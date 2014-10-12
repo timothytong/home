@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<html>
+<head>
+    <title>Timothy Tong</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <script type="text/javascript" src="./js/jquery.min.js">
+	</script>
+	    <script type="text/javascript" src="./js/jquery.stellar.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+<!--     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'> -->
+	<script>
+		$(function(){
+			$.stellar({
+				horizontalScrolling:false,
+				verticalOffset:40;
+			});
+		});
+	</script>
+    <script type="text/javascript">
+/*
+        var OSName="Unknown OS";
+    if (navigator.appVersion.indexOf("Win")!=-1) {
+    	OSName="Windows"
+		$('h1,h2,h3,p').css({'font-family':"Roboto', sans-serif", "font-weight":"300"});
+    };
+    if (navigator.appVersion.indexOf("Mac")!=-1) OSName="MacOS";
+    if (navigator.appVersion.indexOf("X11")!=-1) OSName="UNIX";
+    if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux";
+*/
+/*     document.write('OS: '+OSName); */
+    </script>
+    <link href="./css/indexStyles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body style="zoom:1;">
+    <ul class="parallax">
+        <li>
+            <div class="parallax-background tiger" data-steller-background-ratio="0.5" style="background-position:50% 0px"></div>
+
+            <div class="content1">
+                <h1>My name is Timothy Tong.</h1>
+
+                <h2>Welcome to my personal website.</h2>
+            </div>
+        </li>
+
+        <li>
+            <div class="parallax-background whitefox" data-steller-background-ratio="0.5" style="background-position:50% 550px"></div>
+
+            <div class="content2">
+                <h1>Who Am I?</h1>
+
+                <h3>A diligent and self-motivated technology fan whose<br>
+                aspiration is to be part of a team that engineers<br>
+                groundbreaking products and makes impact on the world.</h3>
+            </div>
+        </li>
+
+        <li>
+            <div class="parallax-background arcticfox" data-steller-background-ratio="0.5" style="background-position:50% 1010px"></div>
+
+            <div class="content3">
+                <h1>A Technology Enthusiast.</h1>
+
+                <h2>With a great affection towards animals.</h2>
+            </div>
+        </li>
+
+        <li>
+            <div class="parallax-background httyd" data-steller-background-ratio="0.5" style="background-position:50% 1650px"></div>
+
+            <div class="content4">
+                <h1>Interested?</h1>
+
+                <h2>Enter my site to find out more.</h2><button class="enterSite" onclick="window.location.href = '/home'">Enter Site</button>
+            </div>
+        </li>
+    </ul>
+    <!--
+<script type="text/javascript">
+        (function($) {
+                var $container = $(".parallax");
+                var $divs = $container.find("div.parallax-background");
+                var elementBeingScrolled = document.body;
+                var liHeight = $divs.eq(0).closest("li").height();
+                var diffHeight = $divs.eq(0).height() - liHeight;
+                var i, len, div, li, offset, scroll, top, transform;
+                var render = function() {
+                    top = elementBeingScrolled.scrollTop;
+                    //loop through divs
+                    for (i = 0, len = $divs.length; i < len; i++) {
+                        // get one div
+                        div = $divs[i];
+                        // calculate the offset TOP of div
+                        offset = $(div).offset().top;
+                        // calculate the amount to scroll
+                        scroll = ~~(((top - offset) / liHeight) * diffHeight);
+                        // apply
+                        transform = "translate3d(0px," + scroll + "px,0px)";
+                        div.style.webkitTransform = transform;
+                        div.style.MozTransform = transform;
+                        div.style.msTransform = transform;
+                        div.style.OTransform = transform;
+                        div.style.transform = transform;
+                    }
+                };
+
+                (function loop() {
+                    requestAnimationFrame(loop);
+                    render();
+                })();
+            })(jQuery);
+    </script>
+-->
+</body>
+</html>

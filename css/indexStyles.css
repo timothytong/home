@@ -1,0 +1,198 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 23-Aug-2014, 6:20:14 PM
+    Author     : timothytong
+*/
+@font-face{
+    font-family: HelveticaNeue-Ultralight;
+    src: url('../fonts/HelveticaNeue-UltraLight.otf');
+}
+h2,h3{
+	font-weight: 100;
+}
+.enterSite{
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out; 
+    -o-transition: all 0.2s ease-in-out; 
+    display: inline-block;
+    border: 1px solid white;
+    border-radius: 5px;
+    /*                padding-top: 10px;*/
+    text-align: center;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    line-height: 120%;
+    text-decoration: none;
+    color: #fff;
+    width: 100px;
+    font-size: 30px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    width: 150px;
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    background: transparent;
+    letter-spacing: 0px;
+}
+
+.enterSite:hover{
+    background: #444;
+}
+
+.enterSite:active{
+    background: rgb(0,0,0);
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+h1{
+    font-size: 60px;
+    margin-bottom: 0px;
+}
+h2{
+    font-size: 40px;
+    margin-top: 0px;
+}
+h3{
+    font-size: 26px;
+    margin-top: 0px;
+}
+/*
+ul li .content1{
+    position: absolute;
+    color: white;
+    font-family: 'Lato',sans-serif;
+    font-weight: 300;
+    letter-spacing: -1px;   
+    top: 250px;
+    left: 50px;
+}
+ul li .content2{
+    position: absolute;
+    color: white;
+    font-family: 'Lato',sans-serif;
+    font-weight: 300;
+    letter-spacing: -1px;   
+    top: 100px;
+    left: 50px;
+}
+ul li .content3{
+    position: absolute;
+    color: black;
+    font-family: 'Lato',sans-serif;
+    font-weight: 300;
+    letter-spacing: -1px;   
+    top: 250px;
+    left: 50px;
+}
+ul li .content4{
+    position: absolute;
+    color: white;
+    font-family: 'Lato',sans-serif;
+    font-weight: 300;
+    letter-spacing: -1px;   
+    top: 200px;
+    left: 50px;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    list-style: none;
+    overflow: hidden;
+    height: 700px;
+    position: relative;
+}
+.parallax-background{
+    height:800px;
+}
+*/
+
+.tiger{
+    background-image: url('../images/tiger_artistic_bg_1440x900.jpg');
+    background-size: 100%;
+    margin-left: 20%;
+    background-repeat: no-repeat;
+    /* background-position: 100% 40%; */
+}
+
+.whitefox{
+    background-image: url('../images/white_fox_bg-1600x900.jpg');
+    background-size: cover;
+    /* background-position: 100% 40%; */
+}
+
+.arcticfox{
+    background-image: url('../images/arctic_fox_bg_1440x900.jpg');
+    background-size: cover;
+    /* background-position: 100% 0%; */
+}
+
+.httyd{
+    background-image: url('../images/toothless_bg_2171x900.jpg');
+    background-size: cover;
+    /* background-position: 40% 0%; */
+}
+@media only screen and (min-width : 150px) and (max-width : 780px){
+    h1,h2,h3{
+    font-family: 'Lato',sans-serif;
+        font-weight: 200;
+    }
+    h1{
+        font-size: 45px;
+        text-shadow: 1px;
+    }
+    h2{
+        font-size: 30px;
+    }
+    h3{
+        font-size: 23px;
+    }
+    .tiger{
+        background-image: url('../images/tiger_artistic_bg_small.jpg');
+        margin-left: 0%;
+    }
+
+    .whitefox{
+        background-image: url('../images/white_fox_bg_small.jpg');
+    }
+
+    .arcticfox{
+        background-image: url('../images/arctic_fox_bg_small.jpg');
+    }
+
+    .httyd{
+        background-image: url('../images/toothless_bg_small.jpg');
+    }
+    .enterSite{
+        width: 180px;
+        padding-top: 10px;
+    }
+    ul li .content1{
+        letter-spacing: 0px;   
+        left: 10px;
+    }
+    ul li .content2{
+        letter-spacing: 0px;   
+        top: 150px;
+        left: 50px;
+        color: black;
+    }
+    ul li .content3{
+        letter-spacing: 0px;   
+        top: 250px;
+        left: 10px;
+    }
+    ul li .content4{
+        letter-spacing: 0px;   
+        top: 250px;
+        left: 50px;
+    }
+}

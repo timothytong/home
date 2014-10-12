@@ -1,0 +1,197 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>KYT | Projects</title>
+        <meta name="description" content="KYT|Projects"/>
+        <meta name="author" content="Timothy Tong"/>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Pacifico:400' rel='stylesheet' type='text/css'>
+        <script src="./js/jquery.min.js"></script>
+        <link href="./css/bootstrap.min.css" rel="stylesheet">
+        <script type="text/javascript" src="/js/jquery.onepage-scroll.js"></script>
+        <link href='/css/onepage-scroll.css' rel='stylesheet' type='text/css'>
+        <link href="css/projectsStyles.min.css" rel="stylesheet">
+        <link rel="shortcut icon" href="./images/favicon.ico"/>
+        <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+        <script>
+            $(document).ready(function() {
+                console.log('ready');
+                $('.sneakpeek').on('click', 'button', function() {
+                    var futureProjects = $(this).parent().find('.futureProjects');
+                    if (futureProjects.is(":hidden")) {
+                        futureProjects.slideDown();
+                        $(this).text('Hide Plans');
+                    }
+                    else {
+                        futureProjects.slideUp();
+                        $(this).text('Show Me');
+                    }
+                });
+                $(".main").onepage_scroll({
+                    sectionContainer: "section",
+                    easing: "ease-in-out",
+                    animationTime: 1000,
+                    pagination: true,
+                    responsiveFallback: 600,
+                    keyboard: true,
+                    loop: false
+                });
+            });
+            var changeText = function() {
+                var isHidden = $('.futureProjects').is(":visible");
+                if (!isHidden) {
+                    $('.sneakpeek').text('Show Me');
+                }
+                else {
+                    $('.sneakpeek').text('Hide Plans');
+                }
+            }
+        </script>
+    </head>
+
+    <body class="body">
+        <!--        <header class="mainHeader">
+                    <nav>
+                        <ul style='font-family: "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;font-weight: 200; font-size: 1.5em;'>
+                            <li><a href="/home.html">Home</a></li>
+                            <li class="active"><a href="/projects.html">Projects</a></li>
+                            <li><a href="/files/timothytong.pdf">Resume</a></li>
+                            <li><a href="#">About</a></li>
+                        </ul>
+                    </nav>
+                </header>-->
+
+        <div class="wrapper">
+            <div class="main">
+                <section class="project1" style="background-color:white;">
+                    <div class="page_container">
+                        <div class="background" style="width:100%; height:609px; background-image:url('/images/pj1_bg.jpg'); background-size:100%; background-repeat:no-repeat; overflow:hidden;position: fixed; bottom:0; z-index: 0"></div>
+                        <div class="bodyblock"> 
+                            <article>
+                                <h1>Project One: DMCalc (iOS)</h1>
+                                <h2>A.K.A the Mighty Discrete Math Calculator.</h2>
+                                <div class="boxed">
+                                    <content>
+                                        <p >
+                                            Everything written from scratch, DMCalc is a powerful tool capable of solving discrete mathematics problems 
+                                            such as Linear Diophantine Equations and congruence.  Applying the knowledge I obtained from school, 
+                                            and combining it with my self-taught learning of Objective-C, I have managed to create this simple yet useful
+                                            calculator that could assist many students in their assignments and courses.
+                                        </p>
+                                        <br>
+                                        <p>
+                                            Though started with the interface builder, to date, DMCalc's UI has already been rewritten with solid code. 
+                                            Every element is generated programmatically, and positioned at the right place depending on the screen size 
+                                            of the device.  And this is merely the beginning; more and more exciting features and functions are being added 
+                                            at the moment.
+                                        </p>
+                                    </content>
+
+                                    <div class='appstore' style="position:relative; padding: 0px;">
+                                        <a href="https://itunes.apple.com/ca/app/discrete-math-calculator/id846170613?mt=8"><img src="/images/dl_on_app_store.svg" alt="Download on the AppStore"></a>
+                                    </div>
+                                    <button class="sourcecode-ios" onclick="window.location.href = 'https://github.com/timothytong/DMCalc'">Source code<br>available on Github</button>
+                                </div>
+                            </article>
+
+                            <div class='ios-icon' style="z-index:3; margin-left: 950px; margin-right: 10px;position: absolute; top:40px; right: 40px; background-color: transparent;">
+                                <img src='/images/DMCalc-icon.png' alt="DMCalc Icon">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="project2" style='background-color:black; background: #000000 url(/images/pj2_bg.jpg) no-repeat right 0px bottom 0px;'>
+                    <div class="page_container" style="background-color: transparent;">
+                        <!--                        <div class="background" style="height:379px; background-image:url('/images/pj2_bg.jpg'); background-size:100%; background-repeat:no-repeat; overflow:hidden;position: fixed; bottom:0; right:0;"></div>-->
+                        <div class="bodyblock2" >
+                            <h1 style="">Project Two: DMCalc (Android)</h1>
+                            <h2 style="z-index: 2; text-align:right; color:#fdff3c; margin-right: 20px; margin-top: 1%; padding-right:2%;">Goodies come in pairs.</h2>
+                            <p style="z-index: 2; text-align: justify; position: relative; padding-left: 40%; color: #fefb9d; margin-top: 3%; margin-right: 2%;">
+                                Based on, and inspired by the iOS version, I decided to collaborate with one of my best buddies <a href="http://www.victorszeto.com">Victor Szeto</a>.  Together, we came up with an Android version of DMCalc
+                                to satisfy the needs of more students who don't own an Apple device.
+                                The process was, fortunately, far less challenging than the iOS version because we
+                                learned Java in high school and were exposed to Android during our first year in university.  Moreover, the
+                                algorithms had already been developed.
+                            </p>
+                            <br>
+                            <p style="text-align: justify; position: relative; padding-left: 40%; color: #fefb9d; margin-right: 2%;">
+                                Although the Android version of DMCalc does not have as many features as the iOS version at the moment, we're working hard on it, and it will catch up!
+                            </p>
+                            <div class="playstore" style="position: relative; margin-left: 60%; margin-top: 1%;">
+                                <a href='https://play.google.com/store/apps/details?id=com.victorszeto.dmcalc&hl=en'><img src='/images/dl_on_play_store.png' alt='GET IT ON Google Play'></a>
+                            </div>
+
+                            <div class='android-icon' style="z-index:1; margin-left: 22%; position: absolute; top:29%; background-color: transparent;">
+                                <img src='/images/android-DMCalc.png' alt="DMCalc Icon">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="project3" style="background: #459FD0 url(/images/waves.jpg) no-repeat left 0px bottom 0px;">
+                    <div class="page_container">
+                        <h1 style="margin-top:10%; margin-left:5%; text-align: left; color: #FBF9E2; width: 95%; ">Project Three: Website</h1>
+                        <h2 style="margin-left:5%; width: 80%; text-align: left; color:#FBDB99;">What you're looking at...  Right now.</h2>
+                        <h2 style="margin-left:5%; color:#FBDB99;">Pretty nice, isn't it?</h2>
+                        <p style='margin-left:5%; width:50%; color: white;'>Um, no I did not spend much time to this site, a quarter of this page did not take me more than 2 hours to make 
+                            because I did not learn HTML and CSS all by myself...  Haha okay I'm a terrible liar.  Anyway, hope you're enjoying it, 'cause if you are, all my sweat, time, and effort devoted to this project will be worthwhile!</p>
+                        <div class="safari">
+                            <img src="/images/safari.png" alt="Safari">
+                        </div>
+                    </div> 
+                </section>
+
+                <section class="project4" style="background-color:#c1d0c1;">
+                    <div class="page_container">
+                        <div class="bodyblock3">
+                            <h1>Project Four:<br>Zombie Killing Spree</h1>
+                            <h2>Time to slaughter some zombies.</h2>
+                            <p><a href="http://www.greenfoot.org/scenarios/4063">Zombie Killing Spree</a> is a game I wrote in <code class='java'>Java</code> for my Grade 11 Computer Science final project.  
+                                As a beginner programmer who could barely use <code class='java'>system.out.println</code>
+                                and <code class='java'>if</code> statements, I found this project particularly difficult at first; the goal was beyond reach.  Challenging 
+                                as it seemed at the beginning, as time went by, I gradually changed my way of looking at this project.  Instead of deeming it as a heavy burden 
+                                of work that I needed to bear, I started thinking of it as a gold mine - the deeper I dug into it, the more valuables I would be rewarded with, 
+                                the more fun I would have, the more challenges I would overcome, and the more excitement I would experience.  This is still how
+                                I think of learning nowadays, and I believe I will hold on to this thought for the rest of my life.<br>And of course, my hard work 
+                                paid of in the end.  Not only did I manage to finish the project independently, but the feedback from my teacher was also really amazing. 
+                            </p>
+                            <div class='pvz_img' style="z-index:3; position: absolute; background-color: transparent; margin-left: 63%; margin-top: -210px;">
+                                <img src='/images/pvz.png' alt="PVZ">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="sneakpeek" style="background-color: black">
+                    <div class="page_container">
+                        <h1 style="margin-left: 7%; margin-top: 1%;">Sneak Peek: Upcoming Projects</h1>
+
+                        <h2 style="margin-left: 7%; width: 90%">Life is full of plans.</h2>
+                        <button class='showDetails' style="margin-left: 7%;">Show Me</button>
+
+                        <center><img src="/images/SeparatorLine.png" alt="line" style="width:90%;"></center>
+                        <div class="futureProjects">
+                            <center>
+                                <ul>
+                                    <li class='left'>
+                                        <h1 style="color: rgb(150,150,150);">DMCalc.  V2.</h1>
+                                        <h2 style="text-align: left; word-wrap: break-word; color: goldenrod;">Written in Swift, designed for iOS8.</h2>
+                                        <p>This project is still a WIP.  Interested in my progress?  Click <a href='https://github.com/timothytong/DMCalc2'>here</a> to check it out!</p>
+                                    </li>
+                                    <li>
+                                        <h1 style="color: rgb(150,150,150);">HACKATHON: Hack The North</h1>
+                                        <h2 style="text-align: left; word-wrap: break-word; color: goldenrod;">TBA.  Please check back soon!</h2>
+                                    </li>
+
+                                </ul>
+                            </center>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+        </div>
+    </body>
+</html>

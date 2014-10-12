@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Timothy Tong</title>
+		<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			font-family: helvetica, arial;
+			background: #404040;
+		}
+		h1 {
+			background-color: black;
+			color: white;
+			height: 40px;
+			font-size: 24px;
+			font-weight: normal;
+			left: 0;
+			line-height: 40px;
+			position: fixed;
+			text-align: center;
+			top: 0;
+			width: 100%;
+			z-index: 1;
+		}
+		h1 a {
+			border-bottom: 1px solid white;
+			color: white;
+			display: inline-block;
+			line-height: 30px;
+			text-decoration: none;
+		}
+		.photo {
+			background-attachment: fixed;
+			background-position: 50% 0;
+			background-repeat: no-repeat;
+			height: 800px;
+			position: relative;
+		}
+		.photo span {
+			bottom: 0;
+			color: white;
+			display: block;
+			left: 50%;
+			margin-left: -640px;
+			font-size: 38px;
+			padding: 10px;
+			position: absolute;
+			text-shadow: 0 2px 0 black, 0 0 10px black;
+			width: 1280px;
+		}
+		.summer {
+			background-image: url(./images/snow.jpg);
+		}
+		.autumn {
+			background-image: url(./images/eagle.jpg);
+		}
+		.winter {
+			background-image: url(./images/arcticfox.jpg);
+		}
+		.spring {
+			background-image: url(./images/toothless.jpg);
+		}
+		</style>
+		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+		<script src="./js/jquery.min.js"></script>
+		<script src="./js/jquery.stellar.min.js"></script>
+		<script>
+		$(function(){
+			$.stellar({
+				horizontalScrolling: false,
+				verticalOffset: 170
+			});
+		});
+		</script>
+	</head>
+	<body>
+		<div class="photo summer" data-stellar-background-ratio="0.5"><span>Summer</span></div>
+		<div class="photo autumn" data-stellar-background-ratio="0.5"><span>Autumn</span></div>
+		<div class="photo winter" data-stellar-background-ratio="0.5"><span>Winter</span></div>
+		<div class="photo spring" data-stellar-background-ratio="0.5"><span>Spring</span></div>
+	</body>
+</html>

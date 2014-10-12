@@ -1,0 +1,451 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 17-Jul-2014, 12:26:49 AM
+    Author     : timothytong
+*/
+.sneakpeek .futureProjects ul>li{
+    width: 40%;
+    margin: auto 2%;
+    display: inline-block;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    background-color: rgb(50,50,50);
+    height: 10%;   
+    float:left;
+}
+
+.sneakpeek .futureProjects{
+    display: none;
+}
+
+.sneakpeek .futureProjects .left{
+    margin-left:6%;
+}
+
+.sneakpeek .futureProjects h1{
+    padding-left: 10px;
+    text-align: left;
+    font-size:45px;
+}
+
+.sneakpeek .futureProjects h2{
+    font-size:25px;
+    text-align: left;
+}
+
+.sneakpeek .page_container h1{
+    color: white;
+    /*    margin-left: 8%;
+        margin-top:3%;*/
+}
+
+.sneakpeek .page_container h2{
+    color: #fdff3c;
+    /*    margin-left: 8%;*/
+}
+
+.sneakpeek .page_container p{
+    font-size: 1.2em;
+    color: white;
+    font-weight: 100;
+    /*    margin-left: 8%;*/
+}
+
+code.java{
+    color: black;
+    background-color: #c1d0c1;
+}
+html {
+    height: 100%;
+}
+.body{
+    margin: 0 auto;
+    clear: both;
+}
+body {
+    background-color: transparent;
+    padding: 0;
+    text-align: left;
+    font-family: 'open sans';
+    position: relative;
+    margin: 0;
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+}
+.wrapper {
+    height: 100% !important;
+    height: 100%;
+    margin: 0 auto; 
+    overflow: hidden;
+}
+a {
+    text-decoration: none;
+}
+h1, h2 {
+    width: 100%;
+    float: left;
+}
+h1 {
+    margin-top: 10px;
+    color: #000;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    font-size: 70px;
+    letter-spacing: -4px;
+    font-weight: 100;
+}
+h2 {
+    color: #6D461D;
+    font-weight: 100;
+    margin-top: 0;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+p{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+img{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.main {
+    float: left;
+    width: 100%;
+    margin: 0 auto;
+}
+.main h1 {
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-weight: 100;
+    margin: 0;
+}
+.main section .page_container {
+    margin: 0 auto 0;
+    z-index: 1;
+}
+
+/* ===========================
+   ===== Main Navigation ===== 
+   =========================== */
+.mainHeader{
+    z-index: 100;
+    background-color: transparent;
+}
+
+.mainHeader nav {
+    width: 100%;
+    clear: both;
+    background: #666;
+    font-size: 1.143em;
+    height: 40px;
+    line-height: 30px;
+    margin: 0px auto 0px auto;
+    text-align: center;
+    /*                border-radius: 5px;
+                    -moz-border-radius: 5px;
+                    -webkit-border-radius: 5px;*/
+}
+
+.mainHeader nav ul {
+    list-style: none; 
+    margin: 0 auto;
+}
+
+.mainHeader nav ul li {
+    float: left; 
+    display: inline; 
+    /*    width: 25%;*/
+}
+
+.mainHeader nav a:link, .mainHeader nav a:visited {
+    color: #fff;
+    display: inline-block;
+    height: 40px;
+    padding: 5px 23px;
+    text-decoration: none;
+}
+.mainHeader nav a:active, .mainHeader nav .active a:link, .mainHeader nav .active a:visited {
+    background: #B2B2B2;
+    color: #fff;
+    text-shadow: none !important;
+    width: 100%;
+}
+.mainHeader nav a:hover{
+    background: black;
+    color: #fff;
+    text-shadow: none !important;
+    width: 100%;
+}
+
+//Project 1
+.project1{
+    background-color: white;
+}
+.showDetails{
+    border: 1px solid gray;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    line-height: 120%;
+    padding: 0.2em;
+    text-decoration: none;
+    color: black;
+    width: 150px;
+    font-size: 20px;
+    font-family: open sans;
+    font-weight: 100;
+    width: 130px;
+    color: rgb(160, 160, 160);
+    border: 2px solid rgb(130, 130, 130);
+    background: rgba(40, 40, 40, 0.75);
+    height:40px;
+}
+
+.showDetails:hover{
+    background:white;
+    color: black;
+}
+.sourcecode-ios{
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    line-height: 120%;
+    padding: 0.2em;
+    text-decoration: none;
+    color: #fff;
+    width: 100px;
+    font-size: 13px;
+    font-family: open sans;
+    font-weight: 100;
+    width: 130px;
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(0, 0, 0);
+    background: rgba(3, 3, 3, 0.75);
+    position: absolute;
+    margin-top: -39px;
+    margin-left: 160px;
+    letter-spacing: 0px;
+}
+.sourcecode-ios:hover{
+    background: #444;
+}
+
+.project1 h1,h2{
+    z-index: 5;
+}
+.project1 h2{
+    position: relative;
+}
+.project1 .page_container{
+    overflow: hidden;
+    position: fixed;
+}
+.main section.project1 h1,h2,p{
+    position: relative;
+    opacity: 1;
+    text-align: justify;
+}
+.bodyblock{
+    position: fixed;
+    background-color: transparent;
+    margin-top: 30px;
+    margin-right: 10%;
+    margin-left: 20px;
+    margin-bottom: 10%;
+}
+.bodyblock2 h1{
+    z-index: 2; 
+    text-align:right; 
+    color:white; 
+    margin-right: 20px; 
+    margin-top: 3%; 
+    padding-right:2%;
+}
+.bodyblock3{
+    text-align: left; 
+    width: 60%;
+    margin-left:10px; 
+    margin-top: 3%;
+}
+.boxed p{
+    z-index:4;
+    background-color:rgba(255,255,255,0.5);  
+    width: 70%;
+}
+.safari img{
+    top: 40%;
+    margin-top: -22%;
+    margin-left: 70%;
+}
+.pvz_img img{
+    width: 200px;
+}
+.project4 h1{
+    padding-left: 10px;
+}
+
+body.disabled-onepage-scroll .onepage-wrapper  section {
+    min-height: 100%;
+    height: auto;
+}
+
+@media only screen and (min-width : 150px) and (max-width : 780px)
+{
+    .sneakpeek .futureProjects ul>li{
+        width: 50%;
+    }
+    .sneakpeek .page_container h1{
+        margin-left: -5%;
+        padding-left: -2%;
+        width: 93%;
+    }
+    .sneakpeek h2{
+        margin-left: 2%;
+    }
+    .bodyblock2 h1,h2{
+        width: 95%;
+        margin-left: 5%;
+        padding-right: 2px;
+    }
+    .ios-icon > img, .pvz_img > img{
+        display: none;
+    }
+    body{
+        max-width:100%;
+        /*        -webkit-overflow-scrolling: touch;*/
+    }
+    .bodyblock3{
+        width: 98%;
+        margin-left: 0px;
+    }
+    .safari img{
+        position: absolute;
+        width:30%;
+        margin-left: 60%;
+        margin-top: -10%;
+    }
+    .project3 .page_container h1{
+        margin-top: 0;
+    }
+    .project3 .page_container p{
+        width: 40%;
+        font-size: 120%;
+    }
+    .project2 .page_container .bodyblock2 .android-icon img{
+        margin-left: -45%;
+        width: 70%;
+    }
+    .project2 .page_container .bodyblock2 p{
+        margin-left: -10%;
+        padding-left: 0;
+    }
+    .project2 .page_container .playstore img{
+        margin-left: 5%;
+        width: 110px;
+    }
+    .bodyblock h1{
+        width: 100%;
+        margin-left: 0;
+        margin-right: 5%;
+        margin-top: -25px;
+    }
+    .bodyblock h2{
+        text-align: left;
+        width: 95%;
+        margin-left: 0;
+    }
+    .boxed{
+        position: absolute;
+        margin-top: 50px;
+        margin-left: -10px;
+        width:110%;
+        padding-right: -10%;
+        text-align: left;
+    }
+    .boxed p{
+        width: 95%;
+    }
+    p{
+        letter-spacing: 0px;
+        padding: 0px;
+    }
+    .project1 .page_container .background{
+        display: none;
+    }
+    body{
+        width: 100%;
+        font-size: 110%;
+        letter-spacing: 0px;
+    }
+    h1{
+        font-size:23px;
+        letter-spacing: -1px;
+    }
+    .sneakpeek .futureProjects h1{
+        padding-left: 10px;
+        text-align: left;
+        font-size:25px;
+    }
+
+    .sneakpeek .futureProjects h2{
+        font-size:105%;
+        text-align: left;
+    }
+    h2{
+        font-size: 20px;
+    }
+    .mainHeader nav {
+        background: #666;
+        font-size: 1.143em;
+        height: 40px;
+        line-height: 20px;
+    }
+    .project4 *{
+        text-align: left;
+    }
+    .project4 h1{
+        padding-left: 10px;
+    }
+    .project4 h2{
+        margin-left: 10px;
+    }
+    .mainHeader nav ul {
+        list-style: none; 
+        margin: 0 auto;
+        padding-left: 0;
+    }
+
+    .mainHeader nav li {
+        margin-left: 0 auto;
+        width: 25%;
+    }
+    .mainHeader nav a:link, .mainHeader nav a:visited {
+        color: #FFF;
+        display: block;
+        height: 40px;
+        padding: 10px 0;
+        text-decoration: none;
+    }
+
+    .mainHeader nav .active a:link, .mainHeader nav .active a:visited {
+        background: #B2B2B2;
+        color: #fff;
+        text-shadow: none !important;
+    }
+    .sneakpeek .futureProjects .left{
+        margin-left:-8%;
+    }
+
+}
