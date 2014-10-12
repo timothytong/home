@@ -43,22 +43,29 @@ and open the template in the editor.
         });
     </script>
     <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-  ga('create', 'UA-53475208-2', 'auto');
-  ga('send', 'pageview');
+        ga('create', 'UA-53475208-2', 'auto');
+        ga('send', 'pageview');
 
-</script>
+    </script>
     <script type="text/javascript">
         $(document).ready(function () {
             var width = $(window).width();
             if (width <= 580) {
                 $("#intro .container p").html("Technology Enthusiast</br>Perfectionist</br>Animal Lover");
                 $("#intro .container h1").html("Timothy</br>Tong");
-                $('#intro .container h1').css("margin-top","70px");
+                $('#intro .container h1').css("margin-top", "70px");
             }
             function checkWidth() {
                 width = $(window).width();
@@ -78,7 +85,7 @@ and open the template in the editor.
                 body.animate({scrollTop: 0}, 'slow', 'swing', function () {
                 });
             });
-            $('#initial-and-name .back-to-top').click(function(e){
+            $('#initial-and-name .back-to-top').click(function (e) {
                 e.preventDefault();
                 var body = $("html, body");
                 body.animate({scrollTop: 0}, 'slow', 'swing', function () {
@@ -184,9 +191,9 @@ and open the template in the editor.
                 <p>Technology Enthusiast <span class="dot"><i class="fa fa-circle"></i></span> Perfectionist <span class="dot"><i class="fa fa-circle"></i></span> Animal Lover</p>
             </div>
         </div>
-        <div id="about" ><!--data-stellar-background-ratio="0.5"-->
+        <div id="about" data-stellar-background-ratio="0.5" >
             <div class="container">
-                <p>Hello, this is Tim.  I'm a 2A Computer Engineering student at the University of Waterloo.  Welcome to my personal site.</p>
+                <p>Hello, this is Tim.  I'm a Computer Engineering student at the University of Waterloo.  Welcome to my personal site.</p>
             </div>
         </div>
         <div id="work"></div>
