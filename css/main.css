@@ -4,7 +4,7 @@
 }
 @font-face {
     font-family: "MyriadSetPro";
-    src: url("../fonts/MyriadSetPro-UltraLight.tff");
+    src: url("../fonts/MyriadSetPro-UltraLight.ttf");
     font-weight: 100;
 }
 @font-face {
@@ -269,6 +269,14 @@ nav{
         -ms-transition: all .4s ease;
         -webkit-transition: all .4s ease;
     }
+    .nav-hide{
+        top: -60px;
+        transition: top .2s ease;
+        -moz-transition: top .2s ease;
+        -o-transition: top .2s ease;
+        -ms-transition: top .2s ease;
+        -webkit-transition: top .2s ease;
+    }
     #initial-and-name {
         width:360px;
     }
@@ -393,6 +401,14 @@ nav{
 }
 
 @media screen and (min-width: 960px) {
+    .nav-hide{
+        top: -80px;
+        transition: top .2s ease;
+        -moz-transition: top .2s ease;
+        -o-transition: top .2s ease;
+        -ms-transition: top .2s ease;
+        -webkit-transition: top .2s ease;
+    }
     #menu-icon{
         display: none;
     }
