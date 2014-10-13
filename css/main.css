@@ -264,19 +264,19 @@ nav{
 @media screen and (max-width: 959px){
     .navigation {
         height:60px;
-        transition: all .4s ease;
-        -moz-transition: all .4s ease;
-        -o-transition: all .4s ease;
-        -ms-transition: all .4s ease;
-        -webkit-transition: all .4s ease;
+        transition: height .4s ease;
+        -moz-transition: height .4s ease;
+        -o-transition: height .4s ease;
+        -ms-transition: height .4s ease;
+        -webkit-transition: height .4s ease;
     }
     .nav-hide{
         margin-top: -60px;
-        transition: all .2s ease;
-        -moz-transition: all .2s ease;
-        -o-transition: all .2s ease;
-        -ms-transition: all .2s ease;
-        -webkit-transition: all .2s ease;
+        transition: margin-top .4s ease;
+        -moz-transition: margin-top .4s ease;
+        -o-transition: margin-top .4s ease;
+        -ms-transition: margin-top .4s ease;
+        -webkit-transition: margin-top .4s ease;
     }
     #initial-and-name {
         width:360px;
