@@ -82,8 +82,18 @@ and open the template in the editor.
             $('#sections ul li').click(function (e) {
                 e.preventDefault();
                 var body = $("html, body");
-                body.animate({scrollTop: 0}, 'slow', 'swing', function () {
-                });
+                if ($(this).is(".about"))
+                    body.animate({scrollTop: $('#about').offset().top - 80}, 1000, 'swing', function () {
+                    });
+                else if ($(this).is(".work"))
+                    body.animate({scrollTop: $('#work').offset().top - 80}, 1000, 'swing', function () {
+                    });
+                if ($(this).is(".projects"))
+                    body.animate({scrollTop: $('#projects').offset().top - 80}, 1000, 'swing', function () {
+                    });
+                if ($(this).is(".contact"))
+                    body.animate({scrollTop: $('#contact').offset().top - 80}, 1000, 'swing', function () {
+                    });
             });
             $('#initial-and-name .back-to-top').click(function (e) {
                 e.preventDefault();
