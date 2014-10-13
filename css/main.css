@@ -190,14 +190,6 @@ nav{
     padding-left: 20px;
 }
 
-#about{
-    background-image: url(../images/bw_fox.jpg);
-    background-attachment: fixed;
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    height: 450px;
-    position: relative;
-}
 
 @media screen and (max-width: 770px){
     #intro .container p{
@@ -225,14 +217,22 @@ nav{
         -webkit-transition: all .4s ease;
     }
 }
-
+#about .container p{
+    color: #ccc;
+}
 @media screen and (min-width: 501px){
     #intro .container h1{
         font-size: 4.5em;
     }
-
+    #about{
+        background-image: url(../images/bw_fox.jpg);
+        background-attachment: fixed;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        height: 450px;
+        position: relative;
+    }
     #about .container p{
-        color: #ccc;
         width: 50%;
         margin-top: 180px;
         margin-left: -20px;
