@@ -52,7 +52,7 @@ and open the template in the editor.
             a.async = 1;
             a.src = g;
             m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        })(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');
 
         ga('create', 'UA-53475208-2', 'auto');
         ga('send', 'pageview');
@@ -161,12 +161,12 @@ and open the template in the editor.
                 if (st > lastScrollTop && st > navbarHeight) {
                     // Scroll Down
                     $('.navigation').addClass('nav-hide');
-                    console.log("down");
+                    
+                
                 } else {
                     // Scroll Up
                     if (st + $(window).height() < $(document).height()) {
                         $('.navigation').removeClass('nav-hide');
-                        console.log("up");
                     }
                 }
 
