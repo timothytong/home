@@ -182,7 +182,7 @@ nav{
     display: table;
 }
 #about .container p{
-    font-family: "Open Sans",sans-serif;
+    font-family: "MyriadSetPro","Open Sans",sans-serif;
     margin: auto;
     font-size: 1.5em;
     font-weight: 100;
@@ -193,7 +193,17 @@ nav{
 #about{
     background-color: #141414;
 }
+#about .container h2{
+    font-family: "MyriadSetPro","Open Sans",sans-serif;
+    font-size: 4em;
+    font-weight: 500;
+    color: white;
 
+}
+#about .container h2 span{
+    font-weight: 100;
+    font-size: 80%;
+}
 
 @media screen and (max-width: 770px){
     #intro .container p{
@@ -220,6 +230,11 @@ nav{
         -ms-transition: all .4s ease;
         -webkit-transition: all .4s ease;
     }
+    #about .container p{
+        width: 100% !important;
+        margin-top:10px;
+        padding:0;
+    }
 }
 
 @media screen and (min-width: 501px){
@@ -234,9 +249,12 @@ nav{
         height: 450px;
         position: relative;
     }
+    #about .container h2{
+        padding-top: 50px;
+    }
     #about .container p{
         width: 50%;
-        margin-top: 180px;
+        margin-top: 50px;
         margin-left: -20px;
         vertical-align: middle;
     }

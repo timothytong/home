@@ -13,7 +13,6 @@ and open the template in the editor.
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" type="text/css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <!--     <link href='http://fonts.googleapis.com/css?family=Zeyada' rel='stylesheet' type='text/css'> -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Gochi+Hand' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
@@ -83,16 +82,16 @@ and open the template in the editor.
                 e.preventDefault();
                 var body = $("html, body");
                 if ($(this).is(".about"))
-                    body.animate({scrollTop: $('#about').offset().top - 80}, 1000, 'swing', function () {
+                    body.animate({scrollTop: $('#about').offset().top - $('.navigation').height()}, 1000, 'swing', function () {
                     });
                 else if ($(this).is(".work"))
-                    body.animate({scrollTop: $('#work').offset().top - 80}, 1000, 'swing', function () {
+                    body.animate({scrollTop: $('#work').offset().top - $('.navigation').height()}, 1000, 'swing', function () {
                     });
                 if ($(this).is(".projects"))
-                    body.animate({scrollTop: $('#projects').offset().top - 80}, 1000, 'swing', function () {
+                    body.animate({scrollTop: $('#projects').offset().top - $('.navigation').height()}, 1000, 'swing', function () {
                     });
                 if ($(this).is(".contact"))
-                    body.animate({scrollTop: $('#contact').offset().top - 80}, 1000, 'swing', function () {
+                    body.animate({scrollTop: $('#contact').offset().top - $('.navigation').height()}, 1000, 'swing', function () {
                     });
             });
             $('#initial-and-name .back-to-top').click(function (e) {
@@ -203,7 +202,9 @@ and open the template in the editor.
         </div>
         <div id="about" data-stellar-background-ratio="0.5" >
             <div class="container">
-                <p>Hello, this is Tim.  I'm a Computer Engineering student at the University of Waterloo.  Welcome to my personal site.</p>
+                <h2>A<span>bout</span></h2>
+                <p>Hello, this is Tim.  I am a Computer Engineering student at the University of Waterloo.  Welcome to my personal site.</p>
+                <p>My aspiration is to be part of a team that engineers great products and makes impact on the world.</p>
             </div>
         </div>
         <div id="work"></div>
