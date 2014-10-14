@@ -141,7 +141,7 @@ and open the template in the editor.
 
             $(window).scroll(function (event) {
                 didScroll = true;
-                
+
             });
 
             setInterval(function () {
@@ -162,8 +162,8 @@ and open the template in the editor.
                 if (st > lastScrollTop && st > navbarHeight) {
                     // Scroll Down
                     $('.navigation').addClass('nav-hide');
-                    
-                
+
+
                 } else {
                     // Scroll Up
                     if (st + $(window).height() < $(document).height()) {
@@ -240,17 +240,21 @@ and open the template in the editor.
             </div>
         </nav>
         <div id="intro">
+
             <div class="container">
                 <h1>Timothy Tong</h1>
                 <div class="line-separator"></div>
                 <p>Technology Enthusiast <span class="dot"><i class="fa fa-circle"></i></span> Perfectionist <span class="dot"><i class="fa fa-circle"></i></span> Animal Lover</p>
             </div>
+
         </div>
         <div id="about" data-stellar-background-ratio="0.5" >
-            <div class="container">
-                <h2>A<span>bout</span></h2>
-                <p>Hello, this is Tim.  I am a Computer Engineering student at the University of Waterloo.  Welcome to my personal site.</p>
-                <p>My aspiration is to be part of a team that engineers great products and makes impact on the world.</p>
+            <div id="about-filter">
+                <div class="container">
+                    <h2>A<span>bout</span></h2>
+                    <p>Hello, this is Tim.  I am a Computer Engineering student at the University of Waterloo.  Welcome to my personal site.</p>
+                    <p>My aspiration is to be part of a team that engineers great products and makes impact on the world.</p>
+                </div>
             </div>
         </div>
         <div id="work"></div>

@@ -238,7 +238,7 @@ nav{
     }
 }
 
-@media screen and (min-width: 501px){
+@media screen and (min-width: 500px){
     #intro .container h1{
         font-size: 4.5em;
     }
@@ -261,7 +261,7 @@ nav{
     }
 }
 
-@media screen and (max-width: 959px){
+@media screen and (max-width: 960px){
     .navigation {
         height:60px;
         transition: height .4s ease;
@@ -404,11 +404,11 @@ nav{
 @media screen and (min-width: 960px) {
     .nav-hide{
         margin-top: -80px;
-        transition: all .2s ease;
-        -moz-transition: all .2s ease;
-        -o-transition: all .2s ease;
-        -ms-transition: all .2s ease;
-        -webkit-transition: all .2s ease;
+        transition:  margin-top .4s ease;
+        -moz-transition:  margin-top .4s ease;
+        -o-transition:  margin-top .4s ease;
+        -ms-transition:  margin-top .4s ease;
+        -webkit-transition:  margin-top .4s ease;
     }
     #menu-icon{
         display: none;
@@ -716,9 +716,10 @@ nav{
         padding-left: 2px;
     }
     /*SVG END*/
-
-
-
+    #about-filter{
+        background-color: rgba(0,0,0,0.5);
+        height: 450px;
+    }
 }
 
 
