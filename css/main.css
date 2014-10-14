@@ -199,11 +199,13 @@ nav{
     font-size: 4em;
     font-weight: 500;
     color: white;
-
 }
 #about .container h2 span{
     font-weight: 300;
     font-size: 80%;
+}
+#about .container p span{
+    font-weight: 500;
 }
 
 @media screen and (max-width: 770px){
@@ -264,11 +266,11 @@ nav{
 @media screen and (max-width: 960px){
     .navigation {
         height:60px;
-        transition: height .4s ease;
-        -moz-transition: height .4s ease;
-        -o-transition: height .4s ease;
-        -ms-transition: height .4s ease;
-        -webkit-transition: height .4s ease;
+        transition: all .4s ease;
+        -moz-transition: all .4s ease;
+        -o-transition: all .4s ease;
+        -ms-transition: all .4s ease;
+        -webkit-transition: all .4s ease;
     }
     .nav-hide{
         margin-top: -60px;
