@@ -25,11 +25,12 @@ body{
 
 /*    navbar BEGIN*/
 .navigation {
-    transition: all .4s ease;
-    -moz-transition: all .4s ease;
-    -o-transition: all .4s ease;
-    -ms-transition: all .4s ease;
-    -webkit-transition: all .4s ease;
+    display: none;
+    /*    transition: all .4s ease;
+        -moz-transition: all .4s ease;
+        -o-transition: all .4s ease;
+        -ms-transition: all .4s ease;
+        -webkit-transition: all .4s ease;*/
     position:fixed;
     top:0!important;
     left:0!important;
@@ -61,11 +62,11 @@ body{
 #initial-and-name .back-to-top {
     z-index: 15;
     position:absolute;
-    transition: all .4s ease;
-    -moz-transition: all .4s ease;
-    -o-transition: all .4s ease;
-    -ms-transition: all .4s ease;
-    -webkit-transition: all .4s ease;
+    /*    transition: all .4s ease;
+        -moz-transition: all .4s ease;
+        -o-transition: all .4s ease;
+        -ms-transition: all .4s ease;
+        -webkit-transition: all .4s ease;*/
     height:80px;
     width:100px;
     text-align:center;
@@ -88,11 +89,11 @@ body{
 }
 
 #initial-and-name .name {
-    transition: all .4s ease;
-    -moz-transition: all .4s ease;
-    -o-transition: all .4s ease;
-    -ms-transition: all .4s ease;
-    -webkit-transition: all .4s ease;
+    /*    transition: all .4s ease;
+        -moz-transition: all .4s ease;
+        -o-transition: all .4s ease;
+        -ms-transition: all .4s ease;
+        -webkit-transition: all .4s ease;*/
     letter-spacing: -1px;
     text-shadow: 0px 0px;
     position:absolute;
@@ -112,40 +113,12 @@ nav{
 }
 /*    navbar END*/
 
+/*intro BEGIN*/
 #intro{
-    height: 400px;
     background-color: #e3e3e3;
     position: relative;
-    top: 80px;
-}
-#about{
-    height: 400px;
-    background-color: #d3d3d3;
-    position: relative;
-    top: 80px;
-}
-#work{
-    height: 400px;
-    background-color: #b4b4b4;
-    position: relative;
-    top: 80px;
-}
-#projects{
-    height: 400px;
-    background-color: #b4b4b4;
-    position: relative;
-    top: 80px;
-}
-#contact{
-    height: 400px;
-    background-color: #b4b4b4;
-    position: relative;
-    top: 80px;
-}
-.container{
-    width: 90%;
-    height: inherit;
-    margin: 0 auto;
+    background-image: url(../images/apple-bg.jpg);
+    background-size: cover;
 }
 #intro .container p{
     transition: all .4s ease;
@@ -157,6 +130,7 @@ nav{
     font-family: "MyriadSetPro","Open Sans",sans-serif;
     font-size: 1.8em;
     font-weight: 300;
+    color: #eeeeee;
 }
 #intro .container span{
     font-size: 0.25em;
@@ -164,7 +138,7 @@ nav{
 #intro .container h1{
     font-family: "MyriadSetPro","Open Sans",sans-serif;
     letter-spacing: -2px;
-    margin: 100px 0 auto auto;
+    margin: auto;
     width: 100%;
     text-align: center;
     font-weight: 300;
@@ -173,10 +147,42 @@ nav{
     -o-transition: all .4s ease;
     -ms-transition: all .4s ease;
     -webkit-transition: all .4s ease;
+    color: #eeeeee;
 }
+/*intro END*/
+
+#about{
+    height:400px;
+    background-color: #d3d3d3;
+    position: relative;
+    /*    top: 80px;*/
+}
+#work{
+    height: 400px;
+    background-color: #b4b4b4;
+    position: relative;
+    /*    top: 80px;*/
+}
+#projects{
+    height: 400px;
+    background-color: #b4b4b4;
+    position: relative;
+    /*    top: 80px;*/
+}
+#contact{
+    height: 400px;
+    background-color: #b4b4b4;
+    position: relative;
+    /*    top: 80px;*/
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+
 .line-separator{
     height:1px;
-    background:#717171;
+    background:#bbbbbb;
     position:relative;
     width: 60%;
     margin: 30px auto;
@@ -188,7 +194,7 @@ nav{
     font-size: 1.5em;
     font-weight: 300;
     width: 60%;
-    padding-left: 20px;
+/*    padding-left: 20px;*/
     color: #ccc;
 }
 #about{
@@ -266,20 +272,22 @@ nav{
 @media screen and (max-width: 960px){
     .navigation {
         height:60px;
-        transition: all .4s ease;
-        -moz-transition: all .4s ease;
-        -o-transition: all .4s ease;
-        -ms-transition: all .4s ease;
-        -webkit-transition: all .4s ease;
+
+        /*        transition: all .4s ease;
+                -moz-transition: all .4s ease;
+                -o-transition: all .4s ease;
+                -ms-transition: all .4s ease;
+                -webkit-transition: all .4s ease;*/
+
     }
-    .nav-hide{
-        margin-top: -60px;
-        transition: margin-top .4s ease;
-        -moz-transition: margin-top .4s ease;
-        -o-transition: margin-top .4s ease;
-        -ms-transition: margin-top .4s ease;
-        -webkit-transition: margin-top .4s ease;
-    }
+    /*    .nav-hide{
+            margin-top: -60px;
+            transition: margin-top .4s ease;
+            -moz-transition: margin-top .4s ease;
+            -o-transition: margin-top .4s ease;
+            -ms-transition: margin-top .4s ease;
+            -webkit-transition: margin-top .4s ease;
+        }*/
     #initial-and-name {
         width:360px;
     }
@@ -291,11 +299,11 @@ nav{
         font-size:1.1em;
     }
     #initial-and-name .name {
-        transition: all .4s ease;
-        -moz-transition: all .4s ease;
-        -o-transition: all .4s ease;
-        -ms-transition: all .4s ease;
-        -webkit-transition: all .4s ease;
+        /*        transition: all .4s ease;
+                -moz-transition: all .4s ease;
+                -o-transition: all .4s ease;
+                -ms-transition: all .4s ease;
+                -webkit-transition: all .4s ease;*/
         height:60px;
         line-height:60px;
         left:80px;
@@ -406,11 +414,11 @@ nav{
 @media screen and (min-width: 960px) {
     .nav-hide{
         margin-top: -80px;
-        transition:  margin-top .4s ease;
-        -moz-transition:  margin-top .4s ease;
-        -o-transition:  margin-top .4s ease;
-        -ms-transition:  margin-top .4s ease;
-        -webkit-transition:  margin-top .4s ease;
+        /*        transition:  margin-top .4s ease;
+                -moz-transition:  margin-top .4s ease;
+                -o-transition:  margin-top .4s ease;
+                -ms-transition:  margin-top .4s ease;
+                -webkit-transition:  margin-top .4s ease;*/
     }
     #menu-icon{
         display: none;

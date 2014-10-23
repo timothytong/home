@@ -37,7 +37,7 @@ and open the template in the editor.
         $(function () {
             $.stellar({
                 horizontalScrolling: false,
-                verticalOffset: 270
+                verticalOffset: -100
             });
         });
     </script>
@@ -60,17 +60,13 @@ and open the template in the editor.
     </script>
     <script type="text/javascript">
         $(document).ready(function () {
-            var width = $(window).width();
-            if (width <= 580) {
-                $("#intro .container p").html("Technology Enthusiast</br>Perfectionist</br>Animal Lover");
-                $("#intro .container h1").html("Timothy</br>Tong");
-                $('#intro .container h1').css("margin-top", "70px");
-            }
+            resizeContent();
+            $(window).resize(function () {
+                resizeContent();
+            });
             function checkWidth() {
                 width = $(window).width();
             }
-
-
             $('#menu-icon').click(function (e) {
                 e.preventDefault();
                 checkWidth();
@@ -80,19 +76,18 @@ and open the template in the editor.
             });
             $('#sections ul li').click(function (e) {
                 e.preventDefault();
-                // - $('.navigation').height()
                 var body = $("html, body");
                 if ($(this).is(".about"))
-                    body.animate({scrollTop: $('#about').offset().top}, 1000, 'swing', function () {
+                    body.animate({scrollTop: $('#about').offset().top - $('.navigation').height()}, 1000, 'swing', function () {
                     });
                 else if ($(this).is(".work"))
-                    body.animate({scrollTop: $('#work').offset().top}, 1000, 'swing', function () {
+                    body.animate({scrollTop: $('#work').offset().top - $('.navigation').height()}, 1000, 'swing', function () {
                     });
                 if ($(this).is(".projects"))
-                    body.animate({scrollTop: $('#projects').offset().top}, 1000, 'swing', function () {
+                    body.animate({scrollTop: $('#projects').offset().top - $('.navigation').height()}, 1000, 'swing', function () {
                     });
                 if ($(this).is(".contact"))
-                    body.animate({scrollTop: $('#contact').offset().top}, 1000, 'swing', function () {
+                    body.animate({scrollTop: $('#contact').offset().top - $('.navigation').height()}, 1000, 'swing', function () {
                     });
             });
             $('#initial-and-name .back-to-top').click(function (e) {
@@ -133,50 +128,73 @@ and open the template in the editor.
             }
 
 
-            //            navbar hides when user scrolls
-            var didScroll;
-            var lastScrollTop = 0;
-            var delta = 5;
-            var navbarHeight = $('.navigation').outerHeight();
-
+            //            navbar hides when user scrolls.  Not using it for now...
+            /*
+             $(window).scroll(function (event) {
+             //     didScroll = true;
+             });
+             var didScroll;
+             var lastScrollTop = 0;
+             var delta = 5;
+             var navbarHeight = $('.navigation').outerHeight();
+             setInterval(function () {
+             if (didScroll) {
+             hasScrolled();
+             didScroll = false;
+             }
+             }, 250);
+             function hasScrolled() {
+             var st = $(this).scrollTop();
+             // Make sure they scroll more than delta
+             if (Math.abs(lastScrollTop - st) <= delta)
+             return;
+             // If they scrolled down, add class .nav-up.
+             if (st > lastScrollTop && st > navbarHeight) {
+             // Scroll Down
+             $('.navigation').addClass('nav-hide');
+             } else {
+             // Scroll Up
+             if (st + $(window).height() < $(document).height()) {
+             $('.navigation').removeClass('nav-hide');
+             }
+             }
+             
+             lastScrollTop = st;
+             }
+             */
+            var navHidden = true;
+            var navbarHeight = $('.navigation').outerHeight() + 10;
             $(window).scroll(function (event) {
-                didScroll = true;
-
+                var curOffset = $(this).scrollTop();
+                if (curOffset >= $("#about").offset().top - navbarHeight && navHidden) {
+                    $(".navigation").slideDown();
+                    navHidden = false;
+                }
+                if (curOffset < $("#about").offset().top - navbarHeight && !navHidden) {
+                    $(".navigation").slideUp();
+                    navHidden = true;
+                }
             });
-
-            setInterval(function () {
-                if (didScroll) {
-                    hasScrolled();
-                    didScroll = false;
-                }
-            }, 250);
-
-            function hasScrolled() {
-                var st = $(this).scrollTop();
-                // Make sure they scroll more than delta
-                if (Math.abs(lastScrollTop - st) <= delta)
-                    return;
-
-                // If they scrolled down and are past the navbar, add class .nav-up.
-                // This is necessary so you never see what is "behind" the navbar.
-                if (st > lastScrollTop && st > navbarHeight) {
-                    // Scroll Down
-                    $('.navigation').addClass('nav-hide');
-
-
-                } else {
-                    // Scroll Up
-                    if (st + $(window).height() < $(document).height()) {
-                        $('.navigation').removeClass('nav-hide');
-                    }
-                }
-
-                lastScrollTop = st;
-            }
-
         });
+        //resizes height of Intro div.
+        function resizeContent() {
+            $height = $(window).height();
+            $("#intro").height($height);
+            $width = $(window).width();
+            if ($width <= 580) {
+                $("#intro .container p").html("Technology Enthusiast</br>Perfectionist</br>Animal Lover");
+                $("#intro .container h1").html("Timothy</br>Tong");
+//                $('#intro .container h1').css("margin-top", "70px");
+            } else {
+                $("#intro .container p").html("Technology Enthusiast <span class='dot'><i class='fa fa-circle'></i></span> Perfectionist <span class='dot'><i class='fa fa-circle'></i></span> Animal Lover");
+                $("#intro .container h1").html("Timothy Tong");
+//                $('#intro .container h1').css("margin-top", "150px");
+            }
+            $introContainer = $("#intro .container");
+            $introContainer.css("position","absolute").css("left", (($width/2) - ($introContainer.width()/2)) + "px").css("top", (($height/2) - ($introContainer.height())) + "px");
 
 
+        }
     </script>
 
 
