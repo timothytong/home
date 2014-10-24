@@ -112,6 +112,10 @@ body{
     font-family:'Gochi Hand',cursive;
     font-size:1.5em;
 }
+#initial-and-name .back-to-top:hover{
+    color: black;
+    background-color: white;
+}
 
 #initial-and-name a {
     color:#404040;//#888;
@@ -205,6 +209,83 @@ nav{
 
 #intro #social-btns li a{
     color: #eeeeee;
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    -ms-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+}
+
+#intro #social-btns li a:hover{
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+#intro #social-btns li.linkedin a:hover{
+    color: rgb(0,137,186);
+}
+
+#intro #social-btns li.github a:hover{
+    color: rgb(126,46,139);
+}
+
+#intro #social-btns li.resume a:hover{
+    color: rgb(123,200,164);
+}
+
+.github-glow:hover{
+    -webkit-animation-name: github-glow;    
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+.linkedin-glow:hover{
+    -webkit-animation-name: linkedin-glow;    
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+.resume-glow:hover{
+    -webkit-animation-name: resume-glow;    
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes github-glow{
+    0%{
+        text-shadow: none;
+    }
+    50%{
+        text-shadow: 0px 0px 20px rgba(137,110,155,0.5);
+    }
+    100%{
+        text-shadow: none;
+    }
+}
+@-webkit-keyframes resume-glow{
+    0%{
+        text-shadow: none;
+    }
+    50%{
+        text-shadow: 0px 0px 20px rgba(0,150,200,0.5);
+    }
+    100%{
+        text-shadow: none;
+    }
+}
+@-webkit-keyframes linkedin-glow{
+    0%{
+        text-shadow: none;
+    }
+    50%{
+        text-shadow: 0px 0px 20px rgba(0,150,200,0.5);
+    }
+    100%{
+        text-shadow: none;
+    }
 }
 /*intro END*/
 
@@ -797,10 +878,7 @@ nav{
         font-size: 3.5em;
         padding: 0 20px;
     }
-    #initial-and-name .back-to-top:hover{
-        color: black;
-        background-color: white;
-    }
+
 }
 
 
