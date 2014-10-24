@@ -104,7 +104,7 @@ and open the template in the editor.
             var firefox = browser.indexOf("Firefox");
             if (msie > 0) {
                 console.log(parseInt(ua.substring(msie + 5, ua.indexOf(".", msie)))); //IE VERSION
-                $('svg').css("display", "none");
+                $('svg').css("color", "transparent");
             }
             else if (firefox > 0) {
                 $(".work span").addClass("firefox-work");
