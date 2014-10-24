@@ -242,14 +242,8 @@ nav{
     -webkit-animation-iteration-count: infinite;
 }
 
-.linkedin-glow:hover{
-    -webkit-animation-name: linkedin-glow;    
-    -webkit-animation-duration: 1.5s;
-    -webkit-animation-iteration-count: infinite;
-}
-
-.resume-glow:hover{
-    -webkit-animation-name: resume-glow;    
+.resume-linkedin-glow:hover{
+    -webkit-animation-name: resume-linkedin-glow;    
     -webkit-animation-duration: 1.5s;
     -webkit-animation-iteration-count: infinite;
 }
@@ -265,7 +259,7 @@ nav{
         text-shadow: none;
     }
 }
-@-webkit-keyframes resume-glow{
+@-webkit-keyframes resume-linkedin-glow{
     0%{
         text-shadow: none;
     }
@@ -276,17 +270,7 @@ nav{
         text-shadow: none;
     }
 }
-@-webkit-keyframes linkedin-glow{
-    0%{
-        text-shadow: none;
-    }
-    50%{
-        text-shadow: 0px 0px 20px rgba(0,150,200,0.5);
-    }
-    100%{
-        text-shadow: none;
-    }
-}
+
 /*intro END*/
 
 #about{
