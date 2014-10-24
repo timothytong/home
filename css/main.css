@@ -252,7 +252,7 @@ nav{
 
 @media screen and (min-width: 500px){
     #intro .container h1{
-        font-size: 4.5em;
+        font-size: 3.5em;
     }
     #about{
         background-image: url(../images/bw_fox.jpg);
