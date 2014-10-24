@@ -310,6 +310,15 @@ nav{
     display: table;
 }
 
+.line-separator-left{
+    height:1px;
+    background:#eeeeee;
+    position:relative;
+    width: 100%;
+    margin-left: -20px;
+    float:left;
+}
+
 #about .container p{
     font-family: "MyriadSetPro","Open Sans",sans-serif;
     margin: auto;
@@ -393,14 +402,6 @@ nav{
         margin-top: 12px;
         margin-left: -20px;
         vertical-align: middle;
-    }
-    .line-separator-left{
-        height:1px;
-        background:#eeeeee;
-        position:relative;
-        width: 100%;
-        margin-left: -20px;
-        float:left;
     }
 }
 
