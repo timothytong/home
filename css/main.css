@@ -137,6 +137,7 @@ nav{
 }
 #intro .container{
     width: 100% !important;
+    left: 0 !important;
 }
 #intro .container h1{
     font-family: "MyriadSetPro","Open Sans",sans-serif;
