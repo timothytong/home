@@ -18,6 +18,28 @@
     src: url("../fonts/MyriadSetPro-Semibold.ttf");
     font-weight: 500;
 }
+@-webkit-keyframes github-glow{
+    0%{
+        text-shadow: none;
+    }
+    50%{
+        text-shadow: 0px 0px 20px rgba(137,110,155,0.5);
+    }
+    100%{
+        text-shadow: none;
+    }
+}
+@-webkit-keyframes resume-linkedin-glow{
+    0%{
+        text-shadow: none;
+    }
+    50%{
+        text-shadow: 0px 0px 20px rgba(0,150,200,0.5);
+    }
+    100%{
+        text-shadow: none;
+    }
+}
 /*@font-face {
     font-family: 'entypo';
     src: url('../fonts/entypo.eot');
@@ -248,29 +270,6 @@ nav{
     -webkit-animation-iteration-count: infinite;
 }
 
-@-webkit-keyframes github-glow{
-    0%{
-        text-shadow: none;
-    }
-    50%{
-        text-shadow: 0px 0px 20px rgba(137,110,155,0.5);
-    }
-    100%{
-        text-shadow: none;
-    }
-}
-@-webkit-keyframes resume-linkedin-glow{
-    0%{
-        text-shadow: none;
-    }
-    50%{
-        text-shadow: 0px 0px 20px rgba(0,150,200,0.5);
-    }
-    100%{
-        text-shadow: none;
-    }
-}
-
 /*intro END*/
 
 #about{
@@ -310,6 +309,7 @@ nav{
     margin: 30px auto;
     display: table;
 }
+
 #about .container p{
     font-family: "MyriadSetPro","Open Sans",sans-serif;
     margin: auto;
@@ -393,6 +393,14 @@ nav{
         margin-top: 12px;
         margin-left: -20px;
         vertical-align: middle;
+    }
+    .line-separator-left{
+        height:1px;
+        background:#eeeeee;
+        position:relative;
+        width: 100%;
+        margin-left: -20px;
+        float:left;
     }
 }
 
@@ -862,7 +870,10 @@ nav{
         font-size: 3.5em;
         padding: 0 20px;
     }
-
+    .line-separator-left{
+        width: 70%;
+        margin-left: -20px;
+    }
 }
 
 
