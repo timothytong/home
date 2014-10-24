@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
+I see you're checking out my source code, come on in ;)
 -->
 
 <html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths">
@@ -37,7 +35,7 @@ and open the template in the editor.
         $(function () {
             $.stellar({
                 horizontalScrolling: false,
-                verticalOffset: -100
+                verticalOffset: -20
             });
         });
     </script>
@@ -60,9 +58,9 @@ and open the template in the editor.
     </script>
     <script type="text/javascript">
         $(document).ready(function () {
-            resizeContent();
+            var firstRun = true;
             $(window).resize(function () {
-                resizeContent();
+                resizeContent(firstRun);
             });
             function checkWidth() {
                 width = $(window).width();
@@ -127,7 +125,8 @@ and open the template in the editor.
                 });
             }
 
-
+            resizeContent(firstRun);
+            firstRun = false;
             //            navbar hides when user scrolls.  Not using it for now...
             /*
              $(window).scroll(function (event) {
@@ -163,7 +162,7 @@ and open the template in the editor.
              }
              */
             var navHidden = true;
-            var navbarHeight = $('.navigation').outerHeight() + 10;
+            var navbarHeight = $('.navigation').outerHeight();
             $(window).scroll(function (event) {
                 var curOffset = $(this).scrollTop();
                 if (curOffset >= $("#about").offset().top - navbarHeight && navHidden) {
@@ -177,21 +176,39 @@ and open the template in the editor.
             });
         });
         //resizes height of Intro div.
-        function resizeContent() {
+        function resizeContent(firstRun) {
             $height = $(window).height();
             $("#intro").height($height);
             $width = $(window).width();
             $introContainer = $("#intro .container");
+            $abtSec = $("#about");
+            $abtFilter = $("#about-filter");
+            if ($width <= 1320) {
+                var abtContHeight = $("#about .container").height();
+                if (!firstRun) {
+                    abtContHeight += 20;
+                }
+                else {
+                    abtContHeight -= 40;
+//                    alert("container height = " + $("#about .container").height() + ", abtContHeight = " + abtContHeight);
+                }
+                $abtSec.css("height", abtContHeight + "px");
+                $abtFilter.css("height", abtContHeight + "px");
+            } else {
+                $abtSec.css("height", "439px");
+                $abtFilter.css("height", "439px");
+            }
+            //position of #intro .container 
+            $introContainer.css("position", "absolute").css("left", (($width / 2) - ($introContainer.width() / 2)) + "px").css("top", (($height / 2) - ($introContainer.height() / 2) - 20) + "px");
             if ($width <= 500) {
                 $("#intro .container p").html("Technology Enthusiast</br>Perfectionist</br>Animal Lover");
                 $("#intro .container h1").html("Timothy</br>Tong");
-                $introContainer.css("position", "absolute").css("left", (($width / 2) - ($introContainer.width() / 2)) + "px").css("top", (($height / 2) - ($introContainer.height()/2)-20) + "px");
+
             } else {
                 $("#intro .container p").html("Technology Enthusiast <span class='dot'><i class='fa fa-circle'></i></span> Perfectionist <span class='dot'><i class='fa fa-circle'></i></span> Animal Lover");
                 $("#intro .container h1").html("Timothy Tong");
-                $introContainer.css("position", "absolute").css("left", (($width / 2) - ($introContainer.width() / 2)) + "px").css("top", (($height / 2) - ($introContainer.height())) + "px");
-                if($height <= 400){
-                    $("#intro .container h1").css("margin-top","20px");
+                if ($height <= 400) {
+                    $("#intro .container h1").css("margin-top", "20px");
                 }
             }
 
@@ -248,47 +265,54 @@ and open the template in the editor.
                     </li>
                     <li class="contact">
                         <span><a href="#contact">Contact</a></span>
-
                         <svg xmlns="http://www.w3.org/2000/svg" width="300px" height="40px">
                         <line class="top" x1="110" y1="1" x2="400" y2="1"/>
                         <line class="left" x1="1" y1="-96" x2="1" y2="0"/>
                         <line class="bottom" x1="-300" y1="39" x2="0" y2="39"/>
                         <line class="right" x1="109" y1="0" x2="109" y2="120"/>
                         </svg>        
-
                     </li>
                 </ul>
             </div>
         </nav>
-        <div id="intro">
-
-            <div class="container">
-                <h1>Timothy Tong</h1>
-                <div class="line-separator"></div>
-                <p>Technology Enthusiast <span class="dot"><i class="fa fa-circle"></i></span> Perfectionist <span class="dot"><i class="fa fa-circle"></i></span> Animal Lover</p>
-            </div>
-
-        </div>
-        <div id="about" data-stellar-background-ratio="0.5" >
-            <div id="about-filter">
-                <div class="container">
-                    <h2>A<span>bout</span></h2>
-                    <p>Hello, this is Tim.  I am a Computer Engineering student at the University of Waterloo.  Welcome to my personal site.</p>
-                    <p>My <span>aspiration</span> is to be part of a team that engineers great products and makes impact on the world.</p>
-                </div>
-            </div>
-        </div>
-        <div id="work"></div>
-        <div id="projects"></div>
-        <div id="contact">
-            <div class="container">
-                <ul>
-                    <li><a href="./files/timothytong.pdf"><i class="fa fa-file-text-o"></i></a></li>
-                    <li><a href="#"><i class="fa fa-github"></i></a></li>
-                </ul>
-            </div>
-
-        </div>
     </header>
+    <div id="intro">
+
+        <div class="container">
+            <h1>Timothy Tong</h1>
+            <div class="line-separator"></div>
+            <p>Technology Enthusiast <span class="dot"><i class="fa fa-circle"></i></span> Perfectionist <span class="dot"><i class="fa fa-circle"></i></span> Animal Lover</p>
+            <ul id="social-btns">
+                <li><a href="https://github.com/timothytong"><i class="fa fa-github"></i></a></li>
+                <li><a href="./files/timothytong.pdf"><i class="fa fa-list-ul"></i></a></li>
+                <li><a href="http://ca.linkedin.com/in/kyttong"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+
+
+    </div>
+    <div id="about" data-stellar-background-ratio="0.3" >
+        <div id="about-filter">
+            <div class="container">
+                <h2>A<span>bout me.</span></h2>
+                <p>Hello and welcome, this is Tim.  I am a Computer Engineering student at the University of Waterloo.</p>
+                <p>I consider myself a technology enthusiast. Since I was young, I have always been fascinated by what technology is capable of doing - it makes our lives so much easier and more enjoyable! Hence, I decided that it shall be my ultimate goal to unwrap and learn all about this mystery.</p>
+                <p>As a result of being so passionate about technology, I am interested in working with both hardware and software. In my spare time, I take initiative to learn new languages, get my hands dirty on software and libraries that I never saw before, and write apps. Last but not least, I constantly keep myself updated with cool new products debuted in the technology arena.</p>
+                <p>My <span>aspiration</span> is to be part of a team that engineers great products and makes impact on the world.</p>
+            </div>
+        </div>
+    </div>
+    <div id="work"></div>
+    <div id="projects"></div>
+    <div id="contact">
+        <div class="container">
+            <ul>
+
+
+            </ul>
+        </div>
+
+    </div>
+
 </body>
 </html>

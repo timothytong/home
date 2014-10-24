@@ -18,6 +18,39 @@
     src: url("../fonts/MyriadSetPro-Semibold.ttf");
     font-weight: 500;
 }
+/*@font-face {
+    font-family: 'entypo';
+    src: url('../fonts/entypo.eot');
+    src: url('../fonts/entypo.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/entypo.woff') format('woff'),
+        url('../fonts/entypo.ttf') format('truetype'),
+        url('../fonts/entypo.svg#entypo') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: '../fonts/entypo-social';
+    src: url('../fonts/entypo-social.eot');
+    src: url('../fonts/entypo-social.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/entypo-social.woff') format('woff'),
+        url('../fonts/entypo-social.ttf') format('truetype'),
+        url('../fonts/entypo-social.svg#../fonts/entypo-social') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '../fonts/entypo-logo';
+    src: url('../fonts/entypo-logo-webfont.eot');
+    src: url('../fonts/entypo-logo-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/entypo-logo-webfont.woff') format('woff'),
+        url('../fonts/entypo-logo-webfont.ttf') format('truetype'),
+        url('../fonts/entypo-logo-webfont.svg#../fonts/entypo-logo') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}*/
 
 body{
     background-color: #e3e3e3;
@@ -62,11 +95,11 @@ body{
 #initial-and-name .back-to-top {
     z-index: 15;
     position:absolute;
-    /*    transition: all .4s ease;
-        -moz-transition: all .4s ease;
-        -o-transition: all .4s ease;
-        -ms-transition: all .4s ease;
-        -webkit-transition: all .4s ease;*/
+    transition: background-color .4s ease;
+    -moz-transition: background-color .4s ease;
+    -o-transition: background-color .4s ease;
+    -ms-transition: background-color .4s ease;
+    -webkit-transition: background-color .4s ease;
     height:80px;
     width:100px;
     text-align:center;
@@ -153,6 +186,26 @@ nav{
     -webkit-transition: all .4s ease;
     color: #eeeeee;
 }
+#intro #social-btns{
+    display: inline-block;
+    margin-top: 20px;
+    list-style: none;
+    width: inherit;
+    text-align: center;
+    padding-left: 0px;
+}
+
+#intro #social-btns li{
+    margin: auto;
+    padding: 0 10px;
+    font-size: 2em;
+    position: relative;
+    display: inline-block;
+}
+
+#intro #social-btns li a{
+    color: #eeeeee;
+}
 /*intro END*/
 
 #about{
@@ -209,6 +262,8 @@ nav{
     font-size: 4em;
     font-weight: 500;
     color: white;
+    margin-left: -20px;
+    margin-bottom: 0px !important;
 }
 #about .container h2 span{
     font-weight: 300;
@@ -217,7 +272,10 @@ nav{
 #about .container p span{
     font-weight: 500;
 }
-
+#about-filter{
+    background-color: rgba(0,0,0,0.5);
+    height: 500px;
+}
 @media screen and (max-width: 770px){
     #intro .container p{
         transition: all .4s ease;
@@ -246,7 +304,6 @@ nav{
     #about .container p{
         width: 100% !important;
         margin-top:10px;
-        padding:0;
     }
 }
 
@@ -259,15 +316,16 @@ nav{
         background-attachment: fixed;
         background-position: 0 0;
         background-repeat: no-repeat;
-        height: 450px;
+        height: 500px;
         position: relative;
     }
     #about .container h2{
-        padding-top: 50px;
+        padding: 10px;
     }
+
     #about .container p{
-        width: 50%;
-        margin-top: 50px;
+        width: 70%;
+        margin-top: 12px;
         margin-left: -20px;
         vertical-align: middle;
     }
@@ -730,12 +788,13 @@ nav{
         padding-left: 2px;
     }
     /*SVG END*/
-    #about-filter{
-        background-color: rgba(0,0,0,0.5);
-        height: 450px;
-    }
+
     #intro .container h1{
         font-size: 4.5em;
+    }
+    #intro #social-btns li{
+        font-size: 3.5em;
+        padding: 0 20px;
     }
 }
 
