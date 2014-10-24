@@ -181,17 +181,18 @@ and open the template in the editor.
             $height = $(window).height();
             $("#intro").height($height);
             $width = $(window).width();
+            $introContainer = $("#intro .container");
             if ($width <= 580) {
                 $("#intro .container p").html("Technology Enthusiast</br>Perfectionist</br>Animal Lover");
                 $("#intro .container h1").html("Timothy</br>Tong");
-//                $('#intro .container h1').css("margin-top", "70px");
+                $introContainer.css("position", "absolute").css("left", (($width / 2) - ($introContainer.width() / 2)) + "px").css("top", (($height / 2) - ($introContainer.height()/3)) + "px");
             } else {
                 $("#intro .container p").html("Technology Enthusiast <span class='dot'><i class='fa fa-circle'></i></span> Perfectionist <span class='dot'><i class='fa fa-circle'></i></span> Animal Lover");
                 $("#intro .container h1").html("Timothy Tong");
 //                $('#intro .container h1').css("margin-top", "150px");
+                $introContainer.css("position", "absolute").css("left", (($width / 2) - ($introContainer.width() / 2)) + "px").css("top", (($height / 2) - ($introContainer.height())) + "px");
             }
-            $introContainer = $("#intro .container");
-            $introContainer.css("position","absolute").css("left", (($width/2) - ($introContainer.width()/2)) + "px").css("top", (($height/2) - ($introContainer.height())) + "px");
+
 
 
         }
