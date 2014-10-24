@@ -135,6 +135,9 @@ nav{
 #intro .container span{
     font-size: 0.25em;
 }
+#intro .container{
+    width: 100% !important;
+}
 #intro .container h1{
     font-family: "MyriadSetPro","Open Sans",sans-serif;
     letter-spacing: -2px;
