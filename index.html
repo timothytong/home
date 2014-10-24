@@ -141,8 +141,14 @@ I see you're checking out my source code, come on in ;)
                 }
             });
 
-            $('#menu-icon').bind('touchstart touchend', function(e) {
+            $('#menu-icon').bind('touchstart touchend', function () {
                 $(this).toggleClass('menu-icon-highlight-mobile');
+            });
+            $("#sections ul li a").bind('touchstart touchend', function () {
+                $(this).toggleClass('menu-items-highlight-mobile');
+            });
+            $("#initial-and-name .back-to-top").bind('touchstart touchend', function () {
+                $(this).toggleClass('back-to-top-highlight-mobile');
             });
 
         });
