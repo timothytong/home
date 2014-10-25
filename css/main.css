@@ -250,11 +250,11 @@ nav{
 }
 
 #intro #scrl-dwn-btn{
-    -webkit-transition: all 0.3s ease-in;  
-    -moz-transition: all 0.3s ease-in;  
-    -o-transition: all 0.3s ease-in;  
-    transition: all 0.3s ease-in;  
-    -ms-transition: all 0.3s ease-in;
+    -webkit-transition: text-shadow 0.3s ease-in;  
+    -moz-transition: text-shadow 0.3s ease-in;  
+    -o-transition: text-shadow 0.3s ease-in;  
+    transition: text-shadow 0.3s ease-in;  
+    -ms-transition: text-shadow 0.3s ease-in;
     color: #eeeeee;
     position: absolute;
     margin: auto;
@@ -308,7 +308,7 @@ nav{
     margin-left: -20px;
     float:left;
 }
-
+/*about BEGIN*/
 #about .container p{
     font-family: "MyriadSetPro","Open Sans",sans-serif;
     margin: auto;
@@ -316,6 +316,10 @@ nav{
     font-weight: 300;
     width: 60%;
     color: #ccc;
+}
+
+#about .container #adjustment{
+    margin-top: 120px;
 }
 #about{
     background-color: #141414;
@@ -327,6 +331,9 @@ nav{
     color: white;
     margin-left: -20px;
     margin-bottom: 0px !important;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    position: absolute;
 }
 #about .container h2 span, #work .container h2 span{
     font-weight: 300;
@@ -339,18 +346,27 @@ nav{
     background-color: rgba(0,0,0,0.5);
     height: 500px;
 }
-
 /*about END*/
+
+/*work BEGIN*/
 
 #work .container h2{
     font-family: "MyriadSetPro","Open Sans",sans-serif;
     font-size: 4em;
     font-weight: 500;
     color: #303030;
-    text-align: center;
+    margin-left: -10px;
     border-bottom-style: solid;
     border-bottom-width: 1px;
     position: absolute;
+}
+#work .container h3{
+    font-family: "MyriadSetPro","Open Sans",sans-serif;
+    font-size: 2.5em;
+    font-weight: 300;
+    color: #303030;
+    margin-top: 120px;
+    text-align: center;
 }
 @media screen and (max-width: 770px){
     #intro .container p{
@@ -367,6 +383,10 @@ nav{
     #initial-and-name .name{
         font-size: 26px;
         margin-left: -50px;
+        letter-spacing: -1px;
+    }
+    #initial-and-name{
+        width: 300px;
     }
     #intro .container h1{
         font-size: 45px;
@@ -528,17 +548,12 @@ nav{
         -moz-box-shadow:-3px 3px 10px #666;
         box-shadow:-3px 3px 10px #666;
     }
+    #intro #social-btns{
+        margin-left: -2px;
+    }
 }
 
 @media screen and (min-width: 960px) {
-    .nav-hide{
-        margin-top: -80px;
-        /*        transition:  margin-top .4s ease;
-                -moz-transition:  margin-top .4s ease;
-                -o-transition:  margin-top .4s ease;
-                -ms-transition:  margin-top .4s ease;
-                -webkit-transition:  margin-top .4s ease;*/
-    }
     #menu-icon{
         display: none;
     }
@@ -856,10 +871,10 @@ nav{
         font-size: 3.5em;
         padding: 0 20px;
     }
-    .line-separator-left{
+/*    .line-separator-left{
         width: 70%;
         margin-left: -20px;
-    }
+    }*/
 
     #intro #scrl-dwn-btn{
         bottom: 30px;
@@ -867,11 +882,11 @@ nav{
     }
     #intro #scrl-dwn-btn:hover{
         text-shadow: 0px 0px 20px rgba(255,255,255,0.7);
-        -webkit-transition: all 0.3s ease-in;  
-        -moz-transition: all 0.3s ease-in;  
-        -o-transition: all 0.3s ease-in;  
-        transition: all 0.3s ease-in;  
-        -ms-transition: all 0.3s ease-in; 
+        -webkit-transition: text-shadow 0.3s ease-in;  
+        -moz-transition: text-shadow 0.3s ease-in;  
+        -o-transition: text-shadow 0.3s ease-in;  
+        transition: text-shadow 0.3s ease-in;  
+        -ms-transition: text-shadow 0.3s ease-in; 
     }
     #intro #scrl-dwn-btn{
         -webkit-animation-name: scrl-dwn-animation-big;    

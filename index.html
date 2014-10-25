@@ -56,6 +56,101 @@ I see you're checking out my source code, come on in ;)
         ga('send', 'pageview');
 
     </script>
+</head>
+
+<body>
+    <header id='top'>
+        <nav class="navigation">
+            <div id='initial-and-name'>
+                <h1><a href="#top" class="back-to-top">KYT</a><span class="name">TIMOTHY <span class="bold">TONG</span></span></h1>
+            </div>
+            <span id="menu-icon"><i class="fa fa-list-ul"></i></span>
+            <div id='sections'>
+                <ul>
+                    <li class="about">
+                        <span><a href="#about">About</a></span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="216px" height="40px">
+                        <line class="top" x1="80" y1="1" x2="252" y2="1"/>
+                        <line class="left" x1="1" y1="-96" x2="1" y2="0"/>
+                        <line class="bottom" x1="-180" y1="39" x2="0" y2="39"/>
+                        <line class="right" x1="79" y1="0" x2="79" y2="120"/>
+                        </svg>
+                    </li>
+
+                    <li class="work">
+                        <span><a href="#work">Work</a></span>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="207px" height="40px">
+                        <line class="top" x1="80" y1="1" x2="252" y2="1"/>
+                        <line class="left" x1="1" y1="-96" x2="1" y2="0"/>
+                        <line class="bottom" x1="-180" y1="39" x2="0" y2="39"/>
+                        <line class="right" x1="79" y1="0" x2="79" y2="120"/>
+                        </svg>
+                    </li>
+
+                    <li class="projects">
+                        <span><a href="#projects">Projects</a></span>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="303px" height="40px">
+                        <line class="top" x1="115" y1="1" x2="404" y2="1"/>
+                        <line class="left" x1="1" y1="-96" x2="1" y2="0"/>
+                        <line class="bottom" x1="-303" y1="39" x2="0" y2="39"/>
+                        <line class="right" x1="114" y1="0" x2="114" y2="120"/>
+                        </svg>                                
+
+
+                    </li>
+                    <li class="contact">
+                        <span><a href="#contact">Contact</a></span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="300px" height="40px">
+                        <line class="top" x1="110" y1="1" x2="400" y2="1"/>
+                        <line class="left" x1="1" y1="-96" x2="1" y2="0"/>
+                        <line class="bottom" x1="-300" y1="39" x2="0" y2="39"/>
+                        <line class="right" x1="109" y1="0" x2="109" y2="120"/>
+                        </svg>        
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div id="intro">
+        <div class="container">
+            <h1>Timothy Tong</h1>
+            <div class="line-separator"></div>
+            <p>Technology Enthusiast <span class="dot"><i class="fa fa-circle"></i></span> Perfectionist <span class="dot"><i class="fa fa-circle"></i></span> Animal Lover</p>
+            <ul id="social-btns">
+                <li class="resume glow"><a class="resume-linkedin-glow" href="./files/timothy_tong.pdf"><i class="fa fa-list-ul"></i></a></li>
+                <li class="github"><a class="github-glow" href="https://github.com/timothytong"><i class="fa fa-github"></i></a></li>
+                <li class="linkedin glow"><a class="resume-linkedin-glow" href="http://ca.linkedin.com/in/kyttong"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+        <h4 id="scrl-dwn-btn"><i class="fa fa-2x fa-angle-double-down"></i></h4>
+    </div>
+
+    <div id="about" data-stellar-background-ratio="0.4" >
+        <div id="about-filter">
+            <div class="container">
+                <h2>A<span>bout me.</span></h2>
+                <p id="adjustment">Hello and welcome, this is Tim.  I am a Computer Engineering student at the University of Waterloo.</p>
+                <p>I consider myself a technology enthusiast. Since I was young, I have always been fascinated by what technology is capable of doing - it makes our lives so much easier and more enjoyable! Hence, I decided that it shall be my ultimate goal to unwrap and learn all about this mystery.</p>
+                <p>As a result of being so passionate about technology, I am interested in working with both hardware and software. In my spare time, I take initiative to learn new languages, get my hands dirty on software and libraries that I never saw before, and write apps. Last but not least, I constantly keep myself updated with cool new products debuted in the technology arena.</p>
+                <p>My <span>aspiration</span> is to be part of a team that engineers great products and makes impact on the world.</p>
+            </div>
+        </div>
+    </div>
+    <div id="work">
+        <div class="container">
+            <h2>W<span>ork experience.</span></h2>
+            <h3>iOS Developer</h3>
+        </div>
+    </div>
+    <div id="projects"></div>
+    <div id="contact">
+        <div class="container">
+        </div>
+
+    </div>
+
     <script type="text/javascript">
         $(document).ready(function () {
             var firstRun = true;
@@ -72,7 +167,7 @@ I see you're checking out my source code, come on in ;)
                     $('#sections').toggleClass("sections-open");
                 }
             });
-            $('#intro #scrl-dwn-btn').click(function(){
+            $('#intro #scrl-dwn-btn').click(function () {
                 $("html, body").animate({scrollTop: $('#about').offset().top - $('.navigation').height()}, 1000, 'swing');
             });
             $('#sections ul li').click(function (e) {
@@ -158,7 +253,7 @@ I see you're checking out my source code, come on in ;)
             $width = $(window).width();
             $introContainer = $("#intro .container");
             $introScrlBtn = $("#intro #scrl-dwn-btn");
-            $workTitle = $("#work .container h2");
+            
             $abtSec = $("#about");
             $abtFilter = $("#about-filter");
             if ($width <= 1320) {
@@ -178,7 +273,7 @@ I see you're checking out my source code, come on in ;)
             //position of #intro .container 
             $introContainer.css("position", "absolute").css("left", (($width / 2) - ($introContainer.width() / 2)) + "px").css("top", (($height / 2) - ($introContainer.height() / 2) - 20) + "px");
             $introScrlBtn.css("left", (($width / 2) - ($introScrlBtn.width() / 2)) + "px");
-            $workTitle.css("left", (($width / 2) - ($workTitle.width() / 2)) + "px");
+            
             if ($width <= 500) {
                 $("#intro .container p").html("Technology Enthusiast</br>Perfectionist</br>Animal Lover");
                 $("#intro .container h1").html("Timothy</br>Tong");
@@ -193,102 +288,7 @@ I see you're checking out my source code, come on in ;)
         }
     </script>
 
-
-
-</head>
-
-<body>
-    <header id='top'>
-        <nav class="navigation">
-            <div id='initial-and-name'>
-                <h1><a href="#top" class="back-to-top">KYT</a><span class="name">TIMOTHY <span class="bold">TONG</span></span></h1>
-            </div>
-            <span id="menu-icon"><i class="fa fa-list-ul"></i></span>
-            <div id='sections'>
-                <ul>
-                    <li class="about">
-                        <span><a href="#about">About</a></span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="216px" height="40px">
-                        <line class="top" x1="80" y1="1" x2="252" y2="1"/>
-                        <line class="left" x1="1" y1="-96" x2="1" y2="0"/>
-                        <line class="bottom" x1="-180" y1="39" x2="0" y2="39"/>
-                        <line class="right" x1="79" y1="0" x2="79" y2="120"/>
-                        </svg>
-                    </li>
-
-                    <li class="work">
-                        <span><a href="#work">Work</a></span>
-
-                        <svg xmlns="http://www.w3.org/2000/svg" width="207px" height="40px">
-                        <line class="top" x1="80" y1="1" x2="252" y2="1"/>
-                        <line class="left" x1="1" y1="-96" x2="1" y2="0"/>
-                        <line class="bottom" x1="-180" y1="39" x2="0" y2="39"/>
-                        <line class="right" x1="79" y1="0" x2="79" y2="120"/>
-                        </svg>
-                    </li>
-
-                    <li class="projects">
-                        <span><a href="#projects">Projects</a></span>
-
-                        <svg xmlns="http://www.w3.org/2000/svg" width="303px" height="40px">
-                        <line class="top" x1="115" y1="1" x2="404" y2="1"/>
-                        <line class="left" x1="1" y1="-96" x2="1" y2="0"/>
-                        <line class="bottom" x1="-303" y1="39" x2="0" y2="39"/>
-                        <line class="right" x1="114" y1="0" x2="114" y2="120"/>
-                        </svg>                                
-
-
-                    </li>
-                    <li class="contact">
-                        <span><a href="#contact">Contact</a></span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="300px" height="40px">
-                        <line class="top" x1="110" y1="1" x2="400" y2="1"/>
-                        <line class="left" x1="1" y1="-96" x2="1" y2="0"/>
-                        <line class="bottom" x1="-300" y1="39" x2="0" y2="39"/>
-                        <line class="right" x1="109" y1="0" x2="109" y2="120"/>
-                        </svg>        
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <div id="intro">
-        <div class="container">
-            <h1>Timothy Tong</h1>
-            <div class="line-separator"></div>
-            <p>Technology Enthusiast <span class="dot"><i class="fa fa-circle"></i></span> Perfectionist <span class="dot"><i class="fa fa-circle"></i></span> Animal Lover</p>
-            <ul id="social-btns">
-                <li class="resume glow"><a class="resume-linkedin-glow" href="./files/timothy_tong.pdf"><i class="fa fa-list-ul"></i></a></li>
-                <li class="github"><a class="github-glow" href="https://github.com/timothytong"><i class="fa fa-github"></i></a></li>
-                <li class="linkedin glow"><a class="resume-linkedin-glow" href="http://ca.linkedin.com/in/kyttong"><i class="fa fa-linkedin"></i></a></li>
-            </ul>
-        </div>
-        <h4 id="scrl-dwn-btn"><i class="fa fa-2x fa-angle-double-down"></i></h4>
-    </div>
-    
-    <div id="about" data-stellar-background-ratio="0.4" >
-        <div id="about-filter">
-            <div class="container">
-                <h2>A<span>bout me.</span></h2>
-                <div class="line-separator-left"></div>
-                <p>Hello and welcome, this is Tim.  I am a Computer Engineering student at the University of Waterloo.</p>
-                <p>I consider myself a technology enthusiast. Since I was young, I have always been fascinated by what technology is capable of doing - it makes our lives so much easier and more enjoyable! Hence, I decided that it shall be my ultimate goal to unwrap and learn all about this mystery.</p>
-                <p>As a result of being so passionate about technology, I am interested in working with both hardware and software. In my spare time, I take initiative to learn new languages, get my hands dirty on software and libraries that I never saw before, and write apps. Last but not least, I constantly keep myself updated with cool new products debuted in the technology arena.</p>
-                <p>My <span>aspiration</span> is to be part of a team that engineers great products and makes impact on the world.</p>
-            </div>
-        </div>
-    </div>
-    <div id="work">
-        <div class="container">
-            <h2>W<span>ork experience.</span></h2>
-        </div>
-    </div>
-    <div id="projects"></div>
-    <div id="contact">
-        <div class="container">
-        </div>
-
-    </div>
-
 </body>
+
+
 </html>
