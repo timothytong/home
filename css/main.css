@@ -51,6 +51,17 @@
         bottom: 30px;
     }
 }
+@-webkit-keyframes scrl-dwn-animation-sml{
+    0%{
+        bottom: 20px;
+    }
+    50%{
+        bottom: 10px;
+    }
+    100%{
+        bottom: 20px;
+    }
+}
 
 body{
     background-color: #e3e3e3;
@@ -247,9 +258,12 @@ nav{
     color: #eeeeee;
     position: absolute;
     margin: auto;
-    bottom: 30px;
-    font-size: 1.5em;
+    bottom: 20px;
+    font-size: 1.2em;
     cursor: pointer;
+    -webkit-animation-name: scrl-dwn-animation-sml;    
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-iteration-count: infinite;
 }
 /*intro END*/
 
@@ -337,7 +351,6 @@ nav{
     border-bottom-style: solid;
     border-bottom-width: 1px;
     position: absolute;
-    
 }
 @media screen and (max-width: 770px){
     #intro .container p{
