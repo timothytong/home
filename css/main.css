@@ -122,11 +122,9 @@ body{
     color: black;
     background-color: white;
 }
-
 #initial-and-name a {
     color:#404040;//#888;
 }
-
 #initial-and-name a:hover, #initial-and-name a:visited, #intial-and-name a:active, #intial-and-name a:focus {
     text-decoration:none;
 }
@@ -324,7 +322,7 @@ nav{
 #about{
     background-color: #141414;
 }
-#about .container h2{
+.section-header{
     font-family: "MyriadSetPro","Open Sans",sans-serif;
     font-size: 4em;
     font-weight: 500;
@@ -335,7 +333,7 @@ nav{
     border-bottom-width: 1px;
     position: absolute;
 }
-#about .container h2 span, #work .container h2 span{
+.section-header span{
     font-weight: 300;
     font-size: 80%;
 }
@@ -350,23 +348,39 @@ nav{
 
 /*work BEGIN*/
 
-#work .container h2{
-    font-family: "MyriadSetPro","Open Sans",sans-serif;
-    font-size: 4em;
-    font-weight: 500;
+#work .section-header{
     color: #303030;
-    margin-left: -10px;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
+}
+#work .container .job-details{
+    width: 70%;
     position: absolute;
 }
-#work .container h3{
+.position{
     font-family: "MyriadSetPro","Open Sans",sans-serif;
     font-size: 2.5em;
     font-weight: 300;
     color: #303030;
     margin-top: 120px;
-    text-align: center;
+    text-align: left;
+}
+
+.company-name{
+    font-weight: 500;
+    font-size: 2em;
+    font-variant: small-caps;
+    letter-spacing: 2px;
+}
+
+#work .container h4{
+    font-family: "MyriadSetPro","Open Sans",sans-serif;
+    font-weight: 300;
+    margin-top: -13px;
+    text-align: left;
+}
+#work .job-details img{
+    position: absolute;
+    right: 0;
+    top: 120px;
 }
 @media screen and (max-width: 770px){
     #intro .container p{
@@ -384,8 +398,6 @@ nav{
         font-size: 26px;
         margin-left: -50px;
         letter-spacing: -1px;
-    }
-    #initial-and-name{
         width: 300px;
     }
     #intro .container h1{
@@ -415,10 +427,9 @@ nav{
         height: 500px;
         position: relative;
     }
-    #about .container h2{
-        padding: 10px;
+    #about .container .section-header{
+        padding: 20px 0 0 0;
     }
-
     #about .container p{
         width: 70%;
         margin-top: 12px;
@@ -426,7 +437,6 @@ nav{
         vertical-align: middle;
     }
 }
-
 @media screen and (max-width: 960px){
     .navigation {
         height:60px;
@@ -860,7 +870,6 @@ nav{
         padding-left: 2px;
     }
     /*SVG END*/
-
     #intro .container h1{
         font-size: 4.5em;
     }
@@ -871,11 +880,6 @@ nav{
         font-size: 3.5em;
         padding: 0 20px;
     }
-/*    .line-separator-left{
-        width: 70%;
-        margin-left: -20px;
-    }*/
-
     #intro #scrl-dwn-btn{
         bottom: 30px;
         font-size: 1.5em;

@@ -130,7 +130,7 @@ I see you're checking out my source code, come on in ;)
     <div id="about" data-stellar-background-ratio="0.4" >
         <div id="about-filter">
             <div class="container">
-                <h2>A<span>bout me.</span></h2>
+                <h2 class="section-header">A<span>bout me.</span></h2>
                 <p id="adjustment">Hello and welcome, this is Tim.  I am a Computer Engineering student at the University of Waterloo.</p>
                 <p>I consider myself a technology enthusiast. Since I was young, I have always been fascinated by what technology is capable of doing - it makes our lives so much easier and more enjoyable! Hence, I decided that it shall be my ultimate goal to unwrap and learn all about this mystery.</p>
                 <p>As a result of being so passionate about technology, I am interested in working with both hardware and software. In my spare time, I take initiative to learn new languages, get my hands dirty on software and libraries that I never saw before, and write apps. Last but not least, I constantly keep myself updated with cool new products debuted in the technology arena.</p>
@@ -140,8 +140,12 @@ I see you're checking out my source code, come on in ;)
     </div>
     <div id="work">
         <div class="container">
-            <h2>W<span>ork experience.</span></h2>
-            <h3>iOS Developer</h3>
+            <h2 class="section-header">W<span>ork experience.</span></h2>
+            <div class="job-details">
+                <h3 class="position">iOS Developer</h3>
+                <h4><span class="company-name">velloapp inc.</span> -Toronto, Canada</h4>
+                <img src="./images/vello1.png">
+            </div>
         </div>
     </div>
     <div id="projects"></div>
@@ -253,7 +257,7 @@ I see you're checking out my source code, come on in ;)
             $width = $(window).width();
             $introContainer = $("#intro .container");
             $introScrlBtn = $("#intro #scrl-dwn-btn");
-            
+            $jobDetPanel = $(".job-details");
             $abtSec = $("#about");
             $abtFilter = $("#about-filter");
             if ($width <= 1320) {
@@ -273,7 +277,8 @@ I see you're checking out my source code, come on in ;)
             //position of #intro .container 
             $introContainer.css("position", "absolute").css("left", (($width / 2) - ($introContainer.width() / 2)) + "px").css("top", (($height / 2) - ($introContainer.height() / 2) - 20) + "px");
             $introScrlBtn.css("left", (($width / 2) - ($introScrlBtn.width() / 2)) + "px");
-            
+            $jobDetPanel.css("left", (($width / 2) - ($jobDetPanel.width() / 2)) + "px");
+
             if ($width <= 500) {
                 $("#intro .container p").html("Technology Enthusiast</br>Perfectionist</br>Animal Lover");
                 $("#intro .container h1").html("Timothy</br>Tong");
