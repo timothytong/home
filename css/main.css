@@ -23,7 +23,7 @@
         text-shadow: none;
     }
     50%{
-        text-shadow: 0px 0px 20px rgba(137,110,155,0.5);
+        text-shadow: 0px 0px 20px rgba(137,110,155,0.7);
     }
     100%{
         text-shadow: none;
@@ -34,45 +34,23 @@
         text-shadow: none;
     }
     50%{
-        text-shadow: 0px 0px 20px rgba(0,150,200,0.5);
+        text-shadow: 0px 0px 20px rgba(0,150,200,0.7);
     }
     100%{
         text-shadow: none;
     }
 }
-/*@font-face {
-    font-family: 'entypo';
-    src: url('../fonts/entypo.eot');
-    src: url('../fonts/entypo.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/entypo.woff') format('woff'),
-        url('../fonts/entypo.ttf') format('truetype'),
-        url('../fonts/entypo.svg#entypo') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
+@-webkit-keyframes scrl-dwn-animation-big{
+    0%{
+        bottom: 30px;
+    }
+    50%{
+        bottom: 20px;
+    }
+    100%{
+        bottom: 30px;
+    }
 }
-
-@font-face {
-    font-family: '../fonts/entypo-social';
-    src: url('../fonts/entypo-social.eot');
-    src: url('../fonts/entypo-social.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/entypo-social.woff') format('woff'),
-        url('../fonts/entypo-social.ttf') format('truetype'),
-        url('../fonts/entypo-social.svg#../fonts/entypo-social') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: '../fonts/entypo-logo';
-    src: url('../fonts/entypo-logo-webfont.eot');
-    src: url('../fonts/entypo-logo-webfont.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/entypo-logo-webfont.woff') format('woff'),
-        url('../fonts/entypo-logo-webfont.ttf') format('truetype'),
-        url('../fonts/entypo-logo-webfont.svg#../fonts/entypo-logo') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}*/
 
 body{
     background-color: #e3e3e3;
@@ -81,11 +59,6 @@ body{
 /*    navbar BEGIN*/
 .navigation {
     display: none;
-    /*    transition: all .4s ease;
-        -moz-transition: all .4s ease;
-        -o-transition: all .4s ease;
-        -ms-transition: all .4s ease;
-        -webkit-transition: all .4s ease;*/
     position:fixed;
     top:0!important;
     left:0!important;
@@ -148,12 +121,7 @@ body{
 }
 
 #initial-and-name .name {
-    /*    transition: all .4s ease;
-        -moz-transition: all .4s ease;
-        -o-transition: all .4s ease;
-        -ms-transition: all .4s ease;
-        -webkit-transition: all .4s ease;*/
-    letter-spacing: -1px;
+    letter-spacing: 3px;
     text-shadow: 0px 0px;
     position:absolute;
     color:#d2d2d2!important;
@@ -164,7 +132,7 @@ body{
     top:0;
     left:120px;
     text-align:center;
-    width:300px;
+    width:350px;
     /*        color:#404040;*/
 }
 nav{
@@ -270,31 +238,39 @@ nav{
     -webkit-animation-iteration-count: infinite;
 }
 
+#intro #scrl-dwn-btn{
+    -webkit-transition: all 0.3s ease-in;  
+    -moz-transition: all 0.3s ease-in;  
+    -o-transition: all 0.3s ease-in;  
+    transition: all 0.3s ease-in;  
+    -ms-transition: all 0.3s ease-in;
+    color: #eeeeee;
+    position: absolute;
+    margin: auto;
+    bottom: 30px;
+    font-size: 1.5em;
+    cursor: pointer;
+}
 /*intro END*/
 
 #about{
-    height:400px;
     background-color: #d3d3d3;
     position: relative;
-    /*    top: 80px;*/
 }
 #work{
-    height: 400px;
-    background-color: #b4b4b4;
+    height: 600px;
+    background-color: #eeeeee;
     position: relative;
-    /*    top: 80px;*/
 }
 #projects{
     height: 400px;
     background-color: #b4b4b4;
     position: relative;
-    /*    top: 80px;*/
 }
 #contact{
     height: 400px;
     background-color: #b4b4b4;
     position: relative;
-    /*    top: 80px;*/
 }
 .container{
     width: 90%;
@@ -325,7 +301,6 @@ nav{
     font-size: 1.5em;
     font-weight: 300;
     width: 60%;
-    /*    padding-left: 20px;*/
     color: #ccc;
 }
 #about{
@@ -339,7 +314,7 @@ nav{
     margin-left: -20px;
     margin-bottom: 0px !important;
 }
-#about .container h2 span{
+#about .container h2 span, #work .container h2 span{
     font-weight: 300;
     font-size: 80%;
 }
@@ -349,6 +324,20 @@ nav{
 #about-filter{
     background-color: rgba(0,0,0,0.5);
     height: 500px;
+}
+
+/*about END*/
+
+#work .container h2{
+    font-family: "MyriadSetPro","Open Sans",sans-serif;
+    font-size: 4em;
+    font-weight: 500;
+    color: #303030;
+    text-align: center;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    position: absolute;
+    
 }
 @media screen and (max-width: 770px){
     #intro .container p{
@@ -408,22 +397,7 @@ nav{
 @media screen and (max-width: 960px){
     .navigation {
         height:60px;
-
-        /*        transition: all .4s ease;
-                -moz-transition: all .4s ease;
-                -o-transition: all .4s ease;
-                -ms-transition: all .4s ease;
-                -webkit-transition: all .4s ease;*/
-
     }
-    /*    .nav-hide{
-            margin-top: -60px;
-            transition: margin-top .4s ease;
-            -moz-transition: margin-top .4s ease;
-            -o-transition: margin-top .4s ease;
-            -ms-transition: margin-top .4s ease;
-            -webkit-transition: margin-top .4s ease;
-        }*/
     #initial-and-name {
         width:360px;
     }
@@ -435,11 +409,6 @@ nav{
         font-size:1.1em;
     }
     #initial-and-name .name {
-        /*        transition: all .4s ease;
-                -moz-transition: all .4s ease;
-                -o-transition: all .4s ease;
-                -ms-transition: all .4s ease;
-                -webkit-transition: all .4s ease;*/
         height:60px;
         line-height:60px;
         left:80px;
@@ -867,6 +836,9 @@ nav{
     #intro .container h1{
         font-size: 4.5em;
     }
+    #intro #social-btns{
+        margin-left: -4px;
+    }
     #intro #social-btns li{
         font-size: 3.5em;
         padding: 0 20px;
@@ -875,17 +847,22 @@ nav{
         width: 70%;
         margin-left: -20px;
     }
-}
 
-
-/*
-html {
-        background:#626262 url(../images/homebg.jpg) no-repeat center center fixed;
-        -webkit-background-size:cover;
-        -moz-background-size:cover;
-        -o-background-size:cover;
-        background-size:cover;
-        filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./images/homebg.jpg',sizingMethod='scale');
-        -ms-filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./images/homebg.jpg',sizingMethod='scale');
+    #intro #scrl-dwn-btn{
+        bottom: 30px;
+        font-size: 1.5em;
+    }
+    #intro #scrl-dwn-btn:hover{
+        text-shadow: 0px 0px 20px rgba(255,255,255,0.7);
+        -webkit-transition: all 0.3s ease-in;  
+        -moz-transition: all 0.3s ease-in;  
+        -o-transition: all 0.3s ease-in;  
+        transition: all 0.3s ease-in;  
+        -ms-transition: all 0.3s ease-in; 
+    }
+    #intro #scrl-dwn-btn{
+        -webkit-animation-name: scrl-dwn-animation-big;    
+        -webkit-animation-duration: 1.5s;
+        -webkit-animation-iteration-count: infinite;
+    }
 }
-*/

@@ -72,21 +72,20 @@ I see you're checking out my source code, come on in ;)
                     $('#sections').toggleClass("sections-open");
                 }
             });
+            $('#intro #scrl-dwn-btn').click(function(){
+                $("html, body").animate({scrollTop: $('#about').offset().top - $('.navigation').height()}, 1000, 'swing');
+            });
             $('#sections ul li').click(function (e) {
                 e.preventDefault();
                 var body = $("html, body");
                 if ($(this).is(".about"))
-                    body.animate({scrollTop: $('#about').offset().top - $('.navigation').height()}, 1000, 'swing', function () {
-                    });
+                    body.animate({scrollTop: $('#about').offset().top - $('.navigation').height()}, 1000, 'swing');
                 else if ($(this).is(".work"))
-                    body.animate({scrollTop: $('#work').offset().top - $('.navigation').height()}, 1000, 'swing', function () {
-                    });
+                    body.animate({scrollTop: $('#work').offset().top - $('.navigation').height()}, 1000, 'swing');
                 if ($(this).is(".projects"))
-                    body.animate({scrollTop: $('#projects').offset().top - $('.navigation').height()}, 1000, 'swing', function () {
-                    });
+                    body.animate({scrollTop: $('#projects').offset().top - $('.navigation').height()}, 1000, 'swing');
                 if ($(this).is(".contact"))
-                    body.animate({scrollTop: $('#contact').offset().top - $('.navigation').height()}, 1000, 'swing', function () {
-                    });
+                    body.animate({scrollTop: $('#contact').offset().top - $('.navigation').height()}, 1000, 'swing');
             });
             $('#initial-and-name .back-to-top').click(function (e) {
                 e.preventDefault();
@@ -158,6 +157,8 @@ I see you're checking out my source code, come on in ;)
             $("#intro").height($height);
             $width = $(window).width();
             $introContainer = $("#intro .container");
+            $introScrlBtn = $("#intro #scrl-dwn-btn");
+            $workTitle = $("#work .container h2");
             $abtSec = $("#about");
             $abtFilter = $("#about-filter");
             if ($width <= 1320) {
@@ -167,7 +168,6 @@ I see you're checking out my source code, come on in ;)
                 }
                 else {
                     abtContHeight -= 40;
-//                    alert("container height = " + $("#about .container").height() + ", abtContHeight = " + abtContHeight);
                 }
                 $abtSec.css("height", abtContHeight + "px");
                 $abtFilter.css("height", abtContHeight + "px");
@@ -177,6 +177,8 @@ I see you're checking out my source code, come on in ;)
             }
             //position of #intro .container 
             $introContainer.css("position", "absolute").css("left", (($width / 2) - ($introContainer.width() / 2)) + "px").css("top", (($height / 2) - ($introContainer.height() / 2) - 20) + "px");
+            $introScrlBtn.css("left", (($width / 2) - ($introScrlBtn.width() / 2)) + "px");
+            $workTitle.css("left", (($width / 2) - ($workTitle.width() / 2)) + "px");
             if ($width <= 500) {
                 $("#intro .container p").html("Technology Enthusiast</br>Perfectionist</br>Animal Lover");
                 $("#intro .container h1").html("Timothy</br>Tong");
@@ -256,11 +258,12 @@ I see you're checking out my source code, come on in ;)
             <div class="line-separator"></div>
             <p>Technology Enthusiast <span class="dot"><i class="fa fa-circle"></i></span> Perfectionist <span class="dot"><i class="fa fa-circle"></i></span> Animal Lover</p>
             <ul id="social-btns">
-                <li class="github"><a class="github-glow" href="https://github.com/timothytong"><i class="fa fa-github"></i></a></li>
                 <li class="resume glow"><a class="resume-linkedin-glow" href="./files/timothy_tong.pdf"><i class="fa fa-list-ul"></i></a></li>
+                <li class="github"><a class="github-glow" href="https://github.com/timothytong"><i class="fa fa-github"></i></a></li>
                 <li class="linkedin glow"><a class="resume-linkedin-glow" href="http://ca.linkedin.com/in/kyttong"><i class="fa fa-linkedin"></i></a></li>
             </ul>
         </div>
+        <h4 id="scrl-dwn-btn"><i class="fa fa-2x fa-angle-double-down"></i></h4>
     </div>
     
     <div id="about" data-stellar-background-ratio="0.4" >
@@ -275,7 +278,11 @@ I see you're checking out my source code, come on in ;)
             </div>
         </div>
     </div>
-    <div id="work"></div>
+    <div id="work">
+        <div class="container">
+            <h2>W<span>ork experience.</span></h2>
+        </div>
+    </div>
     <div id="projects"></div>
     <div id="contact">
         <div class="container">
