@@ -232,33 +232,6 @@ I see you're checking out my source code, come on in ;)
             $(window).scroll(function (event) {
                 var width = $(window).width();
                 var curOffset = $(this).scrollTop();
-                if (width < 960) {
-                    $mobileMenu = $(".navigation #sections ul");
-                    if (curOffset < $("#about").offset().top - navbarHeight && menuHighlight !== 0) {
-                        resetMenuHighlight();
-                        menuHighlight = 0;
-                    }
-                    else if (curOffset >= $("#about").offset().top - navbarHeight && curOffset < $("#work").offset().top - navbarHeight && menuHighlight !== 1) {
-                        resetMenuHighlight();
-                        menuHighlight = 1;
-                        $(".about").addClass("menu-highlight").find("a").addClass("menu-text-highlight");
-                    }
-                    else if (curOffset >= $("#work").offset().top - navbarHeight && curOffset < $("#projects").offset().top - navbarHeight && menuHighlight !== 2) {
-                        resetMenuHighlight();
-                        menuHighlight = 2;
-                        $(".work").addClass("menu-highlight").find("a").addClass("menu-text-highlight");
-                    }
-                    else if (curOffset >= $("#projects").offset().top - navbarHeight && curOffset < $("#contacts").offset().top - navbarHeight && menuHighlight !== 3) {
-                        resetMenuHighlight();
-                        menuHighlight = 3;
-                        $(".projects").addClass("menu-highlight").find("a").addClass("menu-text-highlight");
-                    }
-                    else if (curOffset >= $("#contact").offset().top - navbarHeight && menuHighlight !== 4) {
-                        resetMenuHighlight();
-                        menuHighlight = 4;
-                        $(".contact").addClass("menu-highlight").find("a").addClass("menu-text-highlight");
-                    }
-                }
                 if (curOffset >= $("#about").offset().top - navbarHeight && navHidden) {
                     $(".navigation").slideDown();
                     navHidden = false;
@@ -267,8 +240,56 @@ I see you're checking out my source code, come on in ;)
                     $(".navigation").slideUp();
                     navHidden = true;
                 }
-            });
 
+                $menuSections = $(".navigation #sections ul");
+                if (curOffset < $("#about").offset().top - navbarHeight && menuHighlight !== 0) {
+                    resetMenuHighlight();
+                    menuHighlight = 0;
+                }
+                else if (curOffset >= $("#about").offset().top - navbarHeight && curOffset < $("#work").offset().top - navbarHeight && menuHighlight !== 1) {
+                    resetMenuHighlight();
+                    menuHighlight = 1;
+                    if (width < 960) {
+                        $(".about").addClass("menu-highlight").find("a").addClass("menu-text-highlight-mobile");
+                    }
+                    else {
+                        $(".about").find("a").addClass("menu-text-highlight");
+                    }
+
+                }
+                else if (curOffset >= $("#work").offset().top - navbarHeight && curOffset < $("#projects").offset().top - navbarHeight && menuHighlight !== 2) {
+                    resetMenuHighlight();
+                    menuHighlight = 2;
+                    if (width < 960) {
+                        $(".work").addClass("menu-highlight").find("a").addClass("menu-text-highlight-mobile");
+                    }
+                    else {
+                        $(".work").find("a").addClass("menu-text-highlight");
+                    }
+                }
+                else if (curOffset >= $("#projects").offset().top - navbarHeight && curOffset < $("#contact").offset().top - navbarHeight && menuHighlight !== 3) {
+                    resetMenuHighlight();
+                    menuHighlight = 3;
+                    if (width < 960) {
+                        $(".projects").addClass("menu-highlight").find("a").addClass("menu-text-highlight-mobile");
+                    }
+                    else {
+                        $(".projects").find("a").addClass("menu-text-highlight");
+                    }
+                }
+                else if (curOffset >= $("#contact").offset().top - navbarHeight && menuHighlight !== 4) {
+                    resetMenuHighlight();
+                    menuHighlight = 4;
+                    if (width < 960) {
+                        $(".contact").addClass("menu-highlight").find("a").addClass("menu-text-highlight-mobile");
+                    }
+                    else {
+                        $(".contact").find("a").addClass("menu-text-highlight-mobile");
+                    }
+                    
+                }
+
+            });
 
             $('#menu-icon').bind('touchstart touchend', function () {
                 $(this).toggleClass('menu-icon-highlight-mobile');
@@ -282,9 +303,10 @@ I see you're checking out my source code, come on in ;)
 
         });
         function resetMenuHighlight() {
-            $mobileMenu = $(".navigation #sections ul");
-            $mobileMenu.find('li').each(function () {
+            $menuSections = $(".navigation #sections ul");
+            $menuSections.find('li').each(function () {
                 $(this).removeClass("menu-highlight");
+                $(this).find("a").removeClass("menu-text-highlight-mobile");
                 $(this).find("a").removeClass("menu-text-highlight");
             });
         }
@@ -300,6 +322,7 @@ I see you're checking out my source code, come on in ;)
             $jobDetPanel = $(".job-details");
             $abtSec = $("#about");
             $abtFilter = $("#about-filter");
+            $velloLogo = $('#work .job-details img');
             if ($width <= 1320) {
                 var abtContHeight = $("#about .container").height();
                 if (!firstRun) {

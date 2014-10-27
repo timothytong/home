@@ -18,6 +18,17 @@
     src: url("../fonts/MyriadSetPro-Semibold.ttf");
     font-weight: 500;
 }
+@-webkit-keyframes menu-glow{
+    0%{
+        text-shadow: none;
+    }
+    50%{
+        text-shadow: 0px 0px 7px rgba(255,255,255,1);
+    }
+    100%{
+        text-shadow: none;
+    }
+}
 @-webkit-keyframes github-glow{
     0%{
         text-shadow: none;
@@ -29,6 +40,7 @@
         text-shadow: none;
     }
 }
+
 @-webkit-keyframes resume-linkedin-glow{
     0%{
         text-shadow: none;
@@ -363,19 +375,22 @@ nav{
     margin-top: 120px;
     text-align: left;
 }
-
 .company-name{
     font-weight: 500;
     font-size: 2em;
     font-variant: small-caps;
     letter-spacing: 2px;
 }
-
 #work .container h4{
     font-family: "MyriadSetPro","Open Sans",sans-serif;
     font-weight: 300;
     margin-top: -13px;
     text-align: left;
+}
+#work .job-details img{
+    margin: auto;
+    width: 128px;
+    position: absolute;
 }
 
 @media screen and (max-width: 770px){
@@ -487,9 +502,9 @@ nav{
         -ms-transition: all .2s ease;
         -webkit-transition: all .2s ease;
     }
-    .menu-text-highlight{
+    .menu-text-highlight-mobile{
         color: black!important;
-/*        font-weight: bold;*/
+        /*        font-weight: bold;*/
         transition: all .2s ease;
         -moz-transition: all .2s ease;
         -o-transition: all .2s ease;
@@ -914,6 +929,11 @@ nav{
     }
     #intro #scrl-dwn-btn{
         -webkit-animation-name: scrl-dwn-animation-big;    
+        -webkit-animation-duration: 1.5s;
+        -webkit-animation-iteration-count: infinite;
+    }
+    .menu-text-highlight{
+        -webkit-animation-name: menu-glow;    
         -webkit-animation-duration: 1.5s;
         -webkit-animation-iteration-count: infinite;
     }
