@@ -91,6 +91,11 @@ body{
     /*        -webkit-box-shadow:0 8px 6px -6px #000;
             -moz-box-shadow:0 8px 6px -6px #000;
             box-shadow:0 8px 6px -6px #ccc;*/
+    transition: background-color .4s ease;
+    -moz-transition: background-color .4s ease;
+    -o-transition: background-color .4s ease;
+    -ms-transition: background-color .4s ease;
+    -webkit-transition: background-color .4s ease;
 }
 #initial-and-name .bold{
     font-weight: 500;
@@ -387,12 +392,75 @@ nav{
     margin-top: -13px;
     text-align: left;
 }
-#work .job-details img{
+#work .job-details #vello{
     margin: auto;
     width: 128px;
-    position: absolute;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#work .job-details #vello h5{
+    text-align: center;
+    font-family: "MyriadSetPro","Open Sans",sans-serif;
+    font-size: 1.2em;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+#work .exp-list {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
 }
 
+#work .exp-list li {
+    padding-left: 1em;
+    text-indent: -1em;
+}
+
+#work .exp-list li:before {
+    content: "+";
+    padding-right: 5px;
+}
+
+#work .exp-list li{
+    font-family: "Open Sans",sans-serif;
+    font-size: 1.3em;
+    font-weight: 300;
+/*    letter-spacing: 1px;*/
+}
+#work .exp-list li .bold{
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+#vello-link{
+    text-decoration: none;
+    color: #333;
+    transition: color .3s ease;
+    -moz-transition: color .3s ease;
+    -o-transition: color .3s ease;
+    -ms-transition: color .3s ease;
+    -webkit-transition: color .3s ease;
+}
+
+.vello-link-highlight{
+    color: rgb(39,186,189);
+    transition: color .3s ease;
+    -moz-transition: color .3s ease;
+    -o-transition: color .3s ease;
+    -ms-transition: color .3s ease;
+    -webkit-transition: color .3s ease;
+}
+
+#vello-link:hover{
+    color: rgb(39,186,189);
+    transition: color .3s ease;
+    -moz-transition: color .3s ease;
+    -o-transition: color .3s ease;
+    -ms-transition: color .3s ease;
+    -webkit-transition: color .3s ease;
+}
+.screenshots{
+    
+}
 @media screen and (max-width: 770px){
     #intro .container p{
         transition: all .4s ease;
@@ -449,11 +517,11 @@ nav{
     }
 }
 @media screen and (min-width: 640px){
-    #work .job-details img{
-        position: absolute;
+    #work .job-details #vello{
         right: 0;
-        top: 120px;
+        top: 95px;
         height: 60px;
+        position: absolute;
     }
 }
 @media screen and (max-width: 960px){
@@ -533,7 +601,6 @@ nav{
         -ms-transition: all .4s ease;
         -webkit-transition: all .4s ease;
     }
-
     .about, .work, .projects{
         right:10px;
         height: 50px;

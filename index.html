@@ -133,7 +133,7 @@ I see you're checking out my source code, come on in ;)
                 <h2 class="section-header">A<span>bout me.</span></h2>
                 <p id="adjustment">Hello and welcome, this is Tim.  I am a Computer Engineering student at the University of Waterloo.</p>
                 <p>I consider myself a technology enthusiast. Since I was young, I have always been fascinated by what technology is capable of doing - it makes our lives so much easier and more enjoyable! Hence, I decided that it shall be my ultimate goal to unwrap and learn all about this mystery.</p>
-                <p>As a result of being so passionate about technology, I am interested in working with both hardware and software. In my spare time, I take initiative to learn new languages, get my hands dirty on software and libraries that I never saw before, and write apps. Last but not least, I constantly keep myself updated with cool new products debuted in the technology arena.</p>
+                <p>As a result of being so passionate about technology, I am interested in working with both hardware and software. In my spare time, I take initiative to learn new languages, get my hands dirty on software and libraries that I never saw before, and write apps.</p>
                 <p>My <span>aspiration</span> is to be part of a team that engineers great products and makes impact on the world.</p>
             </div>
         </div>
@@ -142,9 +142,22 @@ I see you're checking out my source code, come on in ;)
         <div class="container">
             <h2 class="section-header">W<span>ork experience.</span></h2>
             <div class="job-details">
-                <h3 class="position">iOS Developer</h3>
-                <h4><span class="company-name">velloapp inc.</span> -Toronto, Canada</h4>
-                <img src="./images/vello1.png">
+                <h3 class="position vello">iOS Developer</h3>
+                <h4><span class="company-name"><a id='vello-link' href="http://velloapp.com">velloapp</a> inc.</span> -Toronto, Canada</h4>
+                <div id="vello">
+                    <img src="./images/velloapp/vello.png">
+                    <h5>04/14-08/14</h5>
+                </div>
+                <ul class="exp-list">
+                    <li><span class='bold'>[BIG PROJECT]</span> Independently designed and created a video importer from scratch to enable users to choose videos from their own video libraries, which will then be automatically trimmed, cropped, rotated if necessary, and imported</li>
+                    <li>Implemented lazy loading and auto-layout when building ViewControllers</li>
+                </ul>
+                <div class='screenshots'></div>
+                <ul class="exp-list">
+                    <li>Responsible for most of the UI changes and new app-side features from v2.03 to v2.10</li>
+                    <li>Troubleshot more advanced memory issues using various techniques</li>
+                    <li>Worked on push notifications on server side (LAMP stack)</li>
+                </ul>
             </div>
         </div>
     </div>
@@ -222,7 +235,6 @@ I see you're checking out my source code, come on in ;)
                     $(this).find("span").toggleClass("safari-chrome-projects-contact-hover");
                 });
             }
-
             resizeContent(firstRun);
             firstRun = false;
             var navHidden = true;
@@ -240,7 +252,6 @@ I see you're checking out my source code, come on in ;)
                     $(".navigation").slideUp();
                     navHidden = true;
                 }
-
                 $menuSections = $(".navigation #sections ul");
                 if (curOffset < $("#about").offset().top - navbarHeight && menuHighlight !== 0) {
                     resetMenuHighlight();
@@ -259,6 +270,7 @@ I see you're checking out my source code, come on in ;)
                 }
                 else if (curOffset >= $("#work").offset().top - navbarHeight && curOffset < $("#projects").offset().top - navbarHeight && menuHighlight !== 2) {
                     resetMenuHighlight();
+                    $(".navigation").css("background-color", "rgba(39,186,189,0.85)");
                     menuHighlight = 2;
                     if (width < 960) {
                         $(".work").addClass("menu-highlight").find("a").addClass("menu-text-highlight-mobile");
@@ -286,11 +298,8 @@ I see you're checking out my source code, come on in ;)
                     else {
                         $(".contact").find("a").addClass("menu-text-highlight-mobile");
                     }
-                    
                 }
-
             });
-
             $('#menu-icon').bind('touchstart touchend', function () {
                 $(this).toggleClass('menu-icon-highlight-mobile');
             });
@@ -300,7 +309,9 @@ I see you're checking out my source code, come on in ;)
             $("#initial-and-name .back-to-top").bind('touchstart touchend', function () {
                 $(this).toggleClass('back-to-top-highlight-mobile');
             });
-
+            $("#vello-link").bind('touchstart touchend', function () {
+                $(this).toggleClass('vello-link-highlight');
+            });
         });
         function resetMenuHighlight() {
             $menuSections = $(".navigation #sections ul");
@@ -309,9 +320,8 @@ I see you're checking out my source code, come on in ;)
                 $(this).find("a").removeClass("menu-text-highlight-mobile");
                 $(this).find("a").removeClass("menu-text-highlight");
             });
+            $(".navigation").css("background-color", "rgba(64,64,64,0.85)");
         }
-
-
         //resizes height of Intro div.
         function resizeContent(firstRun) {
             $height = $(window).height();
@@ -329,7 +339,7 @@ I see you're checking out my source code, come on in ;)
                     abtContHeight += 20;
                 }
                 else {
-                    abtContHeight -= 40;
+                    abtContHeight -= 20;
                 }
                 $abtSec.css("height", abtContHeight + "px");
                 $abtFilter.css("height", abtContHeight + "px");
