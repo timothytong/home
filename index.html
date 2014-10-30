@@ -187,14 +187,18 @@ I see you're checking out my source code, come on in ;)
             $('#sections ul li').click(function (e) {
                 e.preventDefault();
                 var body = $("html, body");
-                if ($(this).is(".about"))
+                if ($(this).is(".about")) {
                     body.animate({scrollTop: $('#about').offset().top - $('.navigation').height()}, 1000, 'swing');
-                else if ($(this).is(".work"))
+                }
+                else if ($(this).is(".work")) {
                     body.animate({scrollTop: $('#work').offset().top - $('.navigation').height()}, 1000, 'swing');
-                if ($(this).is(".projects"))
+                }
+                else if ($(this).is(".projects")) {
                     body.animate({scrollTop: $('#projects').offset().top - $('.navigation').height()}, 1000, 'swing');
-                if ($(this).is(".contact"))
+                }
+                else if ($(this).is(".contact")) {
                     body.animate({scrollTop: $('#contact').offset().top - $('.navigation').height()}, 1000, 'swing');
+                }
             });
             $('#initial-and-name .back-to-top').click(function (e) {
                 e.preventDefault();
