@@ -173,6 +173,11 @@ nav{
     background-image: url(../images/apple-bg.jpg);
     background-size: cover;
 }
+/*#intro-name{
+    font-variant: small-caps;
+    letter-spacing: 4px!important;
+    font-weight: 500!important;
+}*/
 #intro .container p{
     transition: all .4s ease;
     -moz-transition: all .4s ease;
@@ -192,13 +197,16 @@ nav{
     width: 100% !important;
     left: 0 !important;
 }
-#intro .container h1{
+#intro-name{
     font-family: "MyriadSetPro","Open Sans",sans-serif;
-    letter-spacing: -2px;
+    /*letter-spacing: -2px;*/
     margin: auto;
     width: 100%;
     text-align: center;
-    font-weight: 300;
+    /*font-weight: 300;*/
+        font-variant: small-caps;
+    letter-spacing: 4px!important;
+    font-weight: 500!important;
     transition: all .4s ease;
     -moz-transition: all .4s ease;
     -o-transition: all .4s ease;
@@ -425,7 +433,7 @@ nav{
     font-family: "Open Sans",sans-serif;
     font-size: 1.3em;
     font-weight: 300;
-/*    letter-spacing: 1px;*/
+    /*    letter-spacing: 1px;*/
 }
 #work .exp-list li .bold{
     font-weight: 500;
@@ -459,7 +467,7 @@ nav{
     -webkit-transition: color .3s ease;
 }
 .screenshots{
-    
+
 }
 @media screen and (max-width: 770px){
     #intro .container p{
@@ -496,7 +504,7 @@ nav{
 
 @media screen and (min-width: 500px){
     #intro .container h1{
-        font-size: 3.5em;
+        font-size: 4.3em;
     }
     #about{
         background-image: url(../images/bw_fox.jpg);
@@ -972,8 +980,8 @@ nav{
         padding-left: 2px;
     }
     /*SVG END*/
-    #intro .container h1{
-        font-size: 4.5em;
+    #intro-name{
+        font-size: 5.5em;
     }
     #intro #social-btns{
         margin-left: -4px;

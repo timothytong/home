@@ -96,7 +96,7 @@ I see you're checking out my source code, come on in ;)
                         <line class="left" x1="1" y1="-96" x2="1" y2="0"/>
                         <line class="bottom" x1="-303" y1="39" x2="0" y2="39"/>
                         <line class="right" x1="114" y1="0" x2="114" y2="120"/>
-                        </svg>                                
+                        </svg>
 
 
                     </li>
@@ -107,7 +107,7 @@ I see you're checking out my source code, come on in ;)
                         <line class="left" x1="1" y1="-96" x2="1" y2="0"/>
                         <line class="bottom" x1="-300" y1="39" x2="0" y2="39"/>
                         <line class="right" x1="109" y1="0" x2="109" y2="120"/>
-                        </svg>        
+                        </svg>
                     </li>
                 </ul>
             </div>
@@ -115,7 +115,7 @@ I see you're checking out my source code, come on in ;)
     </header>
     <div id="intro">
         <div class="container">
-            <h1>Timothy Tong</h1>
+            <h1 id="intro-name">timothy tong</h1>
             <div class="line-separator"></div>
             <p>Technology Enthusiast <span class="dot"><i class="fa fa-circle"></i></span> Perfectionist <span class="dot"><i class="fa fa-circle"></i></span> Animal Lover</p>
             <ul id="social-btns">
@@ -151,9 +151,6 @@ I see you're checking out my source code, come on in ;)
                 <ul class="exp-list">
                     <li><span class='bold'>[BIG PROJECT]</span> Independently designed and created a video importer from scratch to enable users to choose videos from their own video libraries, which will then be automatically trimmed, cropped, rotated if necessary, and imported</li>
                     <li>Implemented lazy loading and auto-layout when building ViewControllers</li>
-                </ul>
-                <div class='screenshots'></div>
-                <ul class="exp-list">
                     <li>Responsible for most of the UI changes and new app-side features from v2.03 to v2.10</li>
                     <li>Troubleshot more advanced memory issues using various techniques</li>
                     <li>Worked on push notifications on server side (LAMP stack)</li>
@@ -270,7 +267,7 @@ I see you're checking out my source code, come on in ;)
                 }
                 else if (curOffset >= $("#work").offset().top - navbarHeight && curOffset < $("#projects").offset().top - navbarHeight && menuHighlight !== 2) {
                     resetMenuHighlight();
-                    $(".navigation").css("background-color", "rgba(39,186,189,0.85)");
+//                    $(".navigation").css("background-color", "rgba(39,186,189,0.85)");
                     menuHighlight = 2;
                     if (width < 960) {
                         $(".work").addClass("menu-highlight").find("a").addClass("menu-text-highlight-mobile");
@@ -320,7 +317,7 @@ I see you're checking out my source code, come on in ;)
                 $(this).find("a").removeClass("menu-text-highlight-mobile");
                 $(this).find("a").removeClass("menu-text-highlight");
             });
-            $(".navigation").css("background-color", "rgba(64,64,64,0.85)");
+//            $(".navigation").css("background-color", "rgba(64,64,64,0.85)");
         }
         //resizes height of Intro div.
         function resizeContent(firstRun) {
@@ -331,6 +328,7 @@ I see you're checking out my source code, come on in ;)
             $introScrlBtn = $("#intro #scrl-dwn-btn");
             $jobDetPanel = $(".job-details");
             $abtSec = $("#about");
+            $workSec = $("#work");
             $abtFilter = $("#about-filter");
             $velloLogo = $('#work .job-details img');
             if ($width <= 1320) {
@@ -347,21 +345,25 @@ I see you're checking out my source code, come on in ;)
                 $abtSec.css("height", "439px");
                 $abtFilter.css("height", "439px");
             }
-            //position of #intro .container 
+            
+            //position of #intro .container
             $introContainer.css("position", "absolute").css("left", (($width / 2) - ($introContainer.width() / 2)) + "px").css("top", (($height / 2) - ($introContainer.height() / 2) - 20) + "px");
             $introScrlBtn.css("left", (($width / 2) - ($introScrlBtn.width() / 2)) + "px");
             $jobDetPanel.css("left", (($width / 2) - ($jobDetPanel.width() / 2)) + "px");
-
+            $workSec.css("height",$jobDetPanel.height()+20+"px");
+            
             if ($width <= 500) {
                 $introContainer.find("p").html("Technology Enthusiast</br>Perfectionist</br>Animal Lover");
-                $introContainer.find("h1").html("Timothy</br>Tong");
+                $introContainer.find("h1").html("timothy</br>tong");
                 $("#about .section-header").html("A<span>bout.</span>");
                 $("#work .section-header").html("W<span>ork.</span>");
+//                $("#intro-name").removeClass("intro-name-desktop");
             } else {
                 $introContainer.find("p").html("Technology Enthusiast <span class='dot'><i class='fa fa-circle'></i></span> Perfectionist <span class='dot'><i class='fa fa-circle'></i></span> Animal Lover");
-                $introContainer.find("h1").html("Timothy Tong");
+                $introContainer.find("h1").html("timothy tong");
                 $("#about .section-header").html("A<span>bout me.</span>");
                 $("#work .section-header").html("W<span>ork experience.</span>");
+                $("#intro-name").addClass("intro-name-desktop");
                 if ($height <= 400) {
                     $introContainer.find("h1").css("margin-top", "20px");
                 }
