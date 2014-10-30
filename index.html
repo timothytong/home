@@ -149,8 +149,8 @@ I see you're checking out my source code, come on in ;)
                     <h5>04/14-08/14</h5>
                 </div>
                 <ul class="exp-list">
-                    <li><span class='bold'>[BIG PROJECT]</span> Independently designed and created a video importer from scratch to enable users to choose videos from their own video libraries, which will then be automatically trimmed, cropped, rotated if necessary, and imported</li>
-                    <li>Implemented lazy loading and auto-layout when building ViewControllers</li>
+                    <li><span class='bold'>[HIGHLIGHT]</span> Independently designed and created a video importer from scratch to trim, crop, rotate (if necessary), and import videos on just a tap.</li>
+                    <li><span class='bold'>[HIGHLIGHT]</span> Implemented lazy loading and auto-layout when building ViewControllers</li>
                     <li>Responsible for most of the UI changes and new app-side features from v2.03 to v2.10</li>
                     <li>Troubleshot more advanced memory issues using various techniques</li>
                     <li>Worked on push notifications on server side (LAMP stack)</li>
@@ -209,8 +209,10 @@ I see you're checking out my source code, come on in ;)
             var chrome = browser.indexOf("Chrome");
             var firefox = browser.indexOf("Firefox");
             if (msie > 0) {
-                console.log(parseInt(ua.substring(msie + 5, ua.indexOf(".", msie)))); //IE VERSION
-                $('svg').css("color", "transparent");
+                if (parseInt(ua.substring(msie + 5, ua.indexOf(".", msie))) <= 8) {
+                    alert("Friendly advice: Please consider upgrading your browser.")
+                }//IE VERSION
+                $('svg *').css("display", "none");
             }
             else if (firefox > 0) {
                 $(".work span").addClass("firefox-work");
@@ -321,6 +323,11 @@ I see you're checking out my source code, come on in ;)
         }
         //resizes height of Intro div.
         function resizeContent(firstRun) {
+            var browser = window.navigator.userAgent;
+//            var msie = browser.indexOf("MSIE ");
+//            var safari = browser.indexOf("Safari");
+//            var chrome = browser.indexOf("Chrome");
+            var firefox = browser.indexOf("Firefox");
             $height = $(window).height();
             $("#intro").height($height);
             $width = $(window).width();
@@ -337,7 +344,11 @@ I see you're checking out my source code, come on in ;)
                     abtContHeight += 20;
                 }
                 else {
-                    abtContHeight -= 20;
+                    abtContHeight -= 10;
+                    if (firefox > 0) {
+                        abtContHeight += 30;
+                    }
+
                 }
                 $abtSec.css("height", abtContHeight + "px");
                 $abtFilter.css("height", abtContHeight + "px");
@@ -345,13 +356,13 @@ I see you're checking out my source code, come on in ;)
                 $abtSec.css("height", "439px");
                 $abtFilter.css("height", "439px");
             }
-            
+
             //position of #intro .container
             $introContainer.css("position", "absolute").css("left", (($width / 2) - ($introContainer.width() / 2)) + "px").css("top", (($height / 2) - ($introContainer.height() / 2) - 20) + "px");
             $introScrlBtn.css("left", (($width / 2) - ($introScrlBtn.width() / 2)) + "px");
             $jobDetPanel.css("left", (($width / 2) - ($jobDetPanel.width() / 2)) + "px");
-            $workSec.css("height",$jobDetPanel.height()+20+"px");
-            
+            $workSec.css("height", $jobDetPanel.height() + 20 + "px");
+
             if ($width <= 500) {
                 $introContainer.find("p").html("Technology Enthusiast</br>Perfectionist</br>Animal Lover");
                 $introContainer.find("h1").html("timothy</br>tong");
