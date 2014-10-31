@@ -149,11 +149,11 @@ I see you're checking out my source code, come on in ;)
                     <h5>04/14-08/14</h5>
                 </div>
                 <ul class="exp-list">
-                    <li><span class='bold'>[HIGHLIGHT]</span> Independently designed and created a video importer from scratch to trim, crop, rotate (if necessary), and import videos with just a tap.</li>
-                    <li><span class='bold'>[HIGHLIGHT]</span> Implemented lazy loading and auto-layout when building ViewControllers</li>
+                    <li>Independently designed and created a video importer from scratch using <span class='bold'>avfoundation</span> to trim, crop, rotate (if necessary), and import videos with just a tap.</li>
+                    <li>Implemented <span class='bold'>lazy loading</span> and auto-layout when building ViewControllers</li>
                     <li>Responsible for most of the UI changes and new app-side features from v2.03 to v2.10</li>
-                    <li>Troubleshot more advanced memory issues using various techniques</li>
-                    <li>Worked on push notifications on server side (LAMP stack)</li>
+                    <li>Troubleshot more advanced <span class='bold'>memory issues</span> using various techniques (profiler, autoreleasepool, etc.)</li>
+                    <li>Worked on <span class='bold'>push notifications</span> on server side (LAMP stack)</li>
                 </ul>
             </div>
         </div>
@@ -216,7 +216,7 @@ I see you're checking out my source code, come on in ;)
                 if (parseInt(ua.substring(msie + 5, ua.indexOf(".", msie))) <= 8) {
                     alert("Friendly advice: Please consider upgrading your browser.")
                 }//IE VERSION
-                $('svg *').css("display", "none");
+                $('svg').hide();
             }
             else if (firefox > 0) {
                 $(".work span").addClass("firefox-work");
@@ -273,13 +273,15 @@ I see you're checking out my source code, come on in ;)
                 }
                 else if (curOffset >= $("#work").offset().top - navbarHeight && curOffset < $("#projects").offset().top - navbarHeight && menuHighlight !== 2) {
                     resetMenuHighlight();
-//                    $(".navigation").css("background-color", "rgba(39,186,189,0.85)");
+                    $(".navigation").css("background-color", "rgba(39,186,189,1)");
+                    $(".name").css("color", "white");
                     menuHighlight = 2;
                     if (width < 960) {
                         $(".work").addClass("menu-highlight").find("a").addClass("menu-text-highlight-mobile");
                     }
                     else {
                         $(".work").find("a").addClass("menu-text-highlight");
+                        $("#sections ul li span a").css("color", "white");
                     }
                 }
                 else if (curOffset >= $("#projects").offset().top - navbarHeight && curOffset < $("#contact").offset().top - navbarHeight && menuHighlight !== 3) {
@@ -323,7 +325,9 @@ I see you're checking out my source code, come on in ;)
                 $(this).find("a").removeClass("menu-text-highlight-mobile");
                 $(this).find("a").removeClass("menu-text-highlight");
             });
-//            $(".navigation").css("background-color", "rgba(64,64,64,0.85)");
+            $(".navigation").css("background-color", "rgba(64,64,64,0.85)");
+                $(".name").css("color", "#ccc");
+                $("#sections ul li span a").css("color", "#ccc");
         }
         //resizes height of Intro div.
         function resizeContent(firstRun) {
