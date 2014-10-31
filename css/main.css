@@ -748,6 +748,9 @@ nav{
     #intro #social-btns{
         margin-left: -2px;
     }
+    svg{
+        display: none;
+    }
 }
 
 @media screen and (min-width: 960px) {
@@ -790,7 +793,7 @@ nav{
 
     .about svg line, .work svg line, .projects svg line, .contact svg line {
         stroke-width: 0;
-        stroke: #d5d5d5;
+        stroke: #ccc;
         fill: none;
         transition: all .8s ease;
         -moz-transition: all .8s ease;
