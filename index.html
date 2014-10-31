@@ -275,6 +275,7 @@ I see you're checking out my source code, come on in ;)
                     resetMenuHighlight();
                     $(".navigation").css("background-color", "rgba(39,186,189,1)");
                     $(".name").css("color", "white");
+                    $("#menu-icon").css("color","white");
                     menuHighlight = 2;
                     if (width < 960) {
                         $(".work").addClass("menu-highlight").find("a").addClass("menu-text-highlight-mobile");
@@ -326,8 +327,9 @@ I see you're checking out my source code, come on in ;)
                 $(this).find("a").removeClass("menu-text-highlight");
             });
             $(".navigation").css("background-color", "rgba(64,64,64,0.85)");
-                $(".name").css("color", "#ccc");
-                $("#sections ul li span a").css("color", "#ccc");
+            $(".name").css("color", "#ccc");
+            $("#sections ul li span a").css("color", "#ccc");
+            $("#menu-icon").css("color","#ccc");
         }
         //resizes height of Intro div.
         function resizeContent(firstRun) {
@@ -356,7 +358,6 @@ I see you're checking out my source code, come on in ;)
                     if (firefox > 0) {
                         abtContHeight += 30;
                     }
-
                 }
                 $abtSec.css("height", abtContHeight + "px");
                 $abtFilter.css("height", abtContHeight + "px");
@@ -376,7 +377,6 @@ I see you're checking out my source code, come on in ;)
                 $introContainer.find("h1").html("timothy</br>tong");
                 $("#about .section-header").html("A<span>bout.</span>");
                 $("#work .section-header").html("W<span>ork.</span>");
-//                $("#intro-name").removeClass("intro-name-desktop");
             } else {
                 $introContainer.find("p").html("Technology Enthusiast <span class='dot'><i class='fa fa-circle'></i></span> Perfectionist <span class='dot'><i class='fa fa-circle'></i></span> Animal Lover");
                 $introContainer.find("h1").html("timothy tong");
