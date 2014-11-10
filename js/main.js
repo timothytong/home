@@ -27,18 +27,9 @@ function resizeContent() {
     var abtSec = $("#about");
     var workSec = $("#work");
     var abtFilter = $("#about-filter");
-    // var velloLogo = $('#work .job-details img');
     if (width <= 1320) {
         var abtContHeight = $("#about .container").height();
-        // if (!firstRun) {
         abtContHeight += 20;
-        // }
-        // else {
-        //     abtContHeight -= 10;
-        //     if (firefox > 0) {
-        //         abtContHeight += 30;
-        //     }
-        // }
         abtSec.css("height", abtContHeight + "px");
         abtFilter.css("height", abtContHeight + "px");
     } else {
@@ -50,14 +41,18 @@ function resizeContent() {
     introContainer.css("position", "absolute").css("left", ((width / 2) - (introContainer.width() / 2)) + "px").css("top", ((height / 2) - (introContainer.height() / 2) - 20) + "px");
     introScrlBtn.css("left", ((width / 2) - (introScrlBtn.width() / 2)) + "px");
     jobDetPanel.css("left", ((width / 2) - (jobDetPanel.width() / 2)) + "px");
-    workSec.css("height", jobDetPanel.height() + 20 + "px");
+    workSec.css("height", jobDetPanel.height() + 40 + "px");
 
     if (width <= 500) {
         introContainer.find("p").html("Technology Enthusiast</br>Perfectionist</br>Animal Lover");
         introContainer.find("h1").html("timothy</br>tong");
         $("#about .section-header").html("A<span>bout.</span>");
         $("#work .section-header").html("W<span>ork.</span>");
+
     } else {
+        if (width <= 720) {
+            workSec.css("height", jobDetPanel.height() + 60 + "px");
+        }
         introContainer.find("p").html("Technology Enthusiast <span class='dot'><i class='fa fa-circle'></i></span> Perfectionist <span class='dot'><i class='fa fa-circle'></i></span> Animal Lover");
         introContainer.find("h1").html("timothy tong");
         $("#about .section-header").html("A<span>bout me.</span>");
@@ -141,7 +136,7 @@ $(document).ready(function () {
             $(this).find("span").toggleClass("safari-chrome-projects-contact-hover");
         });
     }
-    
+
     // firstRun = false;
     var navHidden = true;
     var navbarHeight = $('.navigation').outerHeight();
@@ -159,7 +154,7 @@ $(document).ready(function () {
             navHidden = true;
         }
         // var menuSections = $(".navigation #sections ul");
-        if (curOffset < $("#about").offset().top - navbarHeight && menuHighlight !== 0) {
+        if (curOffset < $("#about").offset().top - navbarHeight) {
             resetMenuHighlight();
             menuHighlight = 0;
         }
@@ -174,7 +169,7 @@ $(document).ready(function () {
             }
 
         }
-        else if (curOffset >= $("#work").offset().top - navbarHeight && curOffset < $("#projects").offset().top - navbarHeight && menuHighlight !== 2) {
+        else if (curOffset >= $("#work").offset().top - navbarHeight && curOffset < $("#quote").offset().top - navbarHeight - 30 && menuHighlight !== 2) {
             resetMenuHighlight();
             $(".navigation").css("background-color", "rgba(39,186,189,1)");
             $(".name").css("color", "white");
@@ -188,6 +183,10 @@ $(document).ready(function () {
                 $(".work").find("a").addClass("menu-text-highlight");
                 $("#sections ul li span a").css("color", "white");
             }
+        }
+        else if (curOffset >= $("#quote").offset().top - navbarHeight - 30 && curOffset < $("#projects").offset().top - navbarHeight && menuHighlight !== 0) {
+            resetMenuHighlight();
+            menuHighlight = 0;
         }
         else if (curOffset >= $("#projects").offset().top - navbarHeight && curOffset < $("#contact").offset().top - navbarHeight && menuHighlight !== 3) {
             resetMenuHighlight();
