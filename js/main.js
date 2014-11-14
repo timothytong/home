@@ -42,7 +42,7 @@ function resizeContent() {
     introScrlBtn.css("left", ((width / 2) - (introScrlBtn.width() / 2)) + "px");
     jobDetPanel.css("left", ((width / 2) - (jobDetPanel.width() / 2)) + "px");
     workSec.css("height", jobDetPanel.height() + 40 + "px");
-    projectSec.css("height", projectCont.height() + 50 + "px");
+    projectSec.css("height", projectCont.height() + 100 + "px");
     $("#project-list").css("margin-top",$("#projects .container .section-header").height()+30+"px");
 
     if (width <= 500) {
