@@ -597,6 +597,9 @@ nav{
 #projects .container .section-header{
     color: black;
 }
+#project-list{
+    padding: 0;
+}
 /*projects END*/
 
 @media screen and (max-width: 770px){
@@ -820,9 +823,6 @@ nav{
     #projects .container{
         width: 95%;
         margin: auto;
-    }
-    #project-list{
-        padding: 0;
     }
 }
 
