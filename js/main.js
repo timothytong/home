@@ -6,10 +6,7 @@ function resetMenuHighlight() {
         $(this).find("a").removeClass("menu-text-highlight");
     });
     $(".navigation").css("background-color", "rgba(64,64,64,0.85)");
-    $(".name").css("color", "#ccc");
-    $("#sections ul li span a").css("color", "#ccc");
-    $("#menu-icon").css("color", "#ccc");
-    $(".about svg line, .work svg line, .projects svg line, .contact svg line").css("stroke", "#ccc");
+
 }
 //responsiveness
 function resizeContent() {
@@ -26,6 +23,9 @@ function resizeContent() {
     var jobDetPanel = $(".job-details");
     var abtSec = $("#about");
     var workSec = $("#work");
+    var projectSec = $("#projects");
+    var projectCont = $("#project-list");
+
     var abtFilter = $("#about-filter");
     if (width <= 1320) {
         var abtContHeight = $("#about .container").height();
@@ -42,6 +42,8 @@ function resizeContent() {
     introScrlBtn.css("left", ((width / 2) - (introScrlBtn.width() / 2)) + "px");
     jobDetPanel.css("left", ((width / 2) - (jobDetPanel.width() / 2)) + "px");
     workSec.css("height", jobDetPanel.height() + 40 + "px");
+    projectSec.css("height", projectCont.height() + 50 + "px");
+    $("#project-list").css("margin-top",$("#projects .container .section-header").height()+30+"px");
 
     if (width <= 500) {
         introContainer.find("p").html("Technology Enthusiast</br>Perfectionist</br>Animal Lover");
@@ -62,6 +64,8 @@ function resizeContent() {
             introContainer.find("h1").css("margin-top", "20px");
         }
     }
+    
+    
 }
 $(document).ready(function () {
     var width = $(window).width();
@@ -153,7 +157,6 @@ $(document).ready(function () {
             $(".navigation").slideUp();
             navHidden = true;
         }
-        // var menuSections = $(".navigation #sections ul");
         if (curOffset < $("#about").offset().top - navbarHeight) {
             resetMenuHighlight();
             menuHighlight = 0;
@@ -172,16 +175,12 @@ $(document).ready(function () {
         else if (curOffset >= $("#work").offset().top - navbarHeight && curOffset < $("#quote").offset().top - navbarHeight - 30 && menuHighlight !== 2) {
             resetMenuHighlight();
             $(".navigation").css("background-color", "rgba(39,186,189,1)");
-            $(".name").css("color", "white");
-            $("#menu-icon").css("color", "white");
-            $(".about svg line, .work svg line, .projects svg line, .contact svg line").css("stroke", "white");
             menuHighlight = 2;
             if (width < 960) {
                 $(".work").addClass("menu-highlight").find("a").addClass("menu-text-highlight-mobile");
             }
             else {
                 $(".work").find("a").addClass("menu-text-highlight");
-                $("#sections ul li span a").css("color", "white");
             }
         }
         else if (curOffset >= $("#quote").offset().top - navbarHeight - 30 && curOffset < $("#projects").offset().top - navbarHeight && menuHighlight !== 0) {
