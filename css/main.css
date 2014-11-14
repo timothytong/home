@@ -596,7 +596,6 @@ nav{
 }
 #projects .container .section-header{
     color: black;
-    
 }
 /*projects END*/
 
@@ -813,6 +812,17 @@ nav{
     }
     #quote .container h1{
         font-size: 3.5em;
+    }
+    #project-list p{
+        width: 100%;
+        text-align: center;
+    }
+    #projects .container{
+        width: 95%;
+        margin: auto;
+    }
+    #project-list{
+        padding: 0;
     }
 }
 
