@@ -42,6 +42,7 @@ function resizeContent() {
     introScrlBtn.css("left", ((width / 2) - (introScrlBtn.width() / 2)) + "px");
     jobDetPanel.css("left", ((width / 2) - (jobDetPanel.width() / 2)) + "px");
     workSec.css("height", jobDetPanel.height() + 40 + "px");
+    $('#vello').css("top", $("#pivotal-line").offset().top - $('#work').offset().top + 20 + "px");
     projectSec.css("height", projectCont.height() + 100 + "px");
     $("#project-list").css("margin-top", $("#projects .container .section-header").height() + 30 + "px");
 
@@ -170,11 +171,9 @@ $(document).ready(function () {
             else {
                 $(".about").find("a").addClass("menu-text-highlight");
             }
-
         }
-        else if (curOffset >= $("#work").offset().top - navbarHeight && curOffset < $("#vello-line").offset().top - navbarHeight && menuHighlight !== 2) {
+        else if (curOffset >= $("#work").offset().top - navbarHeight && curOffset < $("#pivotal-line").offset().top - navbarHeight - 30 && menuHighlight !== 2) {
             resetMenuHighlight();
-            $(".navigation").css("background-color", "rgba(39,186,189,1)");
             menuHighlight = 2;
             if (width < 960) {
                 $(".work").addClass("menu-highlight").find("a").addClass("menu-text-highlight-mobile");
@@ -183,8 +182,9 @@ $(document).ready(function () {
                 $(".work").find("a").addClass("menu-text-highlight");
             }
         }
-        else if (curOffset >= $("#vello-line").offset().top - navbarHeight && curOffset < $("#quote").offset().top - navbarHeight - 30 && menuHighlight !== 3) {
+        else if (curOffset >= $("#pivotal-line").offset().top - navbarHeight && curOffset < $("#vello-line").offset().top - navbarHeight && menuHighlight !== 3) {
             resetMenuHighlight();
+            $(".navigation").css("background-color", "rgba(39,186,189,1)");
             menuHighlight = 3;
             if (width < 960) {
                 $(".work").addClass("menu-highlight").find("a").addClass("menu-text-highlight-mobile");
