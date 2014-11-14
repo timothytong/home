@@ -43,7 +43,7 @@ function resizeContent() {
     jobDetPanel.css("left", ((width / 2) - (jobDetPanel.width() / 2)) + "px");
     workSec.css("height", jobDetPanel.height() + 40 + "px");
     projectSec.css("height", projectCont.height() + 100 + "px");
-    $("#project-list").css("margin-top",$("#projects .container .section-header").height()+30+"px");
+    $("#project-list").css("margin-top", $("#projects .container .section-header").height() + 30 + "px");
 
     if (width <= 500) {
         introContainer.find("p").html("Technology Enthusiast</br>Perfectionist</br>Animal Lover");
@@ -64,8 +64,8 @@ function resizeContent() {
             introContainer.find("h1").css("margin-top", "20px");
         }
     }
-    
-    
+
+
 }
 $(document).ready(function () {
     var width = $(window).width();
@@ -172,10 +172,20 @@ $(document).ready(function () {
             }
 
         }
-        else if (curOffset >= $("#work").offset().top - navbarHeight && curOffset < $("#quote").offset().top - navbarHeight - 30 && menuHighlight !== 2) {
+        else if (curOffset >= $("#work").offset().top - navbarHeight && curOffset < $("#vello-line").offset().top - navbarHeight && menuHighlight !== 2) {
             resetMenuHighlight();
             $(".navigation").css("background-color", "rgba(39,186,189,1)");
             menuHighlight = 2;
+            if (width < 960) {
+                $(".work").addClass("menu-highlight").find("a").addClass("menu-text-highlight-mobile");
+            }
+            else {
+                $(".work").find("a").addClass("menu-text-highlight");
+            }
+        }
+        else if (curOffset >= $("#vello-line").offset().top - navbarHeight && curOffset < $("#quote").offset().top - navbarHeight - 30 && menuHighlight !== 3) {
+            resetMenuHighlight();
+            menuHighlight = 3;
             if (width < 960) {
                 $(".work").addClass("menu-highlight").find("a").addClass("menu-text-highlight-mobile");
             }
@@ -187,9 +197,9 @@ $(document).ready(function () {
             resetMenuHighlight();
             menuHighlight = 0;
         }
-        else if (curOffset >= $("#projects").offset().top - navbarHeight && curOffset < $("#contact").offset().top - navbarHeight && menuHighlight !== 3) {
+        else if (curOffset >= $("#projects").offset().top - navbarHeight && curOffset < $("#contact").offset().top - navbarHeight && menuHighlight !== 4) {
             resetMenuHighlight();
-            menuHighlight = 3;
+            menuHighlight = 4;
             if (width < 960) {
                 $(".projects").addClass("menu-highlight").find("a").addClass("menu-text-highlight-mobile");
             }
@@ -197,9 +207,9 @@ $(document).ready(function () {
                 $(".projects").find("a").addClass("menu-text-highlight");
             }
         }
-        else if (curOffset >= $("#contact").offset().top - navbarHeight && menuHighlight !== 4) {
+        else if (curOffset >= $("#contact").offset().top - navbarHeight && menuHighlight !== 5) {
             resetMenuHighlight();
-            menuHighlight = 4;
+            menuHighlight = 5;
             if (width < 960) {
                 $(".contact").addClass("menu-highlight").find("a").addClass("menu-text-highlight-mobile");
             }
@@ -219,6 +229,10 @@ $(document).ready(function () {
     });
     $("#vello-link").bind('touchstart touchend', function () {
         $(this).toggleClass('vello-link-highlight');
+    });
+
+    $("#vello img").hover(function () {
+        $("#vello-link").toggleClass("vello-link-highlight");
     });
 });
         

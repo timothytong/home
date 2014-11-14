@@ -446,14 +446,18 @@ nav{
 #work .container .job-details{
     width: 70%;
     position: absolute;
+    list-style: none;
+    padding: 0;
 }
 .position{
     font-family: "MyriadSetPro","Open Sans",sans-serif;
     font-size: 2.5em;
     font-weight: 300;
     color: #303030;
-    margin-top: 120px;
     text-align: left;
+}
+.vello{
+    margin-top: 120px;
 }
 .company-location{
     font-family: "Open Sans",sans-serif;
@@ -476,12 +480,18 @@ nav{
     padding-top: 10px;
     padding-bottom: 10px;
 }
-#work .job-details #vello h5{
+#work .job-details h5{
     text-align: center;
     font-family: "MyriadSetPro","Open Sans",sans-serif;
     font-size: 1.2em;
     font-weight: 300;
     letter-spacing: 2px;
+}
+#work .job-details #pivotal{
+    margin: auto;
+    width: 223px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 #work .exp-list {
     list-style: none;
@@ -510,8 +520,7 @@ nav{
     letter-spacing: 2px;
     font-variant: small-caps;
 }
-#vello-link{
-    text-decoration: none;
+.company-link{
     color: #333;
     transition: color .3s ease;
     -moz-transition: color .3s ease;
@@ -521,7 +530,7 @@ nav{
 }
 
 .vello-link-highlight{
-    color: rgb(39,186,189);
+    color: rgb(39,186,189)!important;
     transition: color .3s ease;
     -moz-transition: color .3s ease;
     -o-transition: color .3s ease;
@@ -530,6 +539,7 @@ nav{
 }
 
 #vello-link:hover{
+    text-decoration: none;
     color: rgb(39,186,189);
     transition: color .3s ease;
     -moz-transition: color .3s ease;
@@ -537,6 +547,7 @@ nav{
     -ms-transition: color .3s ease;
     -webkit-transition: color .3s ease;
 }
+
 /*work END*/
 
 /*quote BEGIN*/
@@ -563,9 +574,14 @@ nav{
     margin: auto;
     padding-top: 10px;
 }
+
 /*quote END*/
 
 /*projects BEGIN*/
+#project-list a{
+    text-decoration: none;
+    color: black;
+}
 #project-list{
     font-family: "MyriadSetPro","Open Sans",sans-serif;
     list-style: none;
