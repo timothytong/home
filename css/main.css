@@ -672,7 +672,7 @@ nav{
     }
 }
 @media screen and (min-width: 640px){
-    #work .job-details #vello{
+    #vello, #pivotal-labs{
         right: 0;
         top: 95px;
         height: 60px;
