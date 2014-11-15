@@ -520,7 +520,7 @@ nav{
     letter-spacing: 2px;
     font-variant: small-caps;
 }
-.company-link{
+.company-link, .company-link span{
     color: #333;
     transition: color .3s ease;
     -moz-transition: color .3s ease;
@@ -529,7 +529,7 @@ nav{
     -webkit-transition: color .3s ease;
 }
 
-.vello-link-highlight{
+/*.vello-link-highlight{
     color: rgb(39,186,189)!important;
     transition: color .3s ease;
     -moz-transition: color .3s ease;
@@ -537,15 +537,10 @@ nav{
     -ms-transition: color .3s ease;
     -webkit-transition: color .3s ease;
 }
-
+*/
 #vello-link:hover{
-    text-decoration: none;
-    color: rgb(39,186,189);
-    transition: color .3s ease;
-    -moz-transition: color .3s ease;
-    -o-transition: color .3s ease;
-    -ms-transition: color .3s ease;
-    -webkit-transition: color .3s ease;
+/*    text-decoration: none;*/
+    color: rgb(39,186,189)!important;
 }
 
 /*work END*/
