@@ -96,16 +96,36 @@ $(document).ready(function () {
         e.preventDefault();
         var body = $("html, body");
         if ($(this).is(".about")) {
-            body.animate({scrollTop: $('#about').offset().top - $('.navigation').height()}, 1000, 'swing');
+            body.animate({scrollTop: $('#about').offset().top - $('.navigation').height()}, 1000, 'swing', function () {
+                checkWidth();
+                if (width <= 959) {
+                    $('#sections').removeClass("sections-open");
+                }
+            });
         }
         else if ($(this).is(".work")) {
-            body.animate({scrollTop: $('#work').offset().top - $('.navigation').height()}, 1000, 'swing');
+            body.animate({scrollTop: $('#work').offset().top - $('.navigation').height()}, 1000, 'swing', function () {
+                checkWidth();
+                if (width <= 959) {
+                    $('#sections').removeClass("sections-open");
+                }
+            });
         }
         else if ($(this).is(".projects")) {
-            body.animate({scrollTop: $('#projects').offset().top - $('.navigation').height()}, 1000, 'swing');
+            body.animate({scrollTop: $('#projects').offset().top - $('.navigation').height()}, 1000, 'swing', function () {
+                checkWidth();
+                if (width <= 959) {
+                    $('#sections').removeClass("sections-open");
+                }
+            });
         }
         else if ($(this).is(".contact")) {
-            body.animate({scrollTop: $('#contact').offset().top - $('.navigation').height()}, 1000, 'swing');
+            body.animate({scrollTop: $('#contact').offset().top - $('.navigation').height()}, 1000, 'swing', function () {
+                checkWidth();
+                if (width <= 959) {
+                    $('#sections').removeClass("sections-open");
+                }
+            });
         }
     });
     $('#initial-and-name .back-to-top').click(function (e) {
