@@ -539,8 +539,14 @@ nav{
 }
 */
 #vello-link:hover{
-/*    text-decoration: none;*/
+    /*    text-decoration: none;*/
     color: rgb(39,186,189)!important;
+}
+.red{
+    color: rgb(196,18,48)!important;
+}
+.blue{
+    color: rgb(0,119,192)!important;
 }
 
 /*work END*/
@@ -647,6 +653,9 @@ nav{
     #work .container .job-details{
         width: 95% !important;
     }
+    #timeline{
+        visibility: hidden;
+    }
 }
 
 @media screen and (min-width: 500px){
@@ -670,14 +679,50 @@ nav{
         margin-left: -20px;
         vertical-align: middle;
     }
+
+    #timeline{
+        position: absolute;
+        width: 6px;
+        background-color: #404040;
+        border-radius: 2px;
+    }
+    .circle{
+        height: 20px;
+        width: 20px;
+        border-radius: 10px;
+        position: absolute;
+        background-color: #eeeeee;
+        border-color: black;
+        border-width: 4px;
+        border-style: solid;
+        transition: all .4s ease;
+        -moz-transition: all .4s ease;
+        -o-transition: all .4s ease;
+        -ms-transition: all .4s ease;
+        -webkit-transition: all .4s ease;
+    }
+    .circle-pivotal-color{
+        background-color: rgb(196,18,48)!important;
+        border-color: rgb(0,119,192)!important;
+    }
+    .circle-vello-color{
+        background-color: white!important;
+        border-color: rgb(37,186,189)!important;
+    }
 }
 @media screen and (min-width: 640px){
-    #vello, #pivotal-labs{
-        right: 0;
+    #vello{
+        /*        right: 20px;*/
+        right:0px;
         top: 95px;
-        height: 60px;
         position: absolute;
     }
+/*  Not needed... yet.  
+    #pivotal{
+        right: 0;
+        top: 95px;
+        position: absolute;
+    }*/
 }
 @media screen and (max-width: 960px){
     .navigation {
@@ -1173,4 +1218,6 @@ nav{
         animation-duration: 1.5s;
         animation-iteration-count: infinite;
     }
+    // work section timeline
+
 }
