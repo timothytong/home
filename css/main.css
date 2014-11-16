@@ -654,7 +654,7 @@ nav{
         width: 95% !important;
     }
     #timeline{
-        visibility: hidden;
+        display:none;
     }
 }
 
