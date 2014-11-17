@@ -433,7 +433,7 @@ nav{
     font-weight: 500;
 }
 #about-filter{
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.4);
     height: 500px;
 }
 /*about END*/
@@ -664,19 +664,21 @@ nav{
     #intro .container h1{
         font-size: 4.3em;
     }
-    #about{
-        background-image: url(../images/bw_fox.jpg);
-        background-attachment: fixed;
-        background-position: 0 0;
-        background-repeat: no-repeat;
-        height: 500px;
-        position: relative;
-    }
+
     #about .container .section-header{
         padding: 20px 0 0 0;
     }
+    #about{
+        /*        background-image: url(../images/bw_fox.jpg);*/
+        background-attachment: fixed;
+        background-image: url(../images/portrait_bw.jpg);
+        background-repeat: no-repeat;
+        position: relative;
+        background-size: auto 90%;
+        background-position: right bottom;
+    }
     #about .container p{
-        width: 70%;
+        width: 55%;
         margin-top: 12px;
         margin-left: -20px;
         vertical-align: middle;
@@ -719,12 +721,12 @@ nav{
         top: 95px;
         position: absolute;
     }
-/*  Not needed... yet.  
-    #pivotal{
-        right: 0;
-        top: 95px;
-        position: absolute;
-    }*/
+    /*  Not needed... yet.  
+        #pivotal{
+            right: 0;
+            top: 95px;
+            position: absolute;
+        }*/
 }
 @media screen and (max-width: 960px){
     .navigation {
@@ -745,7 +747,8 @@ nav{
         left:80px;
     }
     #about .container p{
-        width: 100%;
+        width: 90%;
+        color:white;
     }
     #menu-icon{
         display: block;
@@ -1006,6 +1009,7 @@ nav{
         width: 80px;
         height: 40px;
     }
+
 
     .work{
         width: 80px;

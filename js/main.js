@@ -35,8 +35,8 @@ var resizeContent = function () {
         abtSec.css("height", abtContHeight + "px");
         abtFilter.css("height", abtContHeight + "px");
     } else {
-        abtSec.css("height", "439px");
-        abtFilter.css("height", "439px");
+        abtSec.css("height", "530px");
+        abtFilter.css("height", "530px");
     }
 
     //position of #intro .container
