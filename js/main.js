@@ -70,9 +70,9 @@ var resizeContent = function () {
     $('#vello').css("top", $("#pivotal-line").offset().top - $('#work').offset().top + 20 + "px");
 
     //Timeline
-    $('.circle-pivotal').css("top", $('.pivotal-labs .company-name').offset().top - $('#work').offset().top + "px").css('left', $('.pivotal-labs .position').offset().left / 2 + 'px');
-    $('.circle-vello').css("top", $('.vello .company-name').offset().top - $('#work').offset().top + "px").css('left', $('.vello .position').offset().left / 2 + 'px');
-    $('#timeline').css("height", $('.pivotal-labs').height() + $('.vello').height() - 50 + 'px').css("top", $('.pivotal-labs .company-name').offset().top + $(".circle").height() / 2 - $('#work').offset().top + "px").css('left', $('.circle').offset().left + 8 + "px");
+//    $('.circle-pivotal').css("top", $('.pivotal-labs .company-name').offset().top - $('#work').offset().top + "px").css('left', $('.pivotal-labs .position').offset().left / 2 + 'px');
+//    $('.circle-vello').css("top", $('.vello .company-name').offset().top - $('#work').offset().top + "px").css('left', $('.vello .position').offset().left / 2 + 'px');
+//    $('#timeline').css("height", $('.pivotal-labs').height() + $('.vello').height() - 50 + 'px').css("top", $('.pivotal-labs .company-name').offset().top + $(".circle").height() / 2 - $('#work').offset().top + "px").css('left', $('.circle').offset().left + 8 + "px");
 };
 $(document).ready(function () {
     var width = $(window).width();
