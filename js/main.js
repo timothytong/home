@@ -10,7 +10,7 @@ function resetMenuHighlight() {
     $(".navigation").css("background-color", "rgba(64,64,64,0.85)");
 
 }
-//responsiveness
+//respnnsiveness
 var resizeContent = function () {
     // var browser = window.navigator.userAgent;
 //            var msie = browser.indexOf("MSIE ");
@@ -37,6 +37,7 @@ var resizeContent = function () {
     } else {
         abtSec.css("height", "530px");
         abtFilter.css("height", "530px");
+        $("#about .container p").css('width','689px');
     }
 
     //position of #intro .container
