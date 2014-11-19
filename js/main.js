@@ -172,32 +172,32 @@ $(document).ready(function () {
         var width = $(window).width();
         var curOffset = $(this).scrollTop();
         if (curOffset >= $("#about").offset().top - navbarHeight && navHidden) {
-            $(".navigation").slideDown();
             navHidden = false;
+            $(".navigation").slideDown();
         }
         if (curOffset < $("#about").offset().top - navbarHeight && !navHidden) {
-            $(".navigation").slideUp();
             navHidden = true;
+            $(".navigation").slideUp();
         }
         if (curOffset < $("#about").offset().top - navbarHeight) {
             resetMenuHighlight();
             menuHighlight = 0;
         }
         else if (curOffset >= $("#about").offset().top - navbarHeight && curOffset < $("#work").offset().top - navbarHeight - 50 && menuHighlight !== 1) {
+            menuHighlight = 1;
             resetMenuHighlight();
             //$(".circle-pivotal").removeClass("circle-pivotal-color");
             //$(".circle-vello").removeClass("circle-vello-color");
-            menuHighlight = 1;
             if (width < 960) {
                 $(".about").addClass("menu-highlight").find("a").addClass("menu-text-highlight-mobile");
             }
             else {
-                $(".about").find("a").addClass("menu-text-highlight");
+                $(".about a").addClass("menu-text-highlight");
             }
         }
         else if (curOffset >= $("#work").offset().top - 50 - navbarHeight && curOffset < $("#pivotal-line").offset().top - navbarHeight - 50 && menuHighlight !== 2) {
-            resetMenuHighlight();
             menuHighlight = 2;
+            resetMenuHighlight();
             $(".navigation").css("background-color", "rgba(0,119,192,1)");
             $("#pivotal-link #blue").css("color", "rgb(0,119,192)");
             $("#pivotal-link #red").css("color", "rgb(196,18,48)");
@@ -211,12 +211,12 @@ $(document).ready(function () {
             }
         }
         else if (curOffset >= $("#pivotal-line").offset().top - 50 - navbarHeight && curOffset < $("#quote").offset().top - navbarHeight && menuHighlight !== 3) {
+            menuHighlight = 3;
             resetMenuHighlight();
             $(".navigation").css("background-color", "rgba(39,186,189,1)");
             $("#vello-link").css("color", "rgb(39,186,189)");
             //$(".circle-pivotal").addClass("circle-pivotal-color");
             //$(".circle-vello").addClass("circle-vello-color");
-            menuHighlight = 3;
             if (width < 960) {
                 $(".work").addClass("menu-highlight").find("a").addClass("menu-text-highlight-mobile");
             }
@@ -225,14 +225,14 @@ $(document).ready(function () {
             }
         }
         else if (curOffset >= $("#quote").offset().top - navbarHeight - 30 && curOffset < $("#projects").offset().top - navbarHeight && menuHighlight !== 0) {
+            menuHighlight = 0;
             resetMenuHighlight();
             //$(".circle-pivotal").removeClass("circle-pivotal-color");
             //$(".circle-vello").removeClass("circle-vello-color");
-            menuHighlight = 0;
         }
         else if (curOffset >= $("#projects").offset().top - navbarHeight && curOffset < $("#contact").offset().top - navbarHeight && menuHighlight !== 4) {
-            resetMenuHighlight();
             menuHighlight = 4;
+            resetMenuHighlight();
             //$(".circle-pivotal").removeClass("circle-pivotal-color");
             //$(".circle-vello").removeClass("circle-vello-color");
             if (width < 960) {
@@ -243,10 +243,10 @@ $(document).ready(function () {
             }
         }
         else if (curOffset >= $("#contact").offset().top - navbarHeight && menuHighlight !== 5) {
+            menuHighlight = 5;
             resetMenuHighlight();
             //$(".circle-pivotal").removeClass("circle-pivotal-color");
             //$(".circle-vello").removeClass("circle-vello-color");
-            menuHighlight = 5;
             if (width < 960) {
                 $(".contact").addClass("menu-highlight").find("a").addClass("menu-text-highlight-mobile");
             }
