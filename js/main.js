@@ -20,51 +20,42 @@ var resizeContent = function () {
     var height = $(window).height();
     $("#intro").height(height);
     var width = $(window).width();
-    var introContainer = $("#intro .container");
-    var introScrlBtn = $("#intro #scrl-dwn-btn");
-    var jobDetPanel = $(".job-details");
-    var abtSec = $("#about");
-    var workSec = $("#work");
-    var projectSec = $("#projects");
-    var projectCont = $("#project-list");
-
-    var abtFilter = $("#about-filter");
     if (width <= 1320) {
         var abtContHeight = $("#about .container").height();
-        abtContHeight += 20;
-        abtSec.css("height", abtContHeight + "px");
-        abtFilter.css("height", abtContHeight + "px");
+        abtContHeight += 30;
+        $("#about").css("height", abtContHeight + "px");
+        $("#about-filter").css("height", abtContHeight + "px");
     } else {
-        abtSec.css("height", "530px");
-        abtFilter.css("height", "530px");
+        $("#about").css("height", "540px");
+        $("#about-filter").css("height", "540px");
         $("#about .container p").css('width','689px');
     }
 
     //position of #intro .container
-    introContainer.css("position", "absolute").css("left", ((width / 2) - (introContainer.width() / 2)) + "px").css("top", ((height / 2) - (introContainer.height() / 2) - 20) + "px");
-    introScrlBtn.css("left", ((width / 2) - (introScrlBtn.width() / 2)) + "px");
-    jobDetPanel.css("left", ((width / 2) - (jobDetPanel.width() / 2)) + "px");
-    workSec.css("height", jobDetPanel.height() + 40 + "px");
-    projectSec.css("height", projectCont.height() + 100 + "px");
+    $("#intro .container").css("position", "absolute").css("left", ((width / 2) - ($("#intro .container").width() / 2)) + "px").css("top", ((height / 2) - ($("#intro .container").height() / 2) - 20) + "px");
+    $("#intro #scrl-dwn-btn").css("left", ((width / 2) - ($("#intro #scrl-dwn-btn").width() / 2)) + "px");
+    $(".job-details").css("left", ((width / 2) - ($(".job-details").width() / 2)) + "px");
+    $("#work").css("height", $(".job-details").height() + 40 + "px");
+    $("#projects").css("height", $("#project-list").height() + 120 + "px");
     $("#project-list").css("margin-top", $("#projects .container .section-header").height() + 30 + "px");
 
     if (width <= 500) {
-        introContainer.find("p").html("Technology Enthusiast</br>Perfectionist</br>Animal Lover");
-        introContainer.find("h1").html("timothy</br>tong");
+        $("#intro .container").find("p").html("Technology Enthusiast</br>Perfectionist</br>Animal Lover");
+        $("#intro .container").find("h1").html("timothy</br>tong");
         $("#about .section-header").html("A<span>bout.</span>");
         $("#work .section-header").html("W<span>ork.</span>");
 
     } else {
         if (width <= 720) {
-            workSec.css("height", jobDetPanel.height() + 60 + "px");
+            $("#work").css("height", $(".job-details").height() + 60 + "px");
         }
-        introContainer.find("p").html("Technology Enthusiast <span class='dot'><i class='fa fa-circle'></i></span> Perfectionist <span class='dot'><i class='fa fa-circle'></i></span> Animal Lover");
-        introContainer.find("h1").html("timothy tong");
+        $("#intro .container").find("p").html("Technology Enthusiast <span class='dot'><i class='fa fa-circle'></i></span> Perfectionist <span class='dot'><i class='fa fa-circle'></i></span> Animal Lover");
+        $("#intro .container").find("h1").html("timothy tong");
         $("#about .section-header").html("A<span>bout me.</span>");
         $("#work .section-header").html("W<span>ork experience.</span>");
         $("#intro-name").addClass("intro-name-desktop");
         if (height <= 400) {
-            introContainer.find("h1").css("margin-top", "20px");
+            $("#intro .container").find("h1").css("margin-top", "20px");
         }
     }
     $('#vello').css("top", $("#pivotal-line").offset().top - $('#work').offset().top + 20 + "px");
@@ -194,8 +185,8 @@ $(document).ready(function () {
         }
         else if (curOffset >= $("#about").offset().top - navbarHeight && curOffset < $("#work").offset().top - navbarHeight - 50 && menuHighlight !== 1) {
             resetMenuHighlight();
-            $(".circle-pivotal").removeClass("circle-pivotal-color");
-            $(".circle-vello").removeClass("circle-vello-color");
+            //$(".circle-pivotal").removeClass("circle-pivotal-color");
+            //$(".circle-vello").removeClass("circle-vello-color");
             menuHighlight = 1;
             if (width < 960) {
                 $(".about").addClass("menu-highlight").find("a").addClass("menu-text-highlight-mobile");
@@ -210,8 +201,8 @@ $(document).ready(function () {
             $(".navigation").css("background-color", "rgba(0,119,192,1)");
             $("#pivotal-link #blue").css("color", "rgb(0,119,192)");
             $("#pivotal-link #red").css("color", "rgb(196,18,48)");
-            $(".circle-pivotal").addClass("circle-pivotal-color");
-            $(".circle-vello").addClass("circle-vello-color");
+            //$(".circle-pivotal").addClass("circle-pivotal-color");
+            //$(".circle-vello").addClass("circle-vello-color");
             if (width < 960) {
                 $(".work").addClass("menu-highlight").find("a").addClass("menu-text-highlight-mobile");
             }
@@ -219,12 +210,12 @@ $(document).ready(function () {
                 $(".work").find("a").addClass("menu-text-highlight");
             }
         }
-        else if (curOffset >= $("#pivotal-line").offset().top - 50 - navbarHeight && curOffset < $("#vello-line").offset().top - navbarHeight && menuHighlight !== 3) {
+        else if (curOffset >= $("#pivotal-line").offset().top - 50 - navbarHeight && curOffset < $("#quote").offset().top - navbarHeight && menuHighlight !== 3) {
             resetMenuHighlight();
             $(".navigation").css("background-color", "rgba(39,186,189,1)");
             $("#vello-link").css("color", "rgb(39,186,189)");
-            $(".circle-pivotal").addClass("circle-pivotal-color");
-            $(".circle-vello").addClass("circle-vello-color");
+            //$(".circle-pivotal").addClass("circle-pivotal-color");
+            //$(".circle-vello").addClass("circle-vello-color");
             menuHighlight = 3;
             if (width < 960) {
                 $(".work").addClass("menu-highlight").find("a").addClass("menu-text-highlight-mobile");
@@ -235,15 +226,15 @@ $(document).ready(function () {
         }
         else if (curOffset >= $("#quote").offset().top - navbarHeight - 30 && curOffset < $("#projects").offset().top - navbarHeight && menuHighlight !== 0) {
             resetMenuHighlight();
-            $(".circle-pivotal").removeClass("circle-pivotal-color");
-            $(".circle-vello").removeClass("circle-vello-color");
+            //$(".circle-pivotal").removeClass("circle-pivotal-color");
+            //$(".circle-vello").removeClass("circle-vello-color");
             menuHighlight = 0;
         }
         else if (curOffset >= $("#projects").offset().top - navbarHeight && curOffset < $("#contact").offset().top - navbarHeight && menuHighlight !== 4) {
             resetMenuHighlight();
             menuHighlight = 4;
-            $(".circle-pivotal").removeClass("circle-pivotal-color");
-            $(".circle-vello").removeClass("circle-vello-color");
+            //$(".circle-pivotal").removeClass("circle-pivotal-color");
+            //$(".circle-vello").removeClass("circle-vello-color");
             if (width < 960) {
                 $(".projects").addClass("menu-highlight").find("a").addClass("menu-text-highlight-mobile");
             }
@@ -253,8 +244,8 @@ $(document).ready(function () {
         }
         else if (curOffset >= $("#contact").offset().top - navbarHeight && menuHighlight !== 5) {
             resetMenuHighlight();
-            $(".circle-pivotal").removeClass("circle-pivotal-color");
-            $(".circle-vello").removeClass("circle-vello-color");
+            //$(".circle-pivotal").removeClass("circle-pivotal-color");
+            //$(".circle-vello").removeClass("circle-vello-color");
             menuHighlight = 5;
             if (width < 960) {
                 $(".contact").addClass("menu-highlight").find("a").addClass("menu-text-highlight-mobile");
