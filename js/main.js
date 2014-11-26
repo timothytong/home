@@ -52,6 +52,9 @@ var resizeContent = function () {
         $aboutSection.css("height", "540px");
         $aboutFilter.css("height", "540px");
         $aboutPar.css('width', '689px');
+        $jobDets.css('width', '954px');
+        $quoteSec.find('h1').css('width','1244px');
+        $projList.css('width','1244px');
     }
 
     //position of #intro .container
