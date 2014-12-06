@@ -579,6 +579,11 @@ nav{
 /*quote END*/
 
 /*projects BEGIN*/
+.projUnit{
+    padding: 10px;
+}
+
+
 #project-list a{
     text-decoration: none;
     color: black;

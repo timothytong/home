@@ -7,7 +7,9 @@ var $introScrlBtn = $("#intro #scrl-dwn-btn");
 var $jobDets = $(".job-details");
 var $workSection = $("#work");
 var $projectSec = $("#projects");
+var $projCont = $("#projects .container");
 var $projList = $("#project-list");
+var $units = $(".projUnit");
 var $workHead = $("#work .section-header");
 var $introName = $("#intro-name");
 var $aboutHead = $("#about .section-header");
@@ -53,15 +55,18 @@ var resizeContent = function () {
         $aboutFilter.css("height", "540px");
         $aboutPar.css('width', '689px');
         $jobDets.css('width', '954px');
-        $quoteSec.find('h1').css('width','1244px');
+        $quoteSec.find('h1').css('width','1244px').css("margin","30px auto");
         $projList.css('width','1244px');
+        $projCont.css('width','1244px');
     }
-
+    
     //position of #intro .container
     $introCont.css("position", "absolute").css("left", ((width / 2) - ($introCont.width() / 2)) + "px").css("top", ((height / 2) - ($introCont.height() / 2) - 20) + "px");
     $introScrlBtn.css("left", ((width / 2) - ($introScrlBtn.width() / 2)) + "px");
     $jobDets.css("left", ((width / 2) - ($jobDets.width() / 2)) + "px");
     $workSection.css("height", $jobDets.height() + 40 + "px");
+    $units.css("height", $units.width()+"px");
+    
     $projectSec.css("height", $projList.height() + 120 + "px");
     $projList.css("margin-top", $("#projects .container .section-header").height() + 30 + "px");
 
@@ -199,11 +204,11 @@ $(document).ready(function () {
     $(window).scroll(function () {
         var width = $(window).width();
         var curOffset = $(this).scrollTop();
-        if (curOffset >= $aboutSection.offset().top - navbarHeight && navHidden) {
+        if (curOffset >= $aboutSection.offset().top - 2 * navbarHeight && navHidden) {
             navHidden = false;
             $navigation.slideDown();
         }
-        if (curOffset < $aboutSection.offset().top - navbarHeight && !navHidden) {
+        if (curOffset < $aboutSection.offset().top / 2 && !navHidden) {
             navHidden = true;
             $navigation.slideUp();
         }
