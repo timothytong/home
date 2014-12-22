@@ -66,7 +66,7 @@ var resizeContent = function () {
     $jobDets.css("left", ((width / 2) - ($jobDets.width() / 2)) + "px");
     $workSection.css("height", $jobDets.height() + 40 + "px");
     $units.css("height", $units.width()+"px");
-    
+//    $introSection.parallax({imageSrc: './images/apple-bg.jpg'});
     $projectSec.css("height", $projList.height() + 120 + "px");
     $projList.css("margin-top", $("#projects .container .section-header").height() + 30 + "px");
 
@@ -204,19 +204,21 @@ $(document).ready(function () {
     $(window).scroll(function () {
         var width = $(window).width();
         var curOffset = $(this).scrollTop();
-        if (curOffset >= $aboutSection.offset().top - 2 * navbarHeight && navHidden) {
+        if (curOffset >= $aboutSection.offset().top - 3 * navbarHeight && navHidden) {
             navHidden = false;
-            $navigation.slideDown();
+//            $navigation.slideDown();
+            $navigation.css("margin-top","0px");
         }
-        if (curOffset < $aboutSection.offset().top / 2 && !navHidden) {
+        if (curOffset < $aboutSection.offset().top / 2 && !navHidden) { 
             navHidden = true;
-            $navigation.slideUp();
+//            $navigation.slideUp();
+            $navigation.css("margin-top", -navbarHeight+"px");
         }
-        if (curOffset < $aboutSection.offset().top - navbarHeight) {
+        if (curOffset < $aboutSection.offset().top - 3 * navbarHeight) {
             resetMenuHighlight();
             menuHighlight = 0;
         }
-        else if (curOffset >= $aboutSection.offset().top - navbarHeight && curOffset < $workSection.offset().top - navbarHeight - 50 && menuHighlight !== 1) {
+        else if (curOffset < $workSection.offset().top - navbarHeight - 50 && menuHighlight !== 1) {
             menuHighlight = 1;
             resetMenuHighlight();
             //$(".circle-pivotal").removeClass("circle-pivotal-color");
@@ -243,7 +245,7 @@ $(document).ready(function () {
                 $menuWork.find("a").addClass("menu-text-highlight");
             }
         }
-        else if (curOffset >= $pivotalLine.offset().top - 50 - navbarHeight && curOffset < $quoteSec.offset().top - navbarHeight && menuHighlight !== 3) {
+        else if (curOffset >= $pivotalLine.offset().top - 50 - navbarHeight && curOffset < $quoteSec.offset().top - navbarHeight - 30 && menuHighlight !== 3) {
             menuHighlight = 3;
             resetMenuHighlight();
             $navigation.css("background-color", "rgba(39,186,189,1)");
@@ -260,6 +262,7 @@ $(document).ready(function () {
         else if (curOffset >= $quoteSec.offset().top - navbarHeight - 30 && curOffset < $projectSec.offset().top - navbarHeight && menuHighlight !== 0) {
             menuHighlight = 0;
             resetMenuHighlight();
+            $navigation.css("background-color", "rgba(64,64,64,1)");
             //$(".circle-pivotal").removeClass("circle-pivotal-color");
             //$(".circle-vello").removeClass("circle-vello-color");
         }

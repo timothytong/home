@@ -134,26 +134,27 @@
 }
 
 body{
-    background-color:rgb(64,64,64);
+    background-color:#646464;
 }
 
 /*    navbar BEGIN*/
 .navigation {
-    display: none;
+/*    display: none;*/
+    margin-top: -80px;
     position:fixed;
-    top:0!important;
-    left:0!important;
+    top:0;
+    left:0;
     width:100%;
     height:80px;
     background-color:rgba(64,64,64,0.85);//#404040
     /*        -webkit-box-shadow:0 8px 6px -6px #000;
             -moz-box-shadow:0 8px 6px -6px #000;
             box-shadow:0 8px 6px -6px #ccc;*/
-    transition: background-color .4s ease;
-    -moz-transition: background-color .4s ease;
-    -o-transition: background-color .4s ease;
-    -ms-transition: background-color .4s ease;
-    -webkit-transition: background-color .4s ease;
+    transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    -ms-transition: all .4s ease;
+    -webkit-transition: all .4s ease;
 }
 #initial-and-name .bold{
     font-weight: 500;
@@ -226,9 +227,10 @@ nav{
 
 /*intro BEGIN*/
 #intro{
-    background-color: #e3e3e3;
+/*    background-color: #e3e3e3;*/
+    
     position: relative;
-    background-image: url(../images/apple-bg.jpg);
+/*    background-image: url(../images/apple-bg.jpg);*/
     background-size: cover;
 }
 /*#intro-name{
@@ -743,6 +745,7 @@ nav{
 @media screen and (max-width: 960px){
     .navigation {
         height:60px;
+        margin-top: -60px;
     }
     #initial-and-name {
         width:360px;
