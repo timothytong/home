@@ -409,23 +409,21 @@ nav{
     width: 60%;
     color: white;
 }
-
-#about .container #adjustment{
-    margin-top: 120px;
-}
 #about{
     background-color: #141414;
 }
 .section-header{
+    margin-top: 20px;
     font-family: "MyriadSetPro","Open Sans",sans-serif;
     font-size: 4em;
     font-weight: 500;
     color: white;
-    margin-left: -20px;
     margin-bottom: 0px !important;
     border-bottom-style: solid;
     border-bottom-width: 1px;
-    position: absolute;
+    display: inline-block;
+    text-align: center;
+    margin: 20px auto auto auto;
 }
 .section-header span{
     font-weight: 300;
@@ -457,9 +455,6 @@ nav{
     font-weight: 300;
     color: #303030;
     text-align: left;
-}
-.pivotal-labs{
-    margin-top: 120px;
 }
 .company-location{
     font-family: "Open Sans",sans-serif;
@@ -581,11 +576,18 @@ nav{
 /*quote END*/
 
 /*projects BEGIN*/
+#projects .container{
+    width: 70% !important;
+}
 .projUnit{
-    padding: 10px;
+    margin:60px 0px -30px 0px;
+    background-color: white;
+    border-width: 1px;
+    border-color: #bebebe;
+    border-style: solid;
 }
 
-
+/* Old project list.
 #project-list a{
     text-decoration: none;
     color: black;
@@ -623,7 +625,7 @@ nav{
 }
 #project-list{
     padding: 0;
-}
+}*/
 /*projects END*/
 
 @media screen and (max-width: 770px){
@@ -732,7 +734,7 @@ nav{
     #vello{
         /*        right: 20px;*/
         right:0px;
-        top: 95px;
+        top: 65px;
         position: absolute;
     }
     /*  Not needed... yet.  
@@ -1240,4 +1242,42 @@ nav{
     }
     // work section timeline
 
+}
+@media screen and (min-width: 924px) {
+    #work .container .job-details{
+        width: 829px;
+    }   
+}
+
+@media screen and (min-width: 1320px) {
+    #about, #about-filter{
+        height: 540px;
+    }
+    #about .container{
+        height: 540px;
+        width: 1154px;
+    }
+    #about .container p{
+        width: 628px;
+    }
+    .job-details{
+        width: 954px;
+    }
+    #quote h1{
+        width: 1244px;
+        margin: 30px auto;
+    }
+}
+
+@media screen and (min-width: 1491px){
+    #about .container p{
+        text-align: center;
+    }
+    #about .container{
+        position: absolute;
+        display: block;
+        margin: 5px auto auto auto;
+        width: auto;
+        height: 410px;
+    }
 }

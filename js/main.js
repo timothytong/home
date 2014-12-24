@@ -1,14 +1,14 @@
 var $introSection = $("#intro");
 var $aboutSection = $("#about");
 var $aboutFilter = $("#about-filter");
-var $aboutPar = $("#about .container p");
+var $abtCont = $("#about .container");
 var $introCont = $("#intro .container");
 var $introScrlBtn = $("#intro #scrl-dwn-btn");
 var $jobDets = $(".job-details");
 var $workSection = $("#work");
 var $projectSec = $("#projects");
 var $projCont = $("#projects .container");
-var $projList = $("#project-list");
+//var $projList = $("#project-list");
 var $units = $(".projUnit");
 var $workHead = $("#work .section-header");
 var $introName = $("#intro-name");
@@ -22,6 +22,8 @@ var $menuContact = $(".contact");
 var $menuAbout = $(".about");
 var $menuWork = $(".work");
 var $menuProj = $(".projects");
+var $abtSecHeader = $("#about .section-header");
+var $wrkSecHeader = $("#work .section-header");
 
 function resetMenuHighlight() {
     var menuSections = $(".navigation #sections ul");
@@ -42,33 +44,35 @@ var resizeContent = function () {
 //            var safari = browser.indexOf("Safari");
 //            var chrome = browser.indexOf("Chrome");
     // var firefox = browser.indexOf("Firefox");
+    
     var height = $(window).height();
     $introSection.height(height);
     var width = $(window).width();
     if (width <= 1320) {
         var abtContHeight = $("#about .container").height();
-        abtContHeight += 30;
+        abtContHeight += $abtSecHeader.height() + 40;
         $aboutSection.css("height", abtContHeight + "px");
         $aboutFilter.css("height", abtContHeight + "px");
-    } else {
-        $aboutSection.css("height", "540px");
-        $aboutFilter.css("height", "540px");
-        $aboutPar.css('width', '689px');
-        $jobDets.css('width', '954px');
-        $quoteSec.find('h1').css('width','1244px').css("margin","30px auto");
-        $projList.css('width','1244px');
-        $projCont.css('width','1244px');
+    }
+    if (width >= 1491){
+        $abtCont.css("margin-left", ((width / 2) - ($abtCont.width()/2)) + "px");
+    }
+    else{
+        $abtCont.css("margin-left", "auto");
     }
     
     //position of #intro .container
     $introCont.css("position", "absolute").css("left", ((width / 2) - ($introCont.width() / 2)) + "px").css("top", ((height / 2) - ($introCont.height() / 2) - 20) + "px");
+    $abtSecHeader.css("margin-left", ((width / 2) - ($abtSecHeader.width()/2)) + "px");
+    $wrkSecHeader.css("margin-left", ((width / 2) - ($wrkSecHeader.width()/2)) + "px");
     $introScrlBtn.css("left", ((width / 2) - ($introScrlBtn.width() / 2)) + "px");
     $jobDets.css("left", ((width / 2) - ($jobDets.width() / 2)) + "px");
-    $workSection.css("height", $jobDets.height() + 40 + "px");
+    $workSection.css("height", $jobDets.height() + $abtSecHeader.height() + 40 + "px");
     $units.css("height", $units.width()+"px");
 //    $introSection.parallax({imageSrc: './images/apple-bg.jpg'});
-    $projectSec.css("height", $projList.height() + 120 + "px");
-    $projList.css("margin-top", $("#projects .container .section-header").height() + 30 + "px");
+//    $projectSec.css("height", $projList.height() + 120 + "px");
+    $projectSec.css("height", $projCont.height() + 60 + 'px'); 
+//    $projList.css("margin-top", $("#projects .container .section-header").height() + 30 + "px");
 
     if (width <= 500) {
         $introCont.find("p").html("Technology Enthusiast</br>Perfectionist</br>Animal Lover");
@@ -89,7 +93,7 @@ var resizeContent = function () {
             $introCont.find("h1").css("margin-top", "20px");
         }
     }
-    $velloLogo.css("top", $pivotalLine.offset().top - $workSection.offset().top + 20 + "px");
+    $velloLogo.css("top", $pivotalLine.offset().top - $workSection.offset().top - 70 + "px");
 
     //Timeline
 //    $('.circle-pivotal').css("top", $('.pivotal-labs .company-name').offset().top - $workSection.offset().top + "px").css('left', $('.pivotal-labs .position').offset().left / 2 + 'px');

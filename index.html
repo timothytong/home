@@ -103,10 +103,10 @@ Want to check out my source code?  No problem!  Feel free to give comment or fee
 
     <div id="about"> <!-- data-stellar-background-ratio="0.5" -->
         <div id="about-filter">
+            <h2 class="section-header">A<span>bout me.</span></h2>
             <div class="container">
-                <h2 class="section-header">A<span>bout me.</span></h2>
                 <!--                <img id="round-portrait" src="./images/portrait_round.png" alt="round portrait">-->
-                <p id="adjustment">Hello and welcome, this is Tim.  I am a Computer Engineering student at the University of Waterloo.</p>
+                <p>Hello and welcome, this is Tim.  I am a Computer Engineering student at the University of Waterloo.</p>
                 <p>I consider myself a technology enthusiast. Since I was young, I have always been fascinated by what technology is capable of doing - it makes our lives so much easier and more enjoyable! Hence, I decided that it shall be my ultimate goal to unwrap and learn all about this mystery.</p>
                 <p>As a result of being so passionate about technology, I am interested in working with both hardware and software. In my spare time, I take initiative to learn new languages, get my hands dirty on software and libraries that I never saw before, and write apps.</p>
                 <p>My <span>aspiration</span> is to be part of a team that engineers great products and makes impact on the world.</p>
@@ -118,9 +118,8 @@ Want to check out my source code?  No problem!  Feel free to give comment or fee
                     <div class="circle circle-pivotal"></div>
                     <div class="circle circle-vello"></div>
                 </div>-->
-
+        <h2 class="section-header">W<span>ork experience.</span></h2>
         <div class="container">
-            <h2 class="section-header">W<span>ork experience.</span></h2>
             <ul class="job-details">
                 <li class="pivotal-labs">
                     <h3 class="position pivotal-labs">Agile Engineering</h3>
@@ -160,41 +159,58 @@ Want to check out my source code?  No problem!  Feel free to give comment or fee
         </div>
     </div>
     <div id="projects">
-<!--        <div class="container">
-            <div class="container-fluid" style="background-color: black">
+        <div class="container">
+            <div class="container-fluid project-grids">
                 <div class="row">
-                    <div class="col-sm-3 projUnit" style="background-color: blue"></div>
-                    <div class="col-sm-3 projUnit" style="background-color: green"></div>
-                    <div class="col-sm-3 projUnit" style="background-color: red"></div>
+                    <div class="col-sm-4">
+                        <div class="projUnit" id="dmcalc"></div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="projUnit" id="thalmaps"></div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="projUnit" id="dmcalc2"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="projUnit" id="dmcalc"></div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="projUnit" id="thalmaps"></div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="projUnit" id="dmcalc2"></div>
+                    </div>
                 </div>
             </div>
-        </div>-->
-                <div class="container">
-                    <h2 class="section-header">P<span>rojects.</span></h2>
-                    <ul id="project-list">
-                        <li id="dmcalc-ios">
-                            <h2 class="project-title">DMCalc.</h2>
-                            <h3 class="hashtag"><span>#</span>objective-c <span>#</span>ios <span>#</span>java <span>#</span>android</h3>
-                            <p>Started from scratch, DMCalc is a powerful tool capable of solving discrete mathematics problems such as Linear Diophantine Equations and congruence. Applying the knowledge I obtained from school, and combining it with my self-taught learning of Objective-C, I have managed to create this simple yet useful calculator that could assist many students in their assignments and courses.</p>
-                            <br>
-                            <p>Though started with the interface builder, to date, most of DMCalc<span>'</span>s UI has already been rewritten with solid code. Elements are generated programmatically, and positioned at the right place depending on the screen size of the device. And this is merely the beginning<span>;</span> more and more exciting features and functions are being added at the moment.</p>
-                            <br>
-                            <p>To satisfy the needs of more students who do not have an Apple device, my buddy <a href="http://www.victorszeto.com">Victor Szeto</a> and I translated DMCalc into an Android app.</p>
-                            <div class="line-separator"></div>
-                        </li>
-                        <li id="thalmaps">
-                            <h2 class="project-title">Thalmaps.</h2>
-                            <h3 class="hashtag"><span>#</span>objective-c <span>#</span>myo <span>#</span>hackthenorth <span>#</span>ios</h3>
-                            <div class="line-separator"></div>
-                        </li>
-                        <li id="dmcalc-2">
-                            <h2 class="project-title">DMCalc 2.</h2>
-                            <h3 class="hashtag"><span>#</span>swift <span>#</span>ios</h3>
-                            <p>DMCalc 2 <span>(</span>currently under development<span>)</span> is the successor of DMCalc <span>(</span>1<span>)</span>. It is all code-based and written in Swift, the newest programming language for iOS introduced by Apple back in June 2014. It will be more sophisticated, and will also deliver to users better UI/UX as it will feature more functions and fancy in-app transitions.</p>
-                             
-                        </li>
-                    </ul>
-                </div>
+        </div>
+        <!--                <div class="container">
+                            <h2 class="section-header">P<span>rojects.</span></h2>
+                            <ul id="project-list">
+                                <li id="dmcalc-ios">
+                                    <h2 class="project-title">DMCalc.</h2>
+                                    <h3 class="hashtag"><span>#</span>objective-c <span>#</span>ios <span>#</span>java <span>#</span>android</h3>
+                                    <p>Started from scratch, DMCalc is a powerful tool capable of solving discrete mathematics problems such as Linear Diophantine Equations and congruence. Applying the knowledge I obtained from school, and combining it with my self-taught learning of Objective-C, I have managed to create this simple yet useful calculator that could assist many students in their assignments and courses.</p>
+                                    <br>
+                                    <p>Though started with the interface builder, to date, most of DMCalc<span>'</span>s UI has already been rewritten with solid code. Elements are generated programmatically, and positioned at the right place depending on the screen size of the device. And this is merely the beginning<span>;</span> more and more exciting features and functions are being added at the moment.</p>
+                                    <br>
+                                    <p>To satisfy the needs of more students who do not have an Apple device, my buddy <a href="http://www.victorszeto.com">Victor Szeto</a> and I translated DMCalc into an Android app.</p>
+                                    <div class="line-separator"></div>
+                                </li>
+                                <li id="thalmaps">
+                                    <h2 class="project-title">Thalmaps.</h2>
+                                    <h3 class="hashtag"><span>#</span>objective-c <span>#</span>myo <span>#</span>hackthenorth <span>#</span>ios</h3>
+                                    <div class="line-separator"></div>
+                                </li>
+                                <li id="dmcalc-2">
+                                    <h2 class="project-title">DMCalc 2.</h2>
+                                    <h3 class="hashtag"><span>#</span>swift <span>#</span>ios</h3>
+                                    <p>DMCalc 2 <span>(</span>currently under development<span>)</span> is the successor of DMCalc <span>(</span>1<span>)</span>. It is all code-based and written in Swift, the newest programming language for iOS introduced by Apple back in June 2014. It will be more sophisticated, and will also deliver to users better UI/UX as it will feature more functions and fancy in-app transitions.</p>
+                                     
+                                </li>
+                            </ul>
+                        </div>-->
     </div>
     <div id="contact">
         <div class="container">
@@ -205,16 +221,16 @@ Want to check out my source code?  No problem!  Feel free to give comment or fee
 
     <script src="./js/min/jquery-min.js" type="text/javascript"></script>
     <script src="./js/min/parallax.min.js" type="text/javascript"></script>
-<!--    <script src="./js/min/jquery.stellar-min.js"></script>-->
+    <!--    <script src="./js/min/jquery.stellar-min.js"></script>-->
     <script src="./js/min/main-min.js"></script>
-<!--    <script>
-        $(function () {
-            $.stellar({
-                horizontalScrolling: false,
-                verticalOffset: 80
+    <!--    <script>
+            $(function () {
+                $.stellar({
+                    horizontalScrolling: false,
+                    verticalOffset: 80
+                });
             });
-        });
-    </script>-->
+        </script>-->
     <script>
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
