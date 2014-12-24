@@ -24,7 +24,7 @@ var $menuWork = $(".work");
 var $menuProj = $(".projects");
 var $abtSecHeader = $("#about .section-header");
 var $wrkSecHeader = $("#work .section-header");
-
+var $projSecHeader = $("#projects .section-header");
 function resetMenuHighlight() {
     var menuSections = $(".navigation #sections ul");
     $("#vello-link").css("color", "black");
@@ -38,9 +38,7 @@ function resetMenuHighlight() {
 
 }
 //responsiveness
-var resizeContent = function () {
-
-    
+var resizeContent = function () {    
     var height = $(window).height();
     $introSection.height(height);
     var width = $(window).width();
@@ -61,13 +59,14 @@ var resizeContent = function () {
     $introCont.css("position", "absolute").css("left", ((width / 2) - ($introCont.width() / 2)) + "px").css("top", ((height / 2) - ($introCont.height() / 2) - 20) + "px");
     $abtSecHeader.css("margin-left", ((width / 2) - ($abtSecHeader.width()/2)) + "px");
     $wrkSecHeader.css("margin-left", ((width / 2) - ($wrkSecHeader.width()/2)) + "px");
+    $projSecHeader.css("margin-left", ((width / 2) - ($projSecHeader.width()/2)) + "px");
     $introScrlBtn.css("left", ((width / 2) - ($introScrlBtn.width() / 2)) + "px");
     $jobDets.css("left", ((width / 2) - ($jobDets.width() / 2)) + "px");
     $workSection.css("height", $jobDets.height() + $abtSecHeader.height() + 40 + "px");
     $units.css("height", $units.width()+"px");
     
 //    $projectSec.css("height", $projList.height() + 120 + "px");
-    $projectSec.css("height", $projCont.height() + 90 + 'px'); 
+    $projectSec.css("height", $projCont.height() + $projSecHeader.height() + 70 + 'px'); 
 //    $projList.css("margin-top", $("#projects .container .section-header").height() + 30 + "px");
 
     if (width <= 500) {
