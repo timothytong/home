@@ -39,11 +39,7 @@ function resetMenuHighlight() {
 }
 //responsiveness
 var resizeContent = function () {
-    // var browser = window.navigator.userAgent;
-//            var msie = browser.indexOf("MSIE ");
-//            var safari = browser.indexOf("Safari");
-//            var chrome = browser.indexOf("Chrome");
-    // var firefox = browser.indexOf("Firefox");
+
     
     var height = $(window).height();
     $introSection.height(height);
@@ -69,9 +65,9 @@ var resizeContent = function () {
     $jobDets.css("left", ((width / 2) - ($jobDets.width() / 2)) + "px");
     $workSection.css("height", $jobDets.height() + $abtSecHeader.height() + 40 + "px");
     $units.css("height", $units.width()+"px");
-//    $introSection.parallax({imageSrc: './images/apple-bg.jpg'});
+    
 //    $projectSec.css("height", $projList.height() + 120 + "px");
-    $projectSec.css("height", $projCont.height() + 60 + 'px'); 
+    $projectSec.css("height", $projCont.height() + 90 + 'px'); 
 //    $projList.css("margin-top", $("#projects .container .section-header").height() + 30 + "px");
 
     if (width <= 500) {
@@ -169,6 +165,7 @@ $(document).ready(function () {
     var safari = browser.indexOf("Safari");
     var chrome = browser.indexOf("Chrome");
     var firefox = browser.indexOf("Firefox");
+    
     if (msie > 0) {
         if (parseInt(browser.substring(msie + 5, browser.indexOf(".", msie))) <= 8) {
             alert("Friendly advice: Please consider upgrading your browser.");
@@ -195,6 +192,11 @@ $(document).ready(function () {
             $(this).find("span").toggleClass("safari-chrome-projects-contact-hover");
         });
     }
+    if(chrome > 0 || parseInt(browser.substring(msie + 5, browser.indexOf(".", msie))) <= 9){
+        $introSection.addClass("intro-static");
+    }else{
+        $introSection.parallax({imageSrc: './images/apple-bg.jpg'});
+    }
     $('#pivotal-link').hover(function () {
         $("#pivotal-link #blue").toggleClass("blue");
         $("#pivotal-link #red").toggleClass("red");
@@ -210,13 +212,27 @@ $(document).ready(function () {
         var curOffset = $(this).scrollTop();
         if (curOffset >= $aboutSection.offset().top - 3 * navbarHeight && navHidden) {
             navHidden = false;
-//            $navigation.slideDown();
-            $navigation.css("margin-top","0px");
+//            if(chrome>0){
+//                console.log("this is chrome");
+//                $navigation.slideDown();
+//            }
+//            else{
+//                console.log("this is not chrome");
+                $navigation.css("margin-top","0px");
+//            }
+            
         }
         if (curOffset < $aboutSection.offset().top / 2 && !navHidden) { 
             navHidden = true;
-//            $navigation.slideUp();
-            $navigation.css("margin-top", -navbarHeight+"px");
+//            if(chrome > 0){
+//                console.log("this is chrome");
+//                $navigation.slideUp();
+//            }else{
+//                console.log("this is not chrome");
+                $navigation.css("margin-top", -navbarHeight+"px");
+//            }
+            
+            
         }
         if (curOffset < $aboutSection.offset().top - 3 * navbarHeight) {
             resetMenuHighlight();

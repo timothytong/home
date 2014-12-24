@@ -226,11 +226,9 @@ nav{
 /*    navbar END*/
 
 /*intro BEGIN*/
-#intro{
-/*    background-color: #e3e3e3;*/
-    
+.intro-static{
     position: relative;
-/*    background-image: url(../images/apple-bg.jpg);*/
+    background-image: url(../images/apple-bg.jpg);
     background-size: cover;
 }
 /*#intro-name{
