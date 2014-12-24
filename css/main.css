@@ -584,9 +584,50 @@ nav{
     border-color: #bebebe;
     border-style: solid;
 }
+.projUnit:hover{
+    cursor: pointer;
+}
 #projects .section-header{
     color: black;
 }
+
+.icon-img{
+    width: inherit;
+    height: inherit;
+}
+.projUnit{
+    overflow: hidden;
+}
+.hover-area{
+    height: 30%;
+    position: absolute;
+    z-index: 10;
+    display: none;
+}
+
+.proj-des{
+    font-family: "MyriadSetPro","Open Sans",sans-serif;
+    text-align: center;
+    display: none;
+}
+.hashtag{
+    font-variant: small-caps;
+    letter-spacing: 2px;
+    font-weight: 100;
+}
+.hashtag span{
+    font-family: "Open Sans", sans-serif;
+    font-size: 80%;
+    font-weight: 100;
+}
+.proj-name{
+    font-weight: 300;   
+}
+.hover-area .line-separator{
+    position: absolute;
+    width: 70%;
+}
+
 /* Old project list.
 #project-list a{
     text-decoration: none;
@@ -602,18 +643,11 @@ nav{
     font-size: 3.5em;
     margin-bottom: -20px;
 }
-#project-list .hashtag{
-    font-variant: small-caps;
-    letter-spacing: 2px;
-    font-weight: 300;
-    text-align: center;
-}
+
 #project-list .hashtag span, #project-list p span{
     font-family: "Open Sans",sans-serif;
 }
-#project-list .hashtag span{
-    font-size: 80%;
-}
+
 #project-list p{
     font-weight: 300;
     width:80%;
