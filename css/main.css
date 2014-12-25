@@ -139,7 +139,7 @@ body{
 
 /*    navbar BEGIN*/
 .navigation {
-/*    display: none;*/
+    /*    display: none;*/
     margin-top: -80px;
     position:fixed;
     top:0;
@@ -580,35 +580,56 @@ nav{
 .projUnit{
     margin:40px 0px -10px 0px;
     background-color: white;
-    border-width: 1px;
-    border-color: #bebebe;
-    border-style: solid;
+    /*    border-width: 1px;
+        border-color: #bebebe;
+        border-style: solid;*/
 }
 .projUnit:hover{
     cursor: pointer;
+    transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-box-shadow:    inset 0px 0px 4px #ccc;
+    -webkit-box-shadow: inset 0px 0px 4px #ccc;
+    box-shadow:         inset 0px 0px 4px #ccc;
 }
 #projects .section-header{
     color: black;
 }
-
-.icon-img{
-    width: inherit;
-    height: inherit;
-}
 .projUnit{
     overflow: hidden;
+}
+.proj-img{
+    transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    position: absolute;
+    width: 45%;
+    height: 45%;
+    margin: auto;
+    display: inline-block;
+}
+.scale{
+    -ms-transform: scale(0.97);
+    -webkit-transform: scale(0.97);
+    transform: scale(0.97);
 }
 .hover-area{
     height: 30%;
     position: absolute;
     z-index: 10;
     display: none;
+    overflow: hidden;
 }
-
 .proj-des{
     font-family: "MyriadSetPro","Open Sans",sans-serif;
     text-align: center;
     display: none;
+    line-height: 0.8;
 }
 .hashtag{
     font-variant: small-caps;
@@ -627,7 +648,11 @@ nav{
     position: absolute;
     width: 70%;
 }
-
+.inward-shadow{
+    -moz-box-shadow:    3px 3px 5px 6px #ccc;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    box-shadow:         3px 3px 5px 6px #ccc;
+}
 /* Old project list.
 #project-list a{
     text-decoration: none;
@@ -695,16 +720,16 @@ nav{
     }
     #about #round-portrait{
         width: 70%;
-        
+
     }
     #work .container .job-details{
         width: 95% !important;
     }
-    #timeline{
-        height: 0;
-        width: 0;
-        display: none;
-    }
+    /*    #timeline{
+            height: 0;
+            width: 0;
+            display: none;
+        }*/
 }
 
 @media screen and (min-width: 500px){
@@ -734,35 +759,35 @@ nav{
         vertical-align: middle;
     }
 
-    #timeline{
-        position: absolute;
-        width: 6px;
-        background-color: #404040;
-        border-radius: 2px;
-    }
-    .circle{
-        height: 20px;
-        width: 20px;
-        border-radius: 10px;
-        position: absolute;
-        background-color: #eeeeee;
-        border-color: black;
-        border-width: 4px;
-        border-style: solid;
-        transition: all .4s ease;
-        -moz-transition: all .4s ease;
-        -o-transition: all .4s ease;
-        -ms-transition: all .4s ease;
-        -webkit-transition: all .4s ease;
-    }
-    .circle-pivotal-color{
-        background-color: rgb(196,18,48)!important;
-        border-color: rgb(0,119,192)!important;
-    }
-    .circle-vello-color{
-        background-color: white!important;
-        border-color: rgb(37,186,189)!important;
-    }
+    /*    #timeline{
+            position: absolute;
+            width: 6px;
+            background-color: #404040;
+            border-radius: 2px;
+        }
+        .circle{
+            height: 20px;
+            width: 20px;
+            border-radius: 10px;
+            position: absolute;
+            background-color: #eeeeee;
+            border-color: black;
+            border-width: 4px;
+            border-style: solid;
+            transition: all .4s ease;
+            -moz-transition: all .4s ease;
+            -o-transition: all .4s ease;
+            -ms-transition: all .4s ease;
+            -webkit-transition: all .4s ease;
+        }
+        .circle-pivotal-color{
+            background-color: rgb(196,18,48)!important;
+            border-color: rgb(0,119,192)!important;
+        }
+        .circle-vello-color{
+            background-color: white!important;
+            border-color: rgb(37,186,189)!important;
+        }*/
 }
 @media screen and (min-width: 640px){
     #vello{

@@ -27,6 +27,7 @@ var $wrkSecHeader = $("#work .section-header");
 var $projSecHeader = $("#projects .section-header");
 var $projHoverArea = $(".hover-area");
 var $projDes = $(".proj-des");
+var $projImg = $(".proj-img");
 function resetMenuHighlight() {
     var menuSections = $(".navigation #sections ul");
     $("#vello-link").css("color", "black");
@@ -101,7 +102,9 @@ var resizeContent = function () {
     $(".hover-area .line-separator").each(function () {
         $(this).css("left", "15%");
     });
-
+    $projImg.each(function(){
+        $(this).css("left", "27.5%").css("top", $(this).parent().height()/2 - $(this).height()*0.55 + "px");
+    });
 };
 
 $(document).ready(function () {
@@ -326,18 +329,20 @@ $(document).ready(function () {
     $(".projUnit").hover(function () {
         var hoverArea = $(this).find(".hover-area");
         var description = hoverArea.find(".proj-des");
+        $(this).find(".proj-img").addClass("scale");
         hoverArea.animate({
-            "margin-top": $(this).height() - hoverArea.height() + "px",
+            "margin-top": $(this).height() - hoverArea.height() + "px"
         }, {duration: 300, easing: "swing", queue: false});
         hoverArea.fadeIn(150);
         
         description.delay(100).animate({
-            "margin-top": -5 + "px",
+            "margin-top": -5 + "px"
         }, {duration: 300, easing: "swing", queue: false});
         description.fadeIn(150);
     }, function () {
         var hoverArea = $(this).find(".hover-area");
         var description = hoverArea.find(".proj-des");
+        $(this).find(".proj-img").removeClass("scale");
         description.animate({
             "margin-top": hoverArea.height() * 0.5 + "px"
         }, {duration: 300, easing: "swing", queue: false});
