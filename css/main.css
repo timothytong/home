@@ -628,7 +628,7 @@ nav{
 .proj-des{
     font-family: "MyriadSetPro","Open Sans",sans-serif;
     text-align: center;
-   
+    display: none;
     line-height: 0.8;
 }
 .hashtag{
