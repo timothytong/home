@@ -628,7 +628,7 @@ nav{
 .proj-des{
     font-family: "MyriadSetPro","Open Sans",sans-serif;
     text-align: center;
-    display: none;
+   
     line-height: 0.8;
 }
 .hashtag{
@@ -642,7 +642,8 @@ nav{
     font-weight: 100;
 }
 .proj-name{
-    font-weight: 300;   
+    font-weight: 300; 
+    max-height: 10px;
 }
 .hover-area .line-separator{
     position: absolute;

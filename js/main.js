@@ -102,8 +102,8 @@ var resizeContent = function () {
     $(".hover-area .line-separator").each(function () {
         $(this).css("left", "15%");
     });
-    $projImg.each(function(){
-        $(this).css("left", "27.5%").css("top", $(this).parent().height()/2 - $(this).height()*0.55 + "px");
+    $projImg.each(function () {
+        $(this).css("left", "27.5%").css("top", $(this).parent().height() / 2 - $(this).height() * 0.55 + "px");
     });
 };
 
@@ -334,7 +334,7 @@ $(document).ready(function () {
             "margin-top": $(this).height() - hoverArea.height() + "px"
         }, {duration: 300, easing: "swing", queue: false});
         hoverArea.fadeIn(150);
-        
+
         description.delay(100).animate({
             "margin-top": -5 + "px"
         }, {duration: 300, easing: "swing", queue: false});
@@ -349,7 +349,7 @@ $(document).ready(function () {
         description.fadeOut(150);
         hoverArea.delay(100).animate({
             "margin-top": $(this).height() * 0.75 + "px"
-        },{duration: 300, easing: "swing", queue: false});
+        }, {duration: 300, easing: "swing", queue: false});
         hoverArea.fadeOut(150);
     });
 });
