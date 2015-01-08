@@ -373,9 +373,20 @@ nav{
 }
 #contact{
     height: 400px;
-    background-color: #b4b4b4;
+    background-color: #404040;
     position: relative;
 }
+footer h5{
+    font-family: "MyriadSetPro","Open Sans",sans-serif;
+    font-weight: 300;
+    color: white;
+}
+
+.font{
+    font-family: "Open Sans",sans-serif;
+    font-size: 90%;
+}
+
 .container{
     width: 90%;
     margin: 0 auto;
