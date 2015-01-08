@@ -656,7 +656,8 @@ nav{
 }
 .project-popup{
     position: fixed;
-    display: none;
+/*    display: none;*/
+    
 }
 /* Old project list.
 #project-list a{

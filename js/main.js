@@ -25,9 +25,11 @@ var $menuProj = $(".projects");
 var $abtSecHeader = $(".section-header");
 var $wrkSecHeader = $("#work .section-header");
 var $projSecHeader = $("#projects .section-header");
+var $contactSecHead = $("#contact .section-header");
 var $projHoverArea = $(".hover-area");
 var $projDes = $(".proj-des");
 var $projImg = $(".proj-img");
+var $projPopup = $("#project-popup");
 function resetMenuHighlight() {
     var menuSections = $(".navigation #sections ul");
     $("#vello-link").css("color", "black");
@@ -63,6 +65,7 @@ var resizeContent = function () {
     $abtSecHeader.css("margin-left", ((width / 2) - ($abtSecHeader.width() / 2)) + "px");
     $wrkSecHeader.css("margin-left", ((width / 2) - ($wrkSecHeader.width() / 2)) + "px");
     $projSecHeader.css("margin-left", ((width / 2) - ($projSecHeader.width() / 2)) + "px");
+    $contactSecHead.css("margin-left", ((width / 2) - ($contactSecHead.width() / 2)) + "px"); 
     $introScrlBtn.css("left", ((width / 2) - ($introScrlBtn.width() / 2)) + "px");
     $jobDets.css("left", ((width / 2) - ($jobDets.width() / 2)) + "px");
     $workSection.css("height", $jobDets.height() + $abtSecHeader.height() + 40 + "px");
@@ -105,6 +108,9 @@ var resizeContent = function () {
     $projImg.each(function () {
         $(this).css("left", "27.5%").css("top", $(this).parent().height() / 2 - $(this).height() * 0.55 + "px");
     });
+    
+//    Project popup window
+    $projPopup.css("width","80%").css("height", height * 0.9+"px").css("margin","auto");
 };
 
 $(document).ready(function () {
@@ -126,6 +132,17 @@ $(document).ready(function () {
     $('#intro #scrl-dwn-btn').click(function () {
         $("html, body").animate({scrollTop: $aboutSection.offset().top - $('.navigation').height()}, 1000, 'swing');
     });
+    /*
+    $('#intro #scrl-dwn-btn').hover(function(){
+        $('#social-btns').children().each(function(){
+            $(this).trigger('hover');
+        });
+    },function(){
+        $('#social-btns').children().each(function(){
+            $(this).off('hover');
+        });
+    });
+    */
     $('#sections ul li').click(function (e) {
         e.preventDefault();
         var body = $("html, body");
