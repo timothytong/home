@@ -113,7 +113,7 @@ Want to check out my source code?  No problem!  Feel free to give comment or fee
                 <p>Hello and welcome, this is Tim.  I am a Computer Engineering student at the University of Waterloo.</p>
                 <p>I consider myself a technology enthusiast. Since I was young, I have always been fascinated by what technology is capable of doing - it makes our lives so much easier and more enjoyable! Hence, I decided that it shall be my ultimate goal to unwrap and learn all about this mystery.</p>
                 <p>As a result of being so passionate about technology, I am interested in working with both hardware and software. In my spare time, I take initiative to learn new languages, get my hands dirty on software and libraries that I never saw before, and write apps.</p>
-                <p>My <span>aspiration</span> is to be part of a team that engineers great products and makes impact on the world.</p>
+                <p>My <span class='bold'>aspiration</span> is to be part of a team that engineers great products and makes impact on the world.</p>
             </div>
         </div>
     </div>
@@ -273,14 +273,53 @@ Want to check out my source code?  No problem!  Feel free to give comment or fee
     <div id="contact">
         <h2 class="section-header">C<span>ontact.</span></h2>
         <div class="container">
+            <form name="htmlform" method="post" action="send_message.php">
+                <table width="450px">
+                    <tr>
+                        <td valign="top">
+                            <label for="name">Name:</label>
+                        </td>
+                        <td valign="top">
+                            <input  type="text" name="first_name" maxlength="50" size="30">
+                            <h5>Knock knock who's there?</h5>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td valign="top">
+                            <label for="email">Email:</label>
+                        </td>
+                        <td valign="top">
+                            <input  type="text" name="email" maxlength="80" size="30">
+                            <h5>I don't judge how people pick their email addresses... So don't worry.</h5>
+                        </td>
 
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <label for="message">Message:</label>
+                        </td>
+                        <td valign="top">
+                            <textarea  name="message" maxlength="1000" cols="80" rows="10"></textarea>
+                            <h5>No spamming or blackmailing please :')
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align:center">
+                            <input type="submit" value="Submit">   
+<!--                            ( <a href="http://www.freecontactform.com/html_form.php">HTML Form</a> )-->
+                        </td>
+                    </tr>
+                </table>
+            </form>
         </div>
     </div>
-    <Footer id='footer'>
+    <Footer>
         <div class="container">
             <h5>The Safari <span class='font'>(</span>TM<span class='font'>)</span> and Maps<span class='font'>(</span>TM<span class='font'>)</span> icons are the properties of <a href='http://www.apple.com'>Apple Inc.</a>. The Myo<span class='font'>(</span>TM<span class='font'>)</span> icon is the property of <a href='https://www.thalmic.com/en/myo/'>Thalmic Labs</a>.</h5>
             <h5>The edited icons contained on this site are for display purposes only. They were made for the sake of making this site complete and pretty, and will never be used for commercial purposes.</h5>
-            <h5>If either party mentioned above disallows the use of these icons, please email me at <a href="mailto:timothykytong@gmail.com">timothykytong@gmail.com</a> and they will be taken <span class='font'>off</span> the site as soon as possible.</h5>
+            <h5>If either party mentioned above disallows the use of these icons, please email me at <a href="mailto:timothykytong@gmail.com">timothykytong@gmail.com</a> and they will be taken <span class='font'>off</span> the site immediately.</h5>
             <br>
             <h5 style='float:right'>Made with <span style="color: red"><span class='font'><3</span></span> by Timothy Tong.</h5>
         </div>

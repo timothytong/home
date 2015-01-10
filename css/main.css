@@ -372,7 +372,7 @@ nav{
     position: relative;
 }
 #contact{
-    height: 400px;
+    height: 550px;
     background-color: #404040;
     position: relative;
 }
@@ -381,7 +381,13 @@ footer h5{
     font-weight: 300;
     color: white;
 }
-
+footer a{
+    text-decoration: underline;
+    color: white;
+}
+footer a:hover{
+    color:#ccc;
+}
 .font{
     font-family: "Open Sans",sans-serif;
     font-size: 90%;
@@ -437,9 +443,6 @@ footer h5{
 .section-header span{
     font-weight: 300;
     font-size: 80%;
-}
-#about .container p span{
-    font-weight: 500;
 }
 #about-filter{
     background-color: rgba(0,0,0,0.4);
@@ -521,7 +524,7 @@ footer h5{
     font-weight: 300;
     /*    letter-spacing: 1px;*/
 }
-#work .exp-list li .bold{
+.bold{
     font-weight: 700;
     letter-spacing: 2px;
     font-variant: small-caps;
@@ -668,41 +671,16 @@ footer h5{
 .project-popup{
     position: fixed;
 /*    display: none;*/
-    
-}
-/* Old project list.
-#project-list a{
-    text-decoration: none;
-    color: black;
-}
-#project-list{
-    font-family: "MyriadSetPro","Open Sans",sans-serif;
-    list-style: none;
-}
-#project-list .project-title{
-    text-align: center;
-    font-weight: 100;
-    font-size: 3.5em;
-    margin-bottom: -20px;
 }
 
-#project-list .hashtag span, #project-list p span{
-    font-family: "Open Sans",sans-serif;
-}
-
-#project-list p{
-    font-weight: 300;
-    width:80%;
-    margin: auto;
-    font-size: 1.4em;
-}
-#projects .container .section-header{
-    color: black;
-}
-#project-list{
-    padding: 0;
-}*/
 /*projects END*/
+
+/*contact BEGIN*/
+label, #contact h5{ 
+    color: white;
+}
+
+/*contact END*/
 
 @media screen and (max-width: 770px){
     #intro .container p{

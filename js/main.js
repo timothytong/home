@@ -323,7 +323,7 @@ $(document).ready(function () {
                 $menuContact.addClass("menu-highlight").find("a").addClass("menu-text-highlight-mobile");
             }
             else {
-                $menuContact.find("a").addClass("menu-text-highlight-mobile");
+                $menuContact.find("a").addClass("menu-text-highlight");
             }
         }
     });
