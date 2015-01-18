@@ -704,7 +704,7 @@ form input[type=text], #messageArea{
     margin-bottom: 20px;
 }
 
-form input[type=submit]{
+#submit{
     background-color: rgb(31, 31, 31);
     color: white;
     border-width: 0;
