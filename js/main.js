@@ -92,8 +92,10 @@ var resizeContent = function () {
         $introName.addClass("intro-name-desktop");
         
     }
-    if (height < 660) {
-            $(".note, #messageArea, .textInput").css("width",width - 150 + "px");
+    if (width < 660) {
+            $(".note, #messageArea").css("width",width - 150 + "px");
+            $(".textInput").css("width",width - 200 + "px");
+             
             $("table").css("width", width - 50 + "px");
         }
     $velloLogo.css("top", $pivotalLine.offset().top - $workSection.offset().top - 70 + "px");

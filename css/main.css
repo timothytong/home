@@ -682,6 +682,20 @@ label, #contact h5{
 
 #contact form{
     margin-top: 20px;
+    font-family: "Open Sans",sans-serif;
+}
+
+label{
+    font-size: 1.5em;
+    font-weight: 300;
+    margin-right: 15px;
+    font-family: "MyriadSetPro", "Open Sans",sans-serif;
+}
+
+form input[type=text], #messageArea{
+    border-radius: 10px;
+    padding: 5px;
+    font-weight: 100;
 }
 /*contact END*/
 
