@@ -698,6 +698,7 @@ form input[type=text], #messageArea{
     padding: 5px;
     font-weight: 100;
     color: white;
+    max-height: 210px;
 }
 #contact h5{
     margin-bottom: 20px;

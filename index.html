@@ -273,14 +273,14 @@ Want to check out my source code?  No problem!  Feel free to give comment or fee
     <div id="contact">
         <h2 class="section-header">C<span>ontact.</span></h2>
         <div class="container">
-            <form name="htmlform" id="form" method="post" action="send_message.php">
+            <form name="htmlform" id="form">
                 <table width="450px">
                     <tr>
                         <td valign="top">
                             <label for="name">Name.</label>
                         </td>
                         <td valign="top" class="textInput">
-                            <input type="text" name="first_name" maxlength="50" size="30">
+                            <input type="text" id="name" maxlength="50" size="30">
                             <h5>Knock knock who's there?</h5>
                         </td>
                     </tr>
@@ -290,7 +290,7 @@ Want to check out my source code?  No problem!  Feel free to give comment or fee
                             <label for="email">Email.</label>
                         </td>
                         <td valign="top">
-                            <input type="text" name="email" maxlength="80" size="30">
+                            <input type="text" id="email" maxlength="80" size="30">
                             <h5 class="note">I don't judge how people pick their email addresses... So don't worry.</h5>
                         </td>
 
@@ -300,10 +300,10 @@ Want to check out my source code?  No problem!  Feel free to give comment or fee
                             <label class="message" for="message">Message.</label>
                         </td>
                         <td valign="top" class="textInput">
-                            <textarea id="messageArea" name="message" maxlength="1000" cols="80" rows="10"></textarea>
+                            <textarea id="messageArea" maxlength="1000" cols="80" rows="10"></textarea>
                             <h5 class="note">No spamming or blackmailing please :')</h5>
                         </td>
-
+                        <p id="returnmessage"></p>
                     </tr>
                     <tr>
                         <td colspan="2" style="text-align:center">
@@ -359,6 +359,7 @@ Want to check out my source code?  No problem!  Feel free to give comment or fee
         ga('send', 'pageview');
 
     </script>
+    <script src="contact_form.js"></script>
 </body>
 
 
