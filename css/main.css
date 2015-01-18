@@ -680,6 +680,9 @@ label, #contact h5{
     color: white;
 }
 
+#contact form{
+    margin-top: 20px;
+}
 /*contact END*/
 
 @media screen and (max-width: 770px){

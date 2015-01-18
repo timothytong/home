@@ -90,10 +90,12 @@ var resizeContent = function () {
         $aboutHead.html("A<span>bout me.</span>");
         $workHead.html("W<span>ork experience.</span>");
         $introName.addClass("intro-name-desktop");
-        if (height <= 400) {
-            $introCont.find("h1").css("margin-top", "20px");
-        }
+        
     }
+    if (height < 660) {
+            $(".note, #messageArea, .textInput").css("width",width - 150 + "px");
+            $("table").css("width", width - 50 + "px");
+        }
     $velloLogo.css("top", $pivotalLine.offset().top - $workSection.offset().top - 70 + "px");
 
     $projHoverArea.css("width", $projHoverArea.parent().width() + "px").css("margin-top", $projHoverArea.parent().height() * 0.75 + "px");
