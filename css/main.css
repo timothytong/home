@@ -372,7 +372,7 @@ nav{
     position: relative;
 }
 #contact{
-    height: 550px;
+    height: 590px;
     background-color: #404040;
     position: relative;
 }
@@ -687,15 +687,31 @@ label, #contact h5{
 
 label{
     font-size: 1.5em;
-    font-weight: 300;
+    font-weight: 100;
     margin-right: 15px;
     font-family: "MyriadSetPro", "Open Sans",sans-serif;
 }
 
 form input[type=text], #messageArea{
-    border-radius: 10px;
+    background-color: rgb(31, 31, 31);
+    border-width: 0;
     padding: 5px;
     font-weight: 100;
+    color: white;
+}
+#contact h5{
+    margin-bottom: 20px;
+}
+
+form input[type=submit]{
+    background-color: rgb(31, 31, 31);
+    color: white;
+    border-width: 0;
+    
+    float: right;
+    width: 100px;
+    height: 40px;
+    font-size: 1.4em;
 }
 /*contact END*/
 
