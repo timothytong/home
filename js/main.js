@@ -399,9 +399,10 @@ $(document).ready(function () {
     });
 */
     $("#submit").click(function() {
+        var name = $("#name").val();
         var email = 'me@timothytong.com';
-        var subject = 'Hello from ' + $("label[for='name']");
-        var emailBody = $("label[for='message']") + "\n\nReply to: " + $("label[for='email']");
-        window.location = 'mailto:' + email + '?subject=' + subject + '&body=' +   emailBody;
+        var subject = 'Hello from ' + name.charAt(0).toUpperCase() + name.slice(1);
+        var emailBody = $("#messageArea").val() + "%0D%0A%0D%0A(Sender email: " + $("#email").val() + ")";
+        window.location = 'mailto:' + email + '?subject=' + subject + '&body=' + emailBody;
     });
 });
