@@ -13,7 +13,6 @@ var $units = $(".projUnit");
 var $workHead = $("#work .section-header");
 var $introName = $("#intro-name");
 var $aboutHead = $("#about .section-header");
-var $velloLogo = $('#vello');
 var $navigation = $(".navigation");
 var $pivotalLine = $("#pivotal-line");
 var $quoteSec = $("#quote");
@@ -98,7 +97,7 @@ var resizeContent = function () {
              
             $("table").css("width", width - 70 + "px");
         }
-    $velloLogo.css("top", $pivotalLine.offset().top - $workSection.offset().top - 70 + "px");
+    $('#vello').css("top", $pivotalLine.offset().top - $workSection.offset().top - 70 + "px");
 
     $projHoverArea.css("width", $projHoverArea.parent().width() + "px").css("margin-top", $projHoverArea.parent().height() * 0.75 + "px");
     $projDes.css("width", $projDes.parent().width() + "px").css("margin-top", $projDes.parent().height() * 0.5 + "px");
@@ -374,6 +373,7 @@ $(document).ready(function () {
         hoverArea.fadeOut(150);
     });
     
+    /*
     $("#submit").click(function() {
     var name = $("#name").val();
     var email = $("#email").val();
@@ -396,5 +396,12 @@ $(document).ready(function () {
                 }
             });
         }
+    });
+*/
+    $("#submit").click(function() {
+        var email = 'me@timothytong.com';
+        var subject = 'Hello from ' + $("label[for='name']");
+        var emailBody = $("label[for='message']") + "\n\nReply to: " + $("label[for='email']");
+        window.location = 'mailto:' + email + '?subject=' + subject + '&body=' +   emailBody;
     });
 });
