@@ -139,7 +139,6 @@ body{
 
 /*    navbar BEGIN*/
 .navigation {
-    /*    display: none;*/
     margin-top: -80px;
     position:fixed;
     top:0;
@@ -147,9 +146,6 @@ body{
     width:100%;
     height:80px;
     background-color:rgba(64,64,64,0.85);//#404040
-    /*        -webkit-box-shadow:0 8px 6px -6px #000;
-            -moz-box-shadow:0 8px 6px -6px #000;
-            box-shadow:0 8px 6px -6px #ccc;*/
     transition: all .4s ease;
     -moz-transition: all .4s ease;
     -o-transition: all .4s ease;
@@ -199,7 +195,7 @@ body{
     background-color: white;
 }
 #initial-and-name a {
-    color:#404040;//#888;
+    color:#404040;
 }
 #initial-and-name a:hover, #initial-and-name a:visited, #intial-and-name a:active, #intial-and-name a:focus {
     text-decoration:none;
@@ -218,7 +214,6 @@ body{
     left:120px;
     text-align:center;
     width:350px;
-    /*        color:#404040;*/
 }
 nav{
     z-index: 10;
@@ -231,11 +226,7 @@ nav{
     background-image: url(../images/apple-bg.jpg);
     background-size: cover;
 }
-/*#intro-name{
-    font-variant: small-caps;
-    letter-spacing: 4px!important;
-    font-weight: 500!important;
-}*/
+
 #intro .container p{
     transition: all .4s ease;
     -moz-transition: all .4s ease;
@@ -522,7 +513,6 @@ footer a:hover{
     font-family: "Open Sans",sans-serif;
     font-size: 1.3em;
     font-weight: 300;
-    /*    letter-spacing: 1px;*/
 }
 .bold{
     font-weight: 700;
@@ -537,16 +527,6 @@ footer a:hover{
     -ms-transition: color .3s ease;
     -webkit-transition: color .3s ease;
 }
-
-/*.vello-link-highlight{
-    color: rgb(39,186,189)!important;
-    transition: color .3s ease;
-    -moz-transition: color .3s ease;
-    -o-transition: color .3s ease;
-    -ms-transition: color .3s ease;
-    -webkit-transition: color .3s ease;
-}
-*/
 #vello-link:hover{
     /*    text-decoration: none;*/
     color: rgb(39,186,189)!important;
@@ -594,9 +574,6 @@ footer a:hover{
 .projUnit{
     margin:40px 0px -10px 0px;
     background-color: white;
-    /*    border-width: 1px;
-        border-color: #bebebe;
-        border-style: solid;*/
 }
 .projUnit:hover{
     cursor: pointer;
@@ -643,7 +620,7 @@ footer a:hover{
     font-family: "MyriadSetPro","Open Sans",sans-serif;
     text-align: center;
     display: none;
-    line-height: 0.8;
+    
 }
 .hashtag{
     font-variant: small-caps;
@@ -672,7 +649,6 @@ footer a:hover{
     position: fixed;
 /*    display: none;*/
 }
-
 /*projects END*/
 
 /*contact BEGIN*/
@@ -753,11 +729,6 @@ form input[type=text], #messageArea{
     #work .container .job-details{
         width: 95% !important;
     }
-    /*    #timeline{
-            height: 0;
-            width: 0;
-            display: none;
-        }*/
 }
 
 @media screen and (min-width: 500px){
@@ -786,36 +757,6 @@ form input[type=text], #messageArea{
         margin-left: -20px;
         vertical-align: middle;
     }
-
-    /*    #timeline{
-            position: absolute;
-            width: 6px;
-            background-color: #404040;
-            border-radius: 2px;
-        }
-        .circle{
-            height: 20px;
-            width: 20px;
-            border-radius: 10px;
-            position: absolute;
-            background-color: #eeeeee;
-            border-color: black;
-            border-width: 4px;
-            border-style: solid;
-            transition: all .4s ease;
-            -moz-transition: all .4s ease;
-            -o-transition: all .4s ease;
-            -ms-transition: all .4s ease;
-            -webkit-transition: all .4s ease;
-        }
-        .circle-pivotal-color{
-            background-color: rgb(196,18,48)!important;
-            border-color: rgb(0,119,192)!important;
-        }
-        .circle-vello-color{
-            background-color: white!important;
-            border-color: rgb(37,186,189)!important;
-        }*/
 }
 @media screen and (min-width: 640px){
     #vello{
@@ -824,12 +765,12 @@ form input[type=text], #messageArea{
         top: 65px;
         position: absolute;
     }
-    /*  Not needed... yet.  
-        #pivotal{
-            right: 0;
-            top: 95px;
-            position: absolute;
-        }*/
+    
+    #pivotal{
+        right: -45px;
+        top: 0;
+        position: absolute;
+    }
 }
 @media screen and (max-width: 960px){
     .navigation {
@@ -1366,5 +1307,28 @@ form input[type=text], #messageArea{
         margin: 5px auto auto auto;
         width: auto;
         height: 410px;
+    }
+}
+
+@media screen and (max-width: 390px){
+    .proj-name, .hashtag{
+        font-size: 1.3em;
+        
+        margin-bottom: -10px;
+    }
+    
+    .proj-img{
+        margin-top: 15px;
+    }
+}
+@media screen and (max-width: 390px){
+    .proj-name, .hashtag{
+        font-size: 1.3em;
+        
+        margin-bottom: -10px;
+    }
+    
+    .proj-img{
+        margin-top: 15px;
     }
 }

@@ -26,7 +26,6 @@ var $abtSecHeader = $(".section-header");
 var $wrkSecHeader = $("#work .section-header");
 var $projSecHeader = $("#projects .section-header");
 var $contactSecHead = $("#contact .section-header");
-var $contactCont = $("#contact .container");
 var $projHoverArea = $(".hover-area");
 var $projDes = $(".proj-des");
 var $projImg = $(".proj-img");
@@ -75,7 +74,6 @@ var resizeContent = function () {
 //    $projectSec.css("height", $projList.height() + 120 + "px");
     $projectSec.css("height", $projCont.height() + $projSecHeader.height() + 70 + 'px');
 //    $projList.css("margin-top", $("#projects .container .section-header").height() + 30 + "px");
-$contactSec.css("height", $contactCont.height() + $contactSecHead.height() + 70 + 'px');
 
     if (width <= 500) {
         $introCont.find("p").html("Technology Enthusiast</br>Perfectionist</br>Animal Lover");
@@ -94,16 +92,12 @@ $contactSec.css("height", $contactCont.height() + $contactSecHead.height() + 70 
         $introName.addClass("intro-name-desktop");
         
     }
-    if (width < 660) {
+    if (width < 700) {
             $(".note, #messageArea").css("width",width - 150 + "px");
             $(".textInput").css("width",width - 200 + "px");
              
-            $("table").css("width", width - 50 + "px");
-            if(width < 410){
-                $("table #name, table #email").css("width", $("#messageArea").width() + 10+"px");
-            }
+            $("table").css("width", width - 70 + "px");
         }
-    
     $velloLogo.css("top", $pivotalLine.offset().top - $workSection.offset().top - 70 + "px");
 
     $projHoverArea.css("width", $projHoverArea.parent().width() + "px").css("margin-top", $projHoverArea.parent().height() * 0.75 + "px");

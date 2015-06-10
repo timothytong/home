@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-Want to check out my source code?  No problem!  Feel free to comment or provide feedback!
+So you're checking out my source code?  Welcome!  Feel free to comment or provide feedback!
 -->
 
 <html>
@@ -18,7 +18,7 @@ Want to check out my source code?  No problem!  Feel free to comment or provide 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Gochi+Hand' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
-    <link rel='stylesheet' href="./css/main.css" type="text/css">
+    <link rel='stylesheet' href="./css/main-min.css" type="text/css">
     <!-- Favicons and touch icons -->
     <!-- For retina-display iPads -->
     <link href="/images/favicon-144.png" rel="apple-touch-icon-precomposed" sizes="144x144" type="image/png"/>
@@ -97,7 +97,7 @@ Want to check out my source code?  No problem!  Feel free to comment or provide 
             <div class="line-separator"></div>
             <p>Technology Enthusiast <span class="dot"><i class="fa fa-circle"></i></span> Perfectionist <span class="dot"><i class="fa fa-circle"></i></span> Animal Lover</p>
             <ul id="social-btns">
-                <li class="resume glow"><a class="resume-linkedin-glow" href="./files/timothy_tong.pdf"><i class="fa fa-list-ul"></i></a></li>
+                <li class="resume glow"><a class="resume-linkedin-glow" href="./files/timothytong.pdf"><i class="fa fa-list-ul"></i></a></li>
                 <li class="github"><a class="github-glow" href="https://github.com/timothytong"><i class="fa fa-github"></i></a></li>
                 <li class="linkedin glow"><a class="resume-linkedin-glow" href="http://ca.linkedin.com/in/kyttong"><i class="fa fa-linkedin"></i></a></li>
             </ul>
@@ -130,11 +130,14 @@ Want to check out my source code?  No problem!  Feel free to comment or provide 
                     <h4><span class="company-name"><a class='company-link' id="pivotal-link" href="http://pivotallabs.com/"><span id="blue">pivotal</span> <span id="red">labs</span></a><br></span><span class="company-location">(Toronto, Canada)</span></h4>
                     <div id="pivotal">
                         <a href="http://pivotallabs.com/"><img src="./images/pivotal_labs/pivotal-logo.png" alt="Pivotal logo"></a>
-                        <h5>Expected<br>01/15-05/15</h5>
+                        <h5>01/15-05/15</h5>
                     </div>
-                    <!--                    <ul class="exp-list">
-                                            <li></li>
-                                        </ul>-->
+                    <ul class="exp-list">
+                        <li>Worked on the <span class='bold'>front end</span> side of a business banking webapp for a major Canadian bank</li>
+                        <li>Participated in the development of an Android app that uses <span class='bold'>mvvm</span> architecture</li>
+                        <li>Practiced <span class='bold'>pair programming</span> and <span class='bold'>test driven development</span></li>
+                        <li>Technologies involved: Android, Liaison MVVM Library, AngularJS, HTML/LESS, Chrome debugger</li>
+                    </ul>
                     <div class="line-separator" id="pivotal-line"></div>
                 </li>
                 <li class="vello">
@@ -167,20 +170,33 @@ Want to check out my source code?  No problem!  Feel free to comment or provide 
         <div class="container">
             <div class="container-fluid project-grids">
                 <div class="row">
-                    <div class="col-sm-6 col-md-4 col-xs-12">
+                	<a class="col-sm-6 col-md-4 col-xs-12" href="https://appsto.re/i6Lp69X" target="_blank">
+                        <div class="projUnit" id="flashkards">
+                            <img class="proj-img" src="./images/Flashkards-icon.png" alt="FlashKards (Swift)">
+                            <div class="hover-area">
+                                <div class="line-separator"></div>
+                                <div class="proj-des">
+                                    <h3 class="proj-name">FlashKards</h3>
+                                    <h3 class="hashtag"><span>#</span>appstore <span>#</span>swift <span>#</span>coredata</h3>
+                                </div>
+                            </div>
+
+                        </div>
+                    </a>
+                    <a class="col-sm-6 col-md-4 col-xs-12" href="https://appsto.re/i6LF4Qx" target="_blank">
                         <div class="projUnit" id="dmcalc">
                             <img class="proj-img" src="./images/DMCalc-icon.png" alt="DMCalc (objc)">
                             <div class="hover-area">
                                 <div class="line-separator"></div>
                                 <div class="proj-des">
                                     <h3 class="proj-name">DMCalc</h3>
-                                    <h3 class="hashtag"><span>#</span>ios <span>#</span>objective-c</h3>
+                                    <h3 class="hashtag"><span>#</span>appstore <span>#</span>objective-c</h3>
                                 </div>
                             </div>
 
                         </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-xs-12">
+                    </a>
+                    <a class="col-sm-6 col-md-4 col-xs-12" href="https://github.com/JadyaBird/Hack-Map" target="_blank">
                         <div class="projUnit" id="thalmaps">
                             <img class="proj-img" src="./images/Thalmaps-icon.png" alt="Thalmaps (objc)">
                             <div class="hover-area">
@@ -191,7 +207,7 @@ Want to check out my source code?  No problem!  Feel free to comment or provide 
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                     <div class="col-sm-6 col-md-4 col-xs-12">
                         <div class="projUnit" id="dmcalc2">
                             <img class="proj-img" src="./images/DMCalc2-icon.png" alt="DMCalc2 (Swift)">
@@ -199,12 +215,12 @@ Want to check out my source code?  No problem!  Feel free to comment or provide 
                                 <div class="line-separator"></div>
                                 <div class="proj-des">
                                     <h3 class="proj-name">DMCalc 2</h3>
-                                    <h3 class="hashtag"><span>#</span>ios <span>#</span>swift <span>#</span>wip</h3>
+                                    <h3 class="hashtag"><span>#</span>ios <span>#</span>swift <span>#</span>deferred</h3>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-4 col-xs-12">
+                    <a class="col-sm-6 col-md-4 col-xs-12" href="http://www.greenfoot.org/scenarios/4063" target="_blank">
                         <div class="projUnit" id="zombie-killing-spree">
                             <img class="proj-img" src="./images/ZKS.png" alt="Zombie killing spree">
                             <div class="hover-area">
@@ -215,19 +231,45 @@ Want to check out my source code?  No problem!  Feel free to comment or provide 
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                     <div class="col-sm-6 col-md-4 col-xs-12">
                         <div class="projUnit" id="website">
                             <img class="proj-img" src="./images/Safari-icon.png" alt="Personal Website">
                             <div class="hover-area">
                                 <div class="line-separator"></div>
-                                <div class="proj-des"> 
+                                <div class="proj-des">
                                     <h3 class="proj-name">Personal Website</h3>
                                     <h3 class="hashtag"><span>#</span>html5 <span>#</span>css3 <span>#</span>jquery</h3>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <a class="col-sm-6 col-md-4 col-xs-12" href="https://github.com/timothytong/TTProgressIndicator" target="_blank">
+                        <div class="projUnit" id="classified">
+                            <img class="proj-img" src="./images/TTProgressIndicator-icon.png" alt="TTProgressIndicator">
+                            <div class="hover-area">
+                                <div class="line-separator"></div>
+                                <div class="proj-des">
+                                    <h3 class="proj-name">TTProgressIndicator</h3>
+                                    <h3 class="hashtag"><span>#</span>obj-c <span>#</span>opensource
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a class="col-sm-6 col-md-4 col-xs-12" href="https://github.com/timothytong/Moovies" target="_blank">
+                        <div class="projUnit" id="classified">
+                            <img class="proj-img" src="./images/Moovies-icon.png" alt="Moovies">
+                            <div class="hover-area">
+                                <div class="line-separator"></div>
+                                <div class="proj-des">
+                                    <h3 class="proj-name">Moovies</h3>
+                                    <h3 class="hashtag"><span>#</span>obj-c <span>#</span>rottentomatoesapi
+                                </div>
+                            </div>
+                        </div>
+                    </a>
                     <div class="col-sm-6 col-md-4 col-xs-12">
                         <div class="projUnit" id="classified">
                             <img class="proj-img" src="./images/Secret-icon.png" alt="What's next?">
@@ -265,7 +307,7 @@ Want to check out my source code?  No problem!  Feel free to comment or provide 
                                     <h2 class="project-title">DMCalc 2.</h2>
                                     <h3 class="hashtag"><span>#</span>swift <span>#</span>ios</h3>
                                     <p>DMCalc 2 <span>(</span>currently under development<span>)</span> is the successor of DMCalc <span>(</span>1<span>)</span>. It is all code-based and written in Swift, the newest programming language for iOS introduced by Apple back in June 2014. It will be more sophisticated, and will also deliver to users better UI/UX as it will feature more functions and fancy in-app transitions.</p>
-                                     
+
                                 </li>
                             </ul>
                         </div>-->
@@ -284,7 +326,7 @@ Want to check out my source code?  No problem!  Feel free to comment or provide 
                             <h5>Knock knock who's there?</h5>
                         </td>
                     </tr>
-                    
+
                     <tr>
                         <td valign="top" class="textInput">
                             <label for="email">Email.</label>
@@ -307,7 +349,7 @@ Want to check out my source code?  No problem!  Feel free to comment or provide 
                     </tr>
                     <tr>
                         <td colspan="2" style="text-align:center">
-                            <input id="submit" type="button" value="SEND.">   
+                            <input id="submit" type="button" value="SEND.">
                         </td>
                     </tr>
                 </table>
