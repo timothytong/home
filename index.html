@@ -18,7 +18,7 @@ So you're checking out my source code?  Welcome!  Feel free to comment or provid
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Gochi+Hand' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
-    <link rel='stylesheet' href="./css/main-min.css" type="text/css">
+    <link rel='stylesheet' href="./css/main.css" type="text/css">
     <!-- Favicons and touch icons -->
     <!-- For retina-display iPads -->
     <link href="/images/favicon-144.png" rel="apple-touch-icon-precomposed" sizes="144x144" type="image/png"/>
@@ -118,13 +118,26 @@ So you're checking out my source code?  Welcome!  Feel free to comment or provid
         </div>
     </div>
     <div id="work">
-        <!--        <div id="timeline">
-                    <div class="circle circle-pivotal"></div>
-                    <div class="circle circle-vello"></div>
-                </div>-->
         <h2 class="section-header">W<span>ork experience.</span></h2>
         <div class="container">
             <ul class="job-details">
+                <li class="apple">
+                    <h3 class="position apple">Software Engineer</h3>
+                    <h4><span class="company-name"><a class='company-link' id="apple-link" href="https://www.apple.com/"><span id="white">apple inc.</span></a><br></span><span class="company-location">(Cupertino, California)</span></h4>
+                    <div id="apple-logo-container">
+                        <a href="https://www.apple.com/"><img src="./images/apple-logo.png" alt="Apple logo"></a>
+                        <h5>08/15-12/16</h5>
+                    </div>
+                    <ul class="exp-list">
+                        <li>Built a dashboard with <span class='bold'>swift</span> that is deployed to hundreds of test units in multiple<br>labs, factories, and vendor sites</li>
+                        <li>Built a backend server from scratch with <span class='bold'>nginx</span>, <span class='bold'>ruby on rails</span>,  and <span class='bold'>postgresql</span>.</li>
+                        <li>Wrote <span class='bold'>python</span> and <span class='bold'>ruby</span> workflow automation scripts</li>
+                        <li>Utilized Tableau to facilitate data visualization and analysis</li>
+                    </ul>
+                    <div class="line-separator" id="apple-line"></div>
+                </li>
+
+
                 <li class="pivotal-labs">
                     <h3 class="position pivotal-labs">Agile Engineering</h3>
                     <h4><span class="company-name"><a class='company-link' id="pivotal-link" href="http://pivotallabs.com/"><span id="blue">pivotal</span> <span id="red">labs</span></a><br></span><span class="company-location">(Toronto, Canada)</span></h4>
@@ -133,10 +146,10 @@ So you're checking out my source code?  Welcome!  Feel free to comment or provid
                         <h5>01/15-05/15</h5>
                     </div>
                     <ul class="exp-list">
-                        <li>Worked on the <span class='bold'>front end</span> side of a business banking webapp for a major Canadian bank</li>
+                        <li>Worked on the <span class='bold'>front end</span> side of a business banking webapp for a major<br>Canadian bank</li>
                         <li>Participated in the development of an Android app that uses <span class='bold'>mvvm</span> architecture</li>
                         <li>Practiced <span class='bold'>pair programming</span> and <span class='bold'>test driven development</span></li>
-                        <li>Technologies involved: Android, Liaison MVVM Library, AngularJS, HTML/LESS, Chrome debugger</li>
+                        <li>Technologies involved: Android, Liaison MVVM Library, AngularJS, HTML/LESS,<br>Chrome debugger</li>
                     </ul>
                     <div class="line-separator" id="pivotal-line"></div>
                 </li>
@@ -170,7 +183,7 @@ So you're checking out my source code?  Welcome!  Feel free to comment or provid
         <div class="container">
             <div class="container-fluid project-grids">
                 <div class="row">
-                	<a class="col-sm-6 col-md-4 col-xs-12" href="https://appsto.re/i6Lp69X" target="_blank">
+                    <a class="col-sm-6 col-md-4 col-xs-12" href="https://appsto.re/i6Lp69X" target="_blank">
                         <div class="projUnit" id="flashkards">
                             <img class="proj-img" src="./images/Flashkards-icon.png" alt="FlashKards (Swift)">
                             <div class="hover-area">
@@ -286,31 +299,31 @@ So you're checking out my source code?  Welcome!  Feel free to comment or provid
             </div>
         </div>
         <!--                <div class="container">
-                            <h2 class="section-header">P<span>rojects.</span></h2>
-                            <ul id="project-list">
-                                <li id="dmcalc-ios">
-                                    <h2 class="project-title">DMCalc.</h2>
-                                    <h3 class="hashtag"><span>#</span>objective-c <span>#</span>ios <span>#</span>java <span>#</span>android</h3>
-                                    <p>Started from scratch, DMCalc is a powerful tool capable of solving discrete mathematics problems such as Linear Diophantine Equations and congruence. Applying the knowledge I obtained from school, and combining it with my self-taught learning of Objective-C, I have managed to create this simple yet useful calculator that could assist many students in their assignments and courses.</p>
-                                    <br>
-                                    <p>Though started with the interface builder, to date, most of DMCalc<span>'</span>s UI has already been rewritten with solid code. Elements are generated programmatically, and positioned at the right place depending on the screen size of the device. And this is merely the beginning<span>;</span> more and more exciting features and functions are being added at the moment.</p>
-                                    <br>
-                                    <p>To satisfy the needs of more students who do not have an Apple device, my buddy <a href="http://www.victorszeto.com">Victor Szeto</a> and I translated DMCalc into an Android app.</p>
-                                    <div class="line-separator"></div>
-                                </li>
-                                <li id="thalmaps">
-                                    <h2 class="project-title">Thalmaps.</h2>
-                                    <h3 class="hashtag"><span>#</span>objective-c <span>#</span>myo <span>#</span>hackthenorth <span>#</span>ios</h3>
-                                    <div class="line-separator"></div>
-                                </li>
-                                <li id="dmcalc-2">
-                                    <h2 class="project-title">DMCalc 2.</h2>
-                                    <h3 class="hashtag"><span>#</span>swift <span>#</span>ios</h3>
-                                    <p>DMCalc 2 <span>(</span>currently under development<span>)</span> is the successor of DMCalc <span>(</span>1<span>)</span>. It is all code-based and written in Swift, the newest programming language for iOS introduced by Apple back in June 2014. It will be more sophisticated, and will also deliver to users better UI/UX as it will feature more functions and fancy in-app transitions.</p>
+            <h2 class="section-header">P<span>rojects.</span></h2>
+            <ul id="project-list">
+            <li id="dmcalc-ios">
+            <h2 class="project-title">DMCalc.</h2>
+            <h3 class="hashtag"><span>#</span>objective-c <span>#</span>ios <span>#</span>java <span>#</span>android</h3>
+            <p>Started from scratch, DMCalc is a powerful tool capable of solving discrete mathematics problems such as Linear Diophantine Equations and congruence. Applying the knowledge I obtained from school, and combining it with my self-taught learning of Objective-C, I have managed to create this simple yet useful calculator that could assist many students in their assignments and courses.</p>
+            <br>
+            <p>Though started with the interface builder, to date, most of DMCalc<span>'</span>s UI has already been rewritten with solid code. Elements are generated programmatically, and positioned at the right place depending on the screen size of the device. And this is merely the beginning<span>;</span> more and more exciting features and functions are being added at the moment.</p>
+            <br>
+            <p>To satisfy the needs of more students who do not have an Apple device, my buddy <a href="http://www.victorszeto.com">Victor Szeto</a> and I translated DMCalc into an Android app.</p>
+            <div class="line-separator"></div>
+            </li>
+            <li id="thalmaps">
+            <h2 class="project-title">Thalmaps.</h2>
+            <h3 class="hashtag"><span>#</span>objective-c <span>#</span>myo <span>#</span>hackthenorth <span>#</span>ios</h3>
+            <div class="line-separator"></div>
+            </li>
+            <li id="dmcalc-2">
+            <h2 class="project-title">DMCalc 2.</h2>
+            <h3 class="hashtag"><span>#</span>swift <span>#</span>ios</h3>
+            <p>DMCalc 2 <span>(</span>currently under development<span>)</span> is the successor of DMCalc <span>(</span>1<span>)</span>. It is all code-based and written in Swift, the newest programming language for iOS introduced by Apple back in June 2014. It will be more sophisticated, and will also deliver to users better UI/UX as it will feature more functions and fancy in-app transitions.</p>
 
-                                </li>
-                            </ul>
-                        </div>-->
+            </li>
+            </ul>
+            </div>-->
     </div>
     <div id="contact">
         <h2 class="section-header">C<span>ontact.</span></h2>
@@ -358,7 +371,7 @@ So you're checking out my source code?  Welcome!  Feel free to comment or provid
     </div>
     <Footer>
         <div class="container">
-            <h5>The Safari <span class='font'>(</span>TM<span class='font'>)</span> and Maps<span class='font'>(</span>TM<span class='font'>)</span> icons are the properties of <a href='http://www.apple.com'>Apple Inc.</a>. The Myo<span class='font'>(</span>TM<span class='font'>)</span> icon is the property of <a href='https://www.thalmic.com/en/myo/'>Thalmic Labs</a>.</h5>
+            <h5>The Apple <span class='font'>(</span>TM<span class='font'>)</span>, Safari <span class='font'>(</span>TM<span class='font'>)</span> and Maps<span class='font'>(</span>TM<span class='font'>)</span> icons are the properties of <a href='http://www.apple.com'>Apple Inc.</a>. The Myo<span class='font'>(</span>TM<span class='font'>)</span> icon is the property of <a href='https://www.thalmic.com/en/myo/'>Thalmic Labs</a>.</h5>
             <h5>The edited icons contained on this site are for display purposes only. They were made for the sake of making this site complete and pretty, and will never be used for commercial purposes.</h5>
             <h5>If either party mentioned above disallows the use of these icons, please email me at <a href="mailto:timothykytong@gmail.com">timothykytong@gmail.com</a> and they will be taken <span class='font'>off</span> the site immediately.</h5>
             <br>
@@ -373,35 +386,35 @@ So you're checking out my source code?  Welcome!  Feel free to comment or provid
     </div>
 
     <script src="./js/min/jquery-min.js" type="text/javascript"></script>
-    <script src="./js/min/parallax.min.js" type="text/javascript"></script>
+    <!-- script src="./js/min/parallax.min.js" type="text/javascript"></script> -->
     <!--    <script src="./js/min/jquery.stellar-min.js"></script>-->
     <script src="./js/min/main-min.js"></script>
     <!--    <script>
-            $(function () {
-                $.stellar({
-                    horizontalScrolling: false,
-                    verticalOffset: 80
-                });
-            });
-        </script>-->
+$(function () {
+    $.stellar({
+        horizontalScrolling: false,
+        verticalOffset: 80
+    });
+});
+    </script>-->
     <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                    m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');
+(function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+    m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');
 
-        ga('create', 'UA-53475208-2', 'auto');
-        ga('send', 'pageview');
+ga('create', 'UA-53475208-2', 'auto');
+ga('send', 'pageview');
 
     </script>
-<!--    <script src="contact_form.js"></script>-->
+    <!--    <script src="contact_form.js"></script>-->
 </body>
 
 

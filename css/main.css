@@ -223,10 +223,14 @@ nav{
 /*intro BEGIN*/
 .intro-static{
     position: relative;
+    /*
     background-image: url(../images/apple-bg.jpg);
     background-size: cover;
+    */
 }
-
+#intro {
+    background-color: black;
+}
 #intro .container p{
     transition: all .4s ease;
     -moz-transition: all .4s ease;
@@ -310,28 +314,28 @@ nav{
 }
 
 .github-glow:hover{
-    -webkit-animation-name: github-glow;    
+    -webkit-animation-name: github-glow;
     -webkit-animation-duration: 1.5s;
     -webkit-animation-iteration-count: infinite;
-    animation-name: github-glow;    
+    animation-name: github-glow;
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
 }
 
 .resume-linkedin-glow:hover{
-    -webkit-animation-name: resume-linkedin-glow;    
+    -webkit-animation-name: resume-linkedin-glow;
     -webkit-animation-duration: 1.5s;
     -webkit-animation-iteration-count: infinite;
-    animation-name: resume-linkedin-glow;    
+    animation-name: resume-linkedin-glow;
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
 }
 
 #intro #scrl-dwn-btn{
-    -webkit-transition: text-shadow 0.3s ease-in;  
-    -moz-transition: text-shadow 0.3s ease-in;  
-    -o-transition: text-shadow 0.3s ease-in;  
-    transition: text-shadow 0.3s ease-in;  
+    -webkit-transition: text-shadow 0.3s ease-in;
+    -moz-transition: text-shadow 0.3s ease-in;
+    -o-transition: text-shadow 0.3s ease-in;
+    transition: text-shadow 0.3s ease-in;
     -ms-transition: text-shadow 0.3s ease-in;
     color: #eeeeee;
     position: absolute;
@@ -339,10 +343,10 @@ nav{
     bottom: 20px;
     font-size: 1.2em;
     cursor: pointer;
-    -webkit-animation-name: scrl-dwn-animation-sml;    
+    -webkit-animation-name: scrl-dwn-animation-sml;
     -webkit-animation-duration: 1.5s;
     -webkit-animation-iteration-count: infinite;
-    animation-name: scrl-dwn-animation-sml;    
+    animation-name: scrl-dwn-animation-sml;
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
 }
@@ -473,6 +477,9 @@ footer a:hover{
     font-weight: 300;
     margin-top: -13px;
     text-align: left;
+}
+#work .job-details #apple-logo-container img{
+    width: 85px;
 }
 #work .job-details #vello{
     margin: auto;
@@ -620,7 +627,7 @@ footer a:hover{
     font-family: "MyriadSetPro","Open Sans",sans-serif;
     text-align: center;
     display: none;
-    
+
 }
 .hashtag{
     font-variant: small-caps;
@@ -633,7 +640,7 @@ footer a:hover{
     font-weight: 100;
 }
 .proj-name{
-    font-weight: 300; 
+    font-weight: 300;
     max-height: 10px;
 }
 .hover-area .line-separator{
@@ -652,7 +659,7 @@ footer a:hover{
 /*projects END*/
 
 /*contact BEGIN*/
-label, #contact h5{ 
+label, #contact h5{
     color: white;
 }
 
@@ -759,16 +766,22 @@ form input[type=text], #messageArea{
     }
 }
 @media screen and (min-width: 640px){
+    #apple-logo-container{
+        top: -0px;
+        right: 15px;
+        position: absolute;
+    }
+
     #vello{
         /*        right: 20px;*/
         right:0px;
         top: 65px;
         position: absolute;
     }
-    
+
     #pivotal{
         right: -45px;
-        top: 0;
+        top: 300px;
         position: absolute;
     }
 }
@@ -990,10 +1003,10 @@ form input[type=text], #messageArea{
     .projects:hover span,
     .contact:hover span{
         font-size: 83%;
-        -webkit-transition: all 0.2s ease-in;  
-        -moz-transition: all 0.2s ease-in;  
-        -o-transition: all 0.2s ease-in;  
-        transition: all 0.2s ease-in;  
+        -webkit-transition: all 0.2s ease-in;
+        -moz-transition: all 0.2s ease-in;
+        -o-transition: all 0.2s ease-in;
+        transition: all 0.2s ease-in;
         -ms-transition: all 0.2s ease;
 
         -webkit-transition-delay: 0.1s;
@@ -1005,22 +1018,22 @@ form input[type=text], #messageArea{
 
     .about svg line.top,
     .about svg line.bottom {
-        stroke-dasharray: 80 54; 
+        stroke-dasharray: 80 54;
     }
 
     .work svg line.top,
     .work svg line.bottom {
-        stroke-dasharray: 80 54; 
+        stroke-dasharray: 80 54;
     }
 
     .projects svg line.top,
     .projects svg line.bottom {
-        stroke-dasharray: 115 85; 
+        stroke-dasharray: 115 85;
     }
 
     .contact svg line.top,
     .contact svg line.bottom {
-        stroke-dasharray: 110 82; 
+        stroke-dasharray: 110 82;
     }
 
     .about svg line.left,
@@ -1078,11 +1091,11 @@ form input[type=text], #messageArea{
     .about span, .work span, .projects span, .contact span {
         /*        -webkit-transition: none;
                 transition: none;*/
-        -webkit-transition: all 0.1s ease-in;  
-        -moz-transition: all 0.1s ease-in;  
-        -o-transition: all 0.1s ease-in;  
-        transition: all 0.1s ease-in;  
-        -ms-transition: all 0.1s ease-in; 
+        -webkit-transition: all 0.1s ease-in;
+        -moz-transition: all 0.1s ease-in;
+        -o-transition: all 0.1s ease-in;
+        transition: all 0.1s ease-in;
+        -ms-transition: all 0.1s ease-in;
         -webkit-transition-delay: 0.1s;
         -moz-transition-delay: 0.1s;
         -o-transition-delay: 0.1s;
@@ -1246,25 +1259,25 @@ form input[type=text], #messageArea{
     }
     #intro #scrl-dwn-btn:hover{
         text-shadow: 0px 0px 20px rgba(255,255,255,0.7);
-        -webkit-transition: text-shadow 0.3s ease-in;  
-        -moz-transition: text-shadow 0.3s ease-in;  
-        -o-transition: text-shadow 0.3s ease-in;  
-        transition: text-shadow 0.3s ease-in;  
-        -ms-transition: text-shadow 0.3s ease-in; 
+        -webkit-transition: text-shadow 0.3s ease-in;
+        -moz-transition: text-shadow 0.3s ease-in;
+        -o-transition: text-shadow 0.3s ease-in;
+        transition: text-shadow 0.3s ease-in;
+        -ms-transition: text-shadow 0.3s ease-in;
     }
     #intro #scrl-dwn-btn{
-        -webkit-animation-name: scrl-dwn-animation-big;    
+        -webkit-animation-name: scrl-dwn-animation-big;
         -webkit-animation-duration: 1.5s;
         -webkit-animation-iteration-count: infinite;
-        animation-name: scrl-dwn-animation-big;    
+        animation-name: scrl-dwn-animation-big;
         animation-duration: 1.5s;
         animation-iteration-count: infinite;
     }
     .menu-text-highlight{
-        -webkit-animation-name: menu-glow;    
+        -webkit-animation-name: menu-glow;
         -webkit-animation-duration: 1.5s;
         -webkit-animation-iteration-count: infinite;
-        animation-name: menu-glow;    
+        animation-name: menu-glow;
         animation-duration: 1.5s;
         animation-iteration-count: infinite;
     }
@@ -1274,7 +1287,7 @@ form input[type=text], #messageArea{
 @media screen and (min-width: 924px) {
     #work .container .job-details{
         width: 829px;
-    }   
+    }
 }
 
 @media screen and (min-width: 1320px) {
@@ -1313,10 +1326,10 @@ form input[type=text], #messageArea{
 @media screen and (max-width: 390px){
     .proj-name, .hashtag{
         font-size: 1.3em;
-        
+
         margin-bottom: -10px;
     }
-    
+
     .proj-img{
         margin-top: 15px;
     }
@@ -1324,10 +1337,10 @@ form input[type=text], #messageArea{
 @media screen and (max-width: 390px){
     .proj-name, .hashtag{
         font-size: 1.3em;
-        
+
         margin-bottom: -10px;
     }
-    
+
     .proj-img{
         margin-top: 15px;
     }
