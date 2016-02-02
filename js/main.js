@@ -24,6 +24,7 @@ var $menuProj = $(".projects");
 var $abtSecHeader = $(".section-header");
 var $wrkSecHeader = $("#work .section-header");
 var $projSecHeader = $("#projects .section-header");
+var $quoteSecHeader = $("#quote .section-header");
 var $contactSecHead = $("#contact .section-header");
 var $projHoverArea = $(".hover-area");
 var $projDes = $(".proj-des");
@@ -64,6 +65,7 @@ var resizeContent = function () {
     $abtSecHeader.css("margin-left", ((width / 2) - ($abtSecHeader.width() / 2)) + "px");
     $wrkSecHeader.css("margin-left", ((width / 2) - ($wrkSecHeader.width() / 2)) + "px");
     $projSecHeader.css("margin-left", ((width / 2) - ($projSecHeader.width() / 2)) + "px");
+    $quoteSecHeader.css("margin-left", ((width / 2) - ($quoteSecHeader.width() / 2)) + "px");
     $contactSecHead.css("margin-left", ((width / 2) - ($contactSecHead.width() / 2)) + "px");
     $introScrlBtn.css("left", ((width / 2) - ($introScrlBtn.width() / 2)) + "px");
     $jobDets.css("left", ((width / 2) - ($jobDets.width() / 2)) + "px");

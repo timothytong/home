@@ -423,7 +423,6 @@ footer a:hover{
     background-color: #141414;
 }
 .section-header{
-    margin-top: 20px;
     font-family: "MyriadSetPro","Open Sans",sans-serif;
     font-size: 4em;
     font-weight: 500;
@@ -550,21 +549,21 @@ footer a:hover{
 /*quote BEGIN*/
 #quote .container{
     margin: 30px auto;
-}
-#quote .container h1{
-    font-variant: small-caps;
-    font-family: "MyriadSetPro","Open Sans",sans-serif;
-    font-weight: 300;
-    letter-spacing: 3px;
-    font-size: 4em;
-    color: white;
-    text-align: center;
-    text-shadow: black 2px 2px 2px;
+    max-width: 1000px;
 }
 #quote .container h4{
-    text-align: center;
-    width: 90%;
-    font-size: 2em;
+    /* font-variant: small-caps; */
+    font-family: "Open Sans",sans-serif;
+    font-weight: 300;
+    /* font-size: 4em; */
+    line-height: 150%;
+    color: white;
+    text-align: justify;
+    text-shadow: black 2px 2px 2px;
+}
+#quote .container h6{
+    text-align: right;
+    font-size: 1.5em;
     font-family: "MyriadSetPro","Open Sans",sans-serif;
     font-weight: 100;
     color: white;
