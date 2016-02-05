@@ -1,21 +1,26 @@
 @font-face {
-    font-family: "MyriadSetPro";
-    src: url("../fonts/MyriadSetPro-Thin.ttf");
+    font-family: "Ailerons";
+    src: url("../fonts/Ailerons-Typeface.otf");
     font-weight: 300;
 }
 @font-face {
-    font-family: "MyriadSetPro";
-    src: url("../fonts/MyriadSetPro-UltraLight.ttf");
+    font-family: "Stellar";
+    src: url("../fonts/Stellar-Regular.otf");
+    font-weight: 300;
+}
+@font-face {
+    font-family: "Stellar";
+    src: url("../fonts/Stellar-light.otf");
     font-weight: 100;
 }
 @font-face {
-    font-family: "MyriadSetPro";
-    src: url("../fonts/MyriadSetPro-Bold.ttf");
+    font-family: "Stellar";
+    src: url("../fonts/Stellar-Bold.otf");
     font-weight: 700;
 }
 @font-face {
-    font-family: "MyriadSetPro";
-    src: url("../fonts/MyriadSetPro-Semibold.ttf");
+    font-family: "Stellar";
+    src: url("../fonts/Stellar-Medium.otf");
     font-weight: 500;
 }
 @-webkit-keyframes menu-glow{
@@ -153,7 +158,7 @@ body{
     -webkit-transition: all .4s ease;
 }
 #initial-and-name .bold{
-    font-weight: 500;
+    font-weight: 700;
     text-shadow: none;
 }
 #initial-and-name {
@@ -237,9 +242,9 @@ nav{
     -ms-transition: all .4s ease;
     -webkit-transition: all .4s ease;
     text-align: center;
-    font-family: "MyriadSetPro","Open Sans",sans-serif;
+    font-family: "Stellar","Open Sans",sans-serif;
     font-size: 1.8em;
-    font-weight: 300;
+    font-weight: 100;
     color: #eeeeee;
 }
 #intro .container span{
@@ -250,15 +255,14 @@ nav{
     left: 0 !important;
 }
 #intro-name{
-    font-family: "MyriadSetPro","Open Sans",sans-serif;
+    font-family: "Ailerons","Open Sans",sans-serif;
     /*letter-spacing: -2px;*/
     margin: auto;
-    width: 100%;
+    /* width: 100%; */
+    font-size: 5em;
     text-align: center;
-    /*font-weight: 300;*/
     font-variant: small-caps;
     letter-spacing: 4px!important;
-    font-weight: 500!important;
     transition: all .4s ease;
     -moz-transition: all .4s ease;
     -o-transition: all .4s ease;
@@ -371,8 +375,8 @@ nav{
     position: relative;
 }
 footer h5{
-    font-family: "MyriadSetPro","Open Sans",sans-serif;
-    font-weight: 300;
+    font-family: "Stellar","Open Sans",sans-serif;
+    font-weight: 100;
     color: white;
 }
 footer a{
@@ -411,10 +415,10 @@ footer a:hover{
 }
 /*about BEGIN*/
 #about .container p{
-    font-family: "MyriadSetPro","Open Sans",sans-serif;
+    font-family: "Stellar","Open Sans",sans-serif;
     margin: auto;
     font-size: 1.5em;
-    font-weight: 300;
+    font-weight: 100;
     width: 60%;
     color: white;
 }
@@ -422,7 +426,7 @@ footer a:hover{
     background-color: #141414;
 }
 .section-header{
-    font-family: "MyriadSetPro","Open Sans",sans-serif;
+    font-family: "Stellar","Open Sans",sans-serif;
     font-size: 4em;
     font-weight: 500;
     color: white;
@@ -455,9 +459,9 @@ footer a:hover{
     padding: 0;
 }
 .position{
-    font-family: "MyriadSetPro","Open Sans",sans-serif;
+    font-family: "Stellar","Open Sans",sans-serif;
     font-size: 2.5em;
-    font-weight: 300;
+    font-weight: 100;
     color: #303030;
     text-align: left;
 }
@@ -471,8 +475,8 @@ footer a:hover{
     letter-spacing: 2px;
 }
 #work .container h4{
-    font-family: "MyriadSetPro","Open Sans",sans-serif;
-    font-weight: 300;
+    font-family: "Stellar","Open Sans",sans-serif;
+    font-weight: 100;
     margin-top: -13px;
     text-align: left;
 }
@@ -487,9 +491,9 @@ footer a:hover{
 }
 #work .job-details h5{
     text-align: center;
-    font-family: "MyriadSetPro","Open Sans",sans-serif;
+    font-family: "Stellar","Open Sans",sans-serif;
     font-size: 1.2em;
-    font-weight: 300;
+    font-weight: 100;
     letter-spacing: 2px;
 }
 #work .job-details #pivotal{
@@ -563,7 +567,7 @@ footer a:hover{
 #quote .container h6{
     text-align: right;
     font-size: 1.5em;
-    font-family: "MyriadSetPro","Open Sans",sans-serif;
+    font-family: "Stellar","Open Sans",sans-serif;
     font-weight: 100;
     color: white;
     margin: auto;
@@ -622,7 +626,7 @@ footer a:hover{
     overflow: hidden;
 }
 .proj-des{
-    font-family: "MyriadSetPro","Open Sans",sans-serif;
+    font-family: "Stellar","Open Sans",sans-serif;
     text-align: center;
     display: none;
 
@@ -668,9 +672,9 @@ label, #contact h5{
 
 label{
     font-size: 1.5em;
-    font-weight: 300;
+    font-weight: 100;
     margin-right: 15px;
-    font-family: "MyriadSetPro", "Open Sans",sans-serif;
+    font-family: "Stellar", "Open Sans",sans-serif;
 }
 
 form input[type=text], #messageArea{
@@ -738,7 +742,7 @@ form input[type=text], #messageArea{
 
 @media screen and (min-width: 500px){
     #intro .container h1{
-        font-size: 4.3em;
+        font-size: 8em;
     }
 
     #about .container .section-header{
