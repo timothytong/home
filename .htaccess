@@ -1,3 +1,4 @@
 RewriteEngine On 
 RewriteRule ^(.*)$ https://www.timothytong.net/$1 [R,L]
 ErrorDocument 404 /404.html
+some garbage
