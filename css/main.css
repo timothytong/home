@@ -480,7 +480,7 @@ footer a:hover{
     margin-top: -13px;
     text-align: left;
 }
-#work .job-details #apple-logo-container img{
+#work .job-details #apple-logo-container img, #intercom-logo-container img{
     width: 85px;
 }
 #work .job-details #vello{
@@ -769,7 +769,13 @@ form input[type=text], #messageArea{
 }
 @media screen and (min-width: 640px){
     #apple-logo-container{
-        top: -0px;
+        right: 15px;
+        top: 270px;
+        position: absolute;
+    }
+
+    #intercom-logo-container {
+        top: 0;
         right: 15px;
         position: absolute;
     }
@@ -783,7 +789,7 @@ form input[type=text], #messageArea{
 
     #pivotal{
         right: -45px;
-        top: 300px;
+        top: 560px;
         position: absolute;
     }
 }
