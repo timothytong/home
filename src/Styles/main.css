@@ -1,0 +1,51 @@
+@font-face {
+    font-family: "Nexa Light";
+    font-weight: 300;
+    src: url("../fonts/Nexa-Light.otf");
+}
+body {
+	font-family: "Nexa Light";
+	margin: 0;
+}
+.home-title-name {
+	font-family: "Nexa Light";
+	font-size: 6em;
+}
+.horizontal-nav-ul {
+	display: table;
+	height: 100%;
+	list-style-type: none; /* deletes bullets */
+	margin: 0;
+	padding: 0;
+}
+.horizontal-nav-ul > li, .navbar-top-button {
+	background-color: gray;
+	border-color: black;
+	border-style: solid;
+	border-width: 1px 1px 0 1px;
+	color: white;
+	cursor: pointer;
+	display: table-cell;
+	min-width: 150px;
+	padding: 1em 0;
+	text-align: center;
+}
+.navbar-top-button {
+	height: 100%;
+}
+.navbar {
+	border-bottom-color: black;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	display: flex;
+	flex-direction: row;
+	height: 3.5em;
+}
+.navbar-my-name {
+	flex-grow: 1;
+	height: 100%;
+	line-height: 3em;
+	margin: 0;
+	padding-left: 1em;
+}
+

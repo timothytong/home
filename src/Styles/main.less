@@ -1,0 +1,473 @@
+// Color Stuff
+@royal-blue: #5680E9;
+@teal: #84CEEB;
+@aqua: #5AB9EA;
+@lavender: #C1C8E4;
+@eggplant: #8860D0;
+@shadow-purple: #2E0677;
+@dark-blue-black: #0F141E;
+
+// Font Stuff
+.font-face(@font-family, @file-path, @font-weight, @font-style) {
+  @font-face {
+    font-family: @font-family;
+    src: url('@{file-path}.ttf') format('truetype');
+    font-weight: @font-weight;
+    font-style: @font-style;
+  }
+}
+
+.font-face('CrimsonText', '../Fonts/CrimsonText-Regular', normal, normal);
+.font-face('CrimsonText', '../Fonts/CrimsonText-SemiBold', bold, normal);
+.font-face('CrimsonText', '../Fonts/CrimsonText-Italic', normal, italic);
+.font-face('CrimsonText', '../Fonts/CrimsonText-SemiBoldItalic', bold, italic);
+
+// Animation Stuff
+.keyframes(@name; @arguments) {
+    @-moz-keyframes @name { @arguments(); }
+    @-webkit-keyframes @name { @arguments(); }
+    @keyframes @name { @arguments(); }
+}
+
+.animation(@arguments) {
+    -webkit-animation: @arguments;
+    -moz-animation: @arguments;
+    animation: @arguments;
+}
+
+.transition(@arguments) {
+    -webkit-transition: @arguments;
+    -moz-transition: @arguments;
+    transition: @arguments;
+}
+
+
+.keyframes(navbar-glow;{
+    0%{
+        text-shadow: none;
+    }
+    50%{
+        text-shadow: 0px 0px 7px white;
+    }
+    100%{
+    	text-shadow: none;
+    }
+});
+
+.keyframes(slide-in;{
+    0%{
+        top: -2em;
+        box-shadow: none;
+    }
+    100%{
+        top: 1em;
+        box-shadow: 0px 2px 12px 0px white;
+    }
+});
+
+.keyframes(pop-out;{
+    0%{
+        box-shadow: none;
+    }
+    100%{
+        box-shadow: 0px 9px 12px -12px white;
+    }
+});
+
+.keyframes(embed-in;{
+    0%{
+        box-shadow: 0px 9px 12px -12px white;
+    }
+    100%{
+        box-shadow: none;
+    }
+});
+
+.keyframes(slide-out;{
+    0%{
+        top: 1em;
+        box-shadow: 0px 2px 12px 0px white;
+    }
+    100%{
+        top: -2em;
+        box-shadow: none;
+    }
+});
+
+html {
+    height: 100%!important;
+}
+
+body {
+    font-family: "CrimsonText";
+    margin: 0;
+    height: 100%!important;
+    min-height: 100%;
+}
+
+#root {
+    height: 100%!important;
+}
+
+[data-reactroot]{
+    height: 100%!important;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-body{
+    background-color: @dark-blue-black;
+    height: 100%!important;
+    z-index: 1;
+    position: relative;
+    overflow: auto;
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    color: white;
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    overflow-y: visible;
+    position: relative;
+    z-index: 10;
+    background-color: @dark-blue-black;
+
+}
+.home-title-name {
+    align-items: flex-end;
+    align-self: center;
+    display: inline-flex;
+    flex: 2;
+    font-family: "CrimsonText";
+    font-weight: bold;
+    font-size: 6em;
+    margin: auto;
+    padding: 0%;
+}
+
+.home-component {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    // background-image: url("../Assets/Background1.png");
+    background-size: cover;
+    background-position: 10% 40%;
+    background-repeat: no-repeat;
+}
+
+.home-subtitle-about {
+    margin: 1em auto auto auto;
+    align-self: center;
+}
+
+.horizontal-nav-ul {
+    display: inline-table;
+    height: 100%;
+    list-style-type: none; /* deletes bullets */
+    margin: 0 1em 0 0;
+    padding: 0;
+    z-index: 3;
+}
+
+.home-social-btns {
+    display: inline-flex;
+    align-self: center;
+    list-style: none;
+    flex: 2;
+
+    li {
+        font-size: 3em;
+        margin: 1em 1em;
+        a {
+        	color: white;
+            &:hover {
+                color: @lavender;
+            }
+        }
+    }
+}
+
+.horizontal-nav-ul > li {
+    &.slide-in {
+        &:after{
+            .animation(slide-in 0.3s ease-out)
+        }
+        .animation(pop-out 0.3s ease-out)
+    }
+
+    &.slide-out {
+        &:after{
+            .animation(slide-out 0.3s ease-out)
+        }
+        .animation(embed-in 0.3s ease-out)
+    }
+
+    &.normal{
+        box-shadow: none;
+        &:after {
+            top: -2em;
+        }
+    }
+
+    &.highlighted{
+        box-shadow: 0px 9px 12px -12px white;
+        &:after{
+            top: 1em;
+        }
+    }
+
+    &.active{
+    	text-decoration: underline;
+    	.animation(navbar-glow 1.0s ease-out infinite)
+    }
+
+    &:after{
+        background-color: white;
+        box-shadow: 0px 2px 12px 0px white;
+        content: " ";
+        display: block;
+        left: 50%;
+        margin-left: -1em;
+        top: -2em;
+        transform-origin: 0% 100%;
+        transform: rotate(45deg);
+        position: absolute;
+        width: 2em;
+        height: 2em;
+        z-index: -1;
+    }
+}
+
+.horizontal-nav-ul > li, .navbar-top-button {
+    align-items: center;
+    background-color: @dark-blue-black;
+    color: white;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 1.2em;
+    line-height: 3.5em;
+    min-width: 150px;
+    position: relative;
+    height: 100%;
+    justify-content: center;
+}
+
+.navbar-top-button {
+    height: 100%;
+    border: none;
+    .transition(color 0.1s);
+    .transition(background-color 0.1s);
+
+    &:hover{
+    	background-color: white;
+    	color: @dark-blue-black;
+    }
+}
+
+.navbar-spacer {
+    flex-grow: 1;
+    height: 67px;
+    margin: 0;
+    z-index: 5;
+    background-color: @dark-blue-black;
+
+}
+
+.experience-component {
+    padding: 0 2em;
+    max-width: 1000px;
+    margin: auto;
+
+    .component-title {
+        font-size: 3em;
+        text-align: center;
+    }
+
+    .title-separator {
+        border-color: white;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        margin: 3em 2em;
+    }
+
+    .card-front {
+        background-color: white;
+        color: @dark-blue-black;
+        padding: 1em 2em;
+        margin-bottom: 6em;
+
+        h1 {
+
+            span {
+                font-size: 0.5em;
+                float: right;
+
+                img {
+                    width: 25px;
+                    height: 25px;
+                }
+
+            }
+
+        }
+
+        .card-content {
+            display: flex;
+
+            .company-logo {
+                align-self: center;
+            }
+
+            .separator-line {
+                border-color: @dark-blue-black;
+                border-left-width: 1px;
+                border-left-style: solid;
+                margin: 3em 2em;
+            }
+
+            .company-information {
+                .company-job-title {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+
+                    h3 {
+                        align-self: center;
+                    }
+                }
+            }
+        }
+
+        img {
+            max-width: 200px;
+        }
+
+    }
+
+
+}
+.experience{
+    padding: 5em 0;
+    // background-image: url("../Assets/ExperienceBackground.jpg");
+    background-size: cover;
+    background-position: 10% 40%;
+    background-repeat: no-repeat;
+}
+.about-component {
+    // background-image: url("../Assets/AboutMeMore.jpg");
+    background-size: cover;
+    background-position: 10% 40%;
+    background-repeat: no-repeat;
+}
+
+.education-component {
+    // background-image: url("");
+    background-size: cover;
+    background-position: 10% 40%;
+    background-repeat: no-repeat;
+}
+
+.about-component, .education-component {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	.portrait-container {
+		border-radius: 50%;
+		display: inline-block;
+        margin-top: 7em;
+
+		img {
+			height: 15em;
+			border-radius: 50%;
+			border-width: 0.5em;
+			border-color: white;
+			border-style: solid;
+		}
+	}
+
+    .uw-logo {
+
+        margin-top: 7em;
+    }
+
+    .location-container {
+
+        display: flex;
+
+        .blip-icon {
+            width: 25px;
+            height: 25px;
+        }
+
+        h3 {
+            margin: 0;
+            margin-left: 5px;
+            margin-bottom: 2em;
+        }
+    }
+
+	h1 {
+		font-size: 3em;
+	}
+
+	.about-body, .education-body {
+		margin: 0 2em;
+		max-width: 1260px;
+		font-size: 1.4em;
+        margin-bottom: 7em;
+
+        p {
+            letter-spacing: 1px;
+            line-height: 1.2em;
+        }
+	}
+
+    .education-body {
+        list-style: none;
+        letter-spacing: 1px;
+        line-height: 1.2em;
+
+        .education-entry {
+
+            padding-left: 1em;
+            padding-right: 1em;
+            border-top: white;
+            border-top-width: 1px;
+            border-top-style: solid;
+            margin-bottom: 1.5em;
+
+            h4 {
+                text-decoration: underline;
+            }
+        }
+
+        .education-degree-container {
+            display: flex;
+            margin-top: 2em;
+            background-color: white;
+            color: @dark-blue-black;
+            padding: 0 1em;
+
+            h2 {
+                flex: 5;
+            }
+
+            .education-degree-information {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: right;
+
+                h6, h5 {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+
+
